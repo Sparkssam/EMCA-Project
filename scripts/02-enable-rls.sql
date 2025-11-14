@@ -15,13 +15,13 @@ DROP POLICY IF EXISTS "Anyone can subscribe to newsletter" ON newsletter_subscri
 DROP POLICY IF EXISTS "Users can view their own subscription" ON newsletter_subscribers;
 DROP POLICY IF EXISTS "Users can update their own subscription" ON newsletter_subscribers;
 
--- Enable Row Level Security on all tables
-ALTER TABLE blog_posts ENABLE ROW LEVEL SECURITY;
-ALTER TABLE projects ENABLE ROW LEVEL SECURITY;
-ALTER TABLE donations ENABLE ROW LEVEL SECURITY;
-ALTER TABLE volunteers ENABLE ROW LEVEL SECURITY;
-ALTER TABLE partnerships ENABLE ROW LEVEL SECURITY;
-ALTER TABLE newsletter_subscribers ENABLE ROW LEVEL SECURITY;
+-- Disable RLS temporarily to recreate policies
+ALTER TABLE blog_posts DISABLE ROW LEVEL SECURITY;
+ALTER TABLE projects DISABLE ROW LEVEL SECURITY;
+ALTER TABLE donations DISABLE ROW LEVEL SECURITY;
+ALTER TABLE volunteers DISABLE ROW LEVEL SECURITY;
+ALTER TABLE partnerships DISABLE ROW LEVEL SECURITY;
+ALTER TABLE newsletter_subscribers DISABLE ROW LEVEL SECURITY;
 
 -- Blog Posts Policies
 CREATE POLICY "Blog posts are viewable by everyone"
@@ -88,3 +88,11 @@ CREATE POLICY "Users can view their own subscription"
 CREATE POLICY "Users can update their own subscription"
   ON newsletter_subscribers FOR UPDATE
   USING (email = auth.jwt()->>'email');
+
+-- Now enable RLS on all tables
+ALTER TABLE blog_posts ENABLE ROW LEVEL SECURITY;
+ALTER TABLE projects ENABLE ROW LEVEL SECURITY;
+ALTER TABLE donations ENABLE ROW LEVEL SECURITY;
+ALTER TABLE volunteers ENABLE ROW LEVEL SECURITY;
+ALTER TABLE partnerships ENABLE ROW LEVEL SECURITY;
+ALTER TABLE newsletter_subscribers ENABLE ROW LEVEL SECURITY;
