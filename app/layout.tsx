@@ -6,6 +6,7 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { WhatsAppFloat } from "@/components/whatsapp-float"
 import { ScrollToTop } from "@/components/scroll-to-top"
+import { Toaster } from "sonner"
 
 import { Poppins, Poppins as V0_Font_Poppins } from 'next/font/google'
 
@@ -102,6 +103,7 @@ export default function RootLayout({
         >
           Skip to main content
         </a>
+        <Toaster position="top-right" richColors />
         <ScrollToTop />
         <Navigation />
         <main id="main-content" className="min-h-screen">

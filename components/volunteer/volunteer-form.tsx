@@ -7,6 +7,8 @@ import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 import { Send, Calendar, LogIn } from 'lucide-react'
+import { submitVolunteerApplication } from '@/lib/actions/volunteer'
+import { toast } from 'sonner'
 
 const opportunities = [
   "Tree Planting & Reforestation",
@@ -38,6 +40,7 @@ export function VolunteerForm() {
 
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitMessage, setSubmitMessage] = useState("")
+  const [isSuccess, setIsSuccess] = useState(false)
 
   const handleInterestToggle = (interest: string) => {
     setFormData((prev) => ({
@@ -52,27 +55,60 @@ export function VolunteerForm() {
     e.preventDefault()
     setIsSubmitting(true)
     setSubmitMessage("")
+    setIsSuccess(false)
 
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false)
-      if (formData.registeringForEvent) {
-        setSubmitMessage(`Thank you for registering for "${formData.registeringForEvent}"! We'll contact you within 48 hours with event details.`)
-      } else {
-        setSubmitMessage("Thank you for your interest! We'll contact you within 48 hours.")
-      }
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        location: "",
-        interests: [],
-        availability: "",
-        experience: "",
-        message: "",
-        registeringForEvent: "",
+    try {
+      // Submit to Supabase via server action
+      const result = await submitVolunteerApplication({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        location: formData.location,
+        interests: formData.interests,
+        availability: formData.availability,
+        experience: formData.experience,
+        message: formData.message,
+        registeringForEvent: formData.registeringForEvent,
       })
-    }, 2000)
+
+      if (result.success) {
+        setIsSuccess(true)
+        setSubmitMessage(result.message)
+        toast.success("Application Submitted Successfully!", {
+          description: result.message,
+          duration: 5000,
+        })
+        // Reset form on success
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          location: "",
+          interests: [],
+          availability: "",
+          experience: "",
+          message: "",
+          registeringForEvent: eventName || "",
+        })
+      } else {
+        setIsSuccess(false)
+        setSubmitMessage(result.message)
+        toast.error("Submission Failed", {
+          description: result.message,
+          duration: 5000,
+        })
+      }
+    } catch (error) {
+      console.error("Form submission error:", error)
+      setIsSuccess(false)
+      setSubmitMessage("An unexpected error occurred. Please try again.")
+      toast.error("Error", {
+        description: "An unexpected error occurred. Please try again.",
+        duration: 5000,
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -216,7 +252,11 @@ export function VolunteerForm() {
             </div>
 
             {submitMessage && (
-              <div className="p-4 bg-emca-primary/10 border-2 border-emca-primary/30 rounded-2xl text-emca-primary text-center">
+              <div className={`p-4 border-2 rounded-2xl text-center ${
+                isSuccess 
+                  ? 'bg-green-50 border-green-500 text-green-700 dark:bg-green-900/20 dark:border-green-700 dark:text-green-400' 
+                  : 'bg-red-50 border-red-500 text-red-700 dark:bg-red-900/20 dark:border-red-700 dark:text-red-400'
+              }`}>
                 {submitMessage}
               </div>
             )}
