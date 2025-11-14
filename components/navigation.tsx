@@ -1,0 +1,145 @@
+"use client"
+
+import { useState, useEffect } from "react"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { Menu, X, Leaf, Heart } from 'lucide-react'
+import { cn } from "@/lib/utils"
+import { ThemeToggle } from "./theme-toggle"
+
+const navItems = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About Us" },
+  { href: "/philosophy", label: "Philosophy" },
+  { href: "/projects", label: "Projects" },
+  { href: "/impact", label: "Impact" },
+  { href: "/gallery", label: "Gallery" },
+  { href: "/stories", label: "Stories" },
+  { href: "/volunteer", label: "Volunteer" },
+]
+
+export function Navigation() {
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  return (
+    <nav
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 leading-10 tracking-wide",
+        isScrolled
+          ? "bg-background/95 backdrop-blur-xl shadow-lg border-b border-border"
+          : "bg-gradient-to-b from-emca-darkest/90 to-transparent backdrop-blur-sm",
+      )}
+    >
+      <div className="container mx-auto px-6">
+        <div className="flex items-center justify-between h-20 font-serif tracking-widest">
+          <Link href="/" className="flex items-center gap-4 group text-3xl font-semibold leading-7">
+            <div className="relative">
+              <Leaf className="h-9 w-9 text-emca-yellow transition-all duration-500 group-hover:scale-110 group-hover:rotate-12" />
+            </div>
+            <div className="flex flex-col -space-y-1">
+              <span
+                className={cn(
+                  "text-2xl font-bold tracking-tight transition-colors duration-300",
+                  isScrolled ? "text-foreground" : "text-white",
+                )}
+              >
+                EMCA
+              </span>
+              <span
+                className={cn(
+                  "text-xs tracking-wider uppercase transition-colors duration-300",
+                  isScrolled ? "text-muted-foreground" : "text-emca-lime/90",
+                )}
+              >
+                Tanzania
+              </span>
+            </div>
+          </Link>
+
+          <div className="hidden lg:flex items-center gap-1">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={cn(
+                  "px-4 py-2 text-base rounded-lg transition-all duration-300",
+                  isScrolled
+                    ? "text-foreground/90 hover:text-primary hover:bg-primary/10"
+                    : "text-white/95 hover:text-emca-yellow hover:bg-white/10",
+                )}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+
+          <div className="hidden lg:flex items-center gap-3">
+            <ThemeToggle />
+            <Button
+              asChild
+              className="bg-gradient-to-r from-emca-yellow to-emca-lime hover:from-emca-lime hover:to-emca-yellow text-emca-darkest rounded-full px-6 h-11 text-base font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border-0"
+            >
+              <Link href="/donate">
+                <Heart className="mr-2 h-5 w-5" />
+                Donate
+              </Link>
+            </Button>
+          </div>
+
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className={cn(
+              "lg:hidden p-2 rounded-lg transition-all duration-300",
+              isScrolled ? "text-foreground hover:bg-muted" : "text-white hover:bg-white/10",
+            )}
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
+
+        {isMobileMenuOpen && (
+          <div
+            className="lg:hidden py-6 border-t border-border bg-background/95 backdrop-blur-xl"
+            style={{ animation: "fade-in 0.3s ease-out" }}
+          >
+            <div className="flex flex-col gap-2">
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="px-4 py-3 text-base text-foreground/90 hover:text-primary hover:bg-primary/10 rounded-lg transition-all duration-300"
+                >
+                  {item.label}
+                </Link>
+              ))}
+              <div className="px-4 py-2 flex items-center gap-3">
+                <span className="text-sm text-muted-foreground">Theme:</span>
+                <ThemeToggle />
+              </div>
+              <Button
+                asChild
+                className="mt-4 bg-gradient-to-r from-emca-yellow to-emca-lime hover:from-emca-lime hover:to-emca-yellow text-emca-darkest rounded-full h-12 text-base font-bold border-0"
+              >
+                <Link href="/donate" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Heart className="mr-2 h-5 w-5" />
+                  Donate
+                </Link>
+              </Button>
+            </div>
+          </div>
+        )}
+      </div>
+    </nav>
+  )
+}
