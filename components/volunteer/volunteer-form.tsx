@@ -4,8 +4,9 @@ import type React from "react"
 
 import { useState, useEffect } from "react"
 import { useSearchParams } from 'next/navigation'
+import Link from 'next/link'
 import { Button } from "@/components/ui/button"
-import { Send, Calendar } from 'lucide-react'
+import { Send, Calendar, LogIn } from 'lucide-react'
 
 const opportunities = [
   "Tree Planting & Reforestation",
@@ -234,6 +235,32 @@ export function VolunteerForm() {
                 </>
               )}
             </Button>
+
+            {/* Login Section */}
+            <div className="relative">
+              <div className="absolute inset-0 flex items-center">
+                <div className="w-full border-t border-border"></div>
+              </div>
+              <div className="relative flex justify-center text-sm">
+                <span className="px-4 bg-card text-muted-foreground">or</span>
+              </div>
+            </div>
+
+            <div className="text-center space-y-4">
+              <p className="text-base text-foreground">
+                Login if you're a member of our community
+              </p>
+              <Link href="/login">
+                <Button
+                  type="button"
+                  variant="outline"
+                  className="w-full border-2 border-emca-primary text-emca-primary hover:bg-emca-primary hover:text-white py-6 text-lg rounded-2xl transition-all duration-300 hover:scale-[1.02]"
+                >
+                  Login
+                  <LogIn className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+            </div>
           </form>
         </div>
       </div>
