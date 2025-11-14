@@ -14,6 +14,79 @@
       },
       "filename": "lib/actions/volunteer.ts",
       "exportedName": "submitVolunteerApplication"
+    },
+    "6050d0441fa0c463138fb0192aec91fecfded05058": {
+      "workers": {
+        "app/admin/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "loginWithEmail",
+          "filename": "lib/actions/auth.ts"
+        },
+        "app/admin/volunteers/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/volunteers/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "loginWithEmail",
+          "filename": "lib/actions/auth.ts"
+        },
+        "app/login/page": {
+          "moduleId": "[project]/.next-internal/server/app/login/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "loginWithEmail",
+          "filename": "lib/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/admin/page": "rsc",
+        "app/admin/volunteers/page": "rsc",
+        "app/login/page": "action-browser"
+      },
+      "filename": "lib/actions/auth.ts",
+      "exportedName": "loginWithEmail"
+    },
+    "0082d13d68ace0f04513f2a37b6948d5a9c07bc5aa": {
+      "workers": {
+        "app/admin/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "logout",
+          "filename": "lib/actions/auth.ts"
+        },
+        "app/admin/volunteers/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/volunteers/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "logout",
+          "filename": "lib/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/admin/page": "action-browser",
+        "app/admin/volunteers/page": "rsc"
+      },
+      "filename": "lib/actions/auth.ts",
+      "exportedName": "logout"
+    },
+    "00da218bb7a7f0f92a95b492e21a5b5a745fc084f2": {
+      "workers": {
+        "app/admin/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getCurrentUser",
+          "filename": "lib/actions/auth.ts"
+        },
+        "app/admin/volunteers/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/volunteers/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getCurrentUser",
+          "filename": "lib/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/admin/page": "rsc",
+        "app/admin/volunteers/page": "rsc"
+      },
+      "filename": "lib/actions/auth.ts",
+      "exportedName": "getCurrentUser"
     }
   },
   "edge": {},
