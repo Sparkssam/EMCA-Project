@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
-import { LogOut, Users, Mail, FileText, Handshake } from "lucide-react"
+import { LogOut, Users, Mail, FileText, Handshake, FolderKanban } from "lucide-react"
 import { logout } from "@/lib/actions/auth"
 import { toast } from "sonner"
 
@@ -57,6 +57,12 @@ export function AdminDashboard({ user }: AdminDashboardProps) {
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <DashboardCard
+            title="Projects"
+            icon={FolderKanban}
+            description="Manage key projects"
+            href="/admin/projects"
+          />
+          <DashboardCard
             title="Volunteers"
             icon={Users}
             description="View volunteer applications"
@@ -74,12 +80,6 @@ export function AdminDashboard({ user }: AdminDashboardProps) {
             description="View subscribers"
             href="/admin/newsletter"
           />
-          <DashboardCard
-            title="Blog Posts"
-            icon={FileText}
-            description="Manage blog content"
-            href="/admin/blog"
-          />
         </div>
 
         {/* Quick Actions */}
@@ -93,8 +93,15 @@ export function AdminDashboard({ user }: AdminDashboardProps) {
             </p>
             <div className="flex flex-wrap gap-3 pt-4">
               <Button
-                onClick={() => router.push("/admin/volunteers")}
+                onClick={() => router.push("/admin/projects")}
                 className="bg-emca-primary hover:bg-emca-medium text-white"
+              >
+                Manage Projects
+              </Button>
+              <Button
+                onClick={() => router.push("/admin/volunteers")}
+                variant="outline"
+                className="border-2"
               >
                 View Volunteers
               </Button>

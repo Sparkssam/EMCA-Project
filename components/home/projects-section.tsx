@@ -4,9 +4,26 @@ import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Sprout, TreePine, Trash2 } from "lucide-react"
+import { ArrowRight, Sprout, TreePine, Trash2, Leaf, Heart, Users, Globe, Flower } from "lucide-react"
+import { Project } from "@/lib/actions/projects"
 
-export function ProjectsSection() {
+// Icon mapping
+const iconMap = {
+  Sprout,
+  TreePine,
+  Trash2,
+  Leaf,
+  Heart,
+  Users,
+  Globe,
+  Flower,
+}
+
+interface ProjectsSectionProps {
+  projects: Project[]
+}
+
+export function ProjectsSection({ projects }: ProjectsSectionProps) {
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
 
@@ -27,42 +44,6 @@ export function ProjectsSection() {
     return () => observer.disconnect()
   }, [])
 
-  const projects = [
-    {
-      icon: Sprout,
-      title: "Binti Mazingira",
-      subtitle: "Daughters of the Environment",
-      description:
-        "A 6-month project promoting environmental sustainability through eco-friendly practices to improve menstrual hygiene management for school girls aged 10-14 in Muheza District, Tanga. Training 12 youth female tailors and establishing a textile industry for reusable sanitary pads.",
-      impact: "500+ Girls & 12 Tailors",
-      image: "/young-african-leaders--youth-empowerment-tanzania.jpg",
-      color: "from-emca-yellow to-emca-lime",
-      link: "/projects#binti-mazingira",
-    },
-    {
-      icon: TreePine,
-      title: "Tuelimishe Mazingira",
-      subtitle: "Let's Cultivate the Environment",
-      description:
-        "Empowering 200 youth aged 10-18 at Mazoezi Mlimani Primary School to become climate change advocates through training, workshops, and hands-on activities including waste management, tree planting, and site visits to conservation centers.",
-      impact: "200+ Youth Empowered",
-      image: "/tree-planting-tanzania-youth-reforestation.jpg",
-      color: "from-emca-primary to-emca-medium",
-      link: "/projects#tuelimishe-mazingira",
-    },
-    {
-      icon: Trash2,
-      title: "Cleanup Drives",
-      subtitle: "Cleaning Our Communities",
-      description:
-        "Regular beach and community cleanup campaigns across Tanzania. Mobilizing volunteers to remove waste and protect ecosystems. We've successfully removed over 10,000 tonnes of plastic waste, preventing harm to marine life and the environment.",
-      impact: "10,000+ Tonnes Removed",
-      image: "/beach-cleanup-volunteers-tanzania-coast.jpg",
-      color: "from-emca-medium to-emca-darkest",
-      link: "/projects#cleanup-drives",
-    },
-  ]
-
   return (
     <section ref={sectionRef} className="py-16 sm:py-20 md:py-24 bg-emca-darkest/5 relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -79,9 +60,11 @@ export function ProjectsSection() {
           </div>
 
           <div className="space-y-8 sm:space-y-10 md:space-y-12">
-            {projects.map((project, index) => (
+            {projects.map((project, index) => {
+              const IconComponent = iconMap[project.icon as keyof typeof iconMap] || Sprout
+              return (
               <div
-                key={index}
+                key={project.id}
                 className={`card-minimal overflow-hidden hover:shadow-2xl hover:border-emca-primary/40 transition-all duration-700 ${
                   isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
                 }`}
@@ -92,7 +75,7 @@ export function ProjectsSection() {
                     className={`relative h-64 sm:h-80 md:h-auto min-h-[320px] ${index % 2 === 1 ? "md:col-start-2" : ""}`}
                   >
                     <Image
-                      src={project.image || "/placeholder.svg"}
+                      src={project.image_url || "/placeholder.svg"}
                       alt={`${project.title} - EMCA Tanzania environmental project`}
                       fill
                       className="object-cover"
@@ -106,7 +89,7 @@ export function ProjectsSection() {
                     <div
                       className={`inline-flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r ${project.color} rounded-full w-fit mb-4 sm:mb-6`}
                     >
-                      <project.icon className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
+                      <IconComponent className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
                       <span className="text-white font-semibold text-sm sm:text-base">{project.impact}</span>
                     </div>
 
@@ -122,7 +105,7 @@ export function ProjectsSection() {
                       asChild
                       className="bg-gradient-to-r from-emca-primary to-emca-medium hover:from-emca-medium hover:to-emca-primary text-white rounded-full px-6 sm:px-8 h-11 sm:h-12 text-sm sm:text-base font-medium shadow-lg hover:shadow-xl transition-all duration-300 w-fit group border-0"
                     >
-                      <Link href={project.link}>
+                      <Link href={project.link || "#"}>
                         Learn More
                         <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-2 transition-transform duration-300" />
                       </Link>
@@ -130,7 +113,8 @@ export function ProjectsSection() {
                   </div>
                 </div>
               </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </div>

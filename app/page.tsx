@@ -8,14 +8,17 @@ import { ReviewsSection } from "@/components/home/reviews-section"
 import { NewsUpdates } from "@/components/home/news-updates"
 import { EventsSection } from "@/components/home/events-section"
 import { CallToAction } from "@/components/home/call-to-action"
+import { getProjects } from "@/lib/actions/projects"
 
-export default function HomePage() {
+export default async function HomePage() {
+  const projects = await getProjects()
+  
   return (
     <div className="flex flex-col">
       <HeroSection />
       <AboutSection />
       <PhilosophyPreview />
-      <ProjectsSection />
+      <ProjectsSection projects={projects} />
       <ImpactStats />
       <YoutubeStories />
       <ReviewsSection />
