@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
-import { LogOut, Users, Mail, FileText, Handshake, FolderKanban } from "lucide-react"
+import { LogOut, Users, Mail, FileText, Handshake, FolderKanban, Star } from "lucide-react"
 import { logout } from "@/lib/actions/auth"
 import { toast } from "sonner"
 
@@ -69,16 +69,16 @@ export function AdminDashboard({ user }: AdminDashboardProps) {
             href="/admin/volunteers"
           />
           <DashboardCard
+            title="Reviews"
+            icon={Star}
+            description="Manage testimonials"
+            href="/admin/reviews"
+          />
+          <DashboardCard
             title="Partnerships"
             icon={Handshake}
             description="Manage partnership inquiries"
             href="/admin/partnerships"
-          />
-          <DashboardCard
-            title="Newsletter"
-            icon={Mail}
-            description="View subscribers"
-            href="/admin/newsletter"
           />
         </div>
 
