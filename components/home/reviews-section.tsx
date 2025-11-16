@@ -6,6 +6,8 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { submitPublicReview } from "@/lib/actions/reviews"
+import { toast } from "sonner"
 
 const reviews = [
   {
@@ -65,23 +67,32 @@ export function ReviewsSection() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    try {
+      const result = await submitPublicReview(formData)
 
-    setSubmitted(true)
-    setIsSubmitting(false)
-
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setSubmitted(false)
-      setFormData({
-        name: "",
-        email: "",
-        location: "",
-        rating: 5,
-        review: "",
-      })
-    }, 3000)
+      if (result.success) {
+        setSubmitted(true)
+        toast.success("Review submitted successfully! It will appear after admin approval.")
+        
+        // Reset form after 3 seconds
+        setTimeout(() => {
+          setSubmitted(false)
+          setFormData({
+            name: "",
+            email: "",
+            location: "",
+            rating: 5,
+            review: "",
+          })
+        }, 3000)
+      } else {
+        toast.error(result.error || "Failed to submit review. Please try again.")
+      }
+    } catch (error) {
+      toast.error("An error occurred. Please try again.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const averageRating = 5.0
@@ -158,7 +169,9 @@ export function ReviewsSection() {
                     <Star className="h-8 w-8 fill-emca-primary text-emca-primary" />
                   </div>
                   <h4 className="text-xl font-pompiere text-foreground mb-2">Thank You!</h4>
-                  <p className="text-sm text-muted-foreground">Your review has been submitted successfully.</p>
+                  <p className="text-sm text-muted-foreground">
+                    Your review has been submitted and is pending admin approval. It will appear on the website once approved.
+                  </p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">

@@ -111,6 +111,45 @@ export async function createReview(formData: ReviewFormData) {
   }
 }
 
+export async function submitPublicReview(formData: {
+  name: string
+  email: string
+  location: string
+  rating: number
+  review: string
+}) {
+  try {
+    const supabase = await getSupabaseServerClient()
+
+    const { data, error } = await supabase
+      .from("reviews")
+      .insert([
+        {
+          name: formData.name,
+          role: formData.location, // Using location as role for public submissions
+          text: formData.review,
+          rating: formData.rating,
+          display_order: 999, // New reviews go to the end
+          is_active: false, // Needs admin approval
+        },
+      ])
+      .select()
+      .single()
+
+    if (error) {
+      console.error("Error submitting public review:", error)
+      return { success: false, error: error.message }
+    }
+
+    revalidatePath("/admin/reviews")
+
+    return { success: true, data }
+  } catch (error) {
+    console.error("Error in submitPublicReview:", error)
+    return { success: false, error: "Failed to submit review" }
+  }
+}
+
 export async function updateReview(id: string, formData: ReviewFormData) {
   try {
     const supabase = await getSupabaseServerClient()

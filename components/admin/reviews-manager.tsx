@@ -99,8 +99,16 @@ export function ReviewsManager({ reviews: initialReviews }: ReviewsManagerProps)
             Manage Reviews
           </h1>
           <p className="text-muted-foreground mt-2">
-            Add, edit, or remove customer testimonials and reviews
+            Add, edit, approve or remove customer testimonials and reviews
           </p>
+          <div className="flex gap-4 mt-4">
+            <div className="px-4 py-2 bg-yellow-100 text-yellow-800 rounded-lg text-sm font-medium">
+              {reviews.filter(r => !r.is_active).length} Pending Approval
+            </div>
+            <div className="px-4 py-2 bg-green-100 text-green-800 rounded-lg text-sm font-medium">
+              {reviews.filter(r => r.is_active).length} Active
+            </div>
+          </div>
         </div>
         <Button
           onClick={handleAddNew}
@@ -159,10 +167,10 @@ export function ReviewsManager({ reviews: initialReviews }: ReviewsManagerProps)
                     className={`px-2 py-1 rounded-full text-xs font-medium flex-shrink-0 ${
                       review.is_active
                         ? "bg-green-100 text-green-700"
-                        : "bg-gray-100 text-gray-600"
+                        : "bg-yellow-100 text-yellow-700"
                     }`}
                   >
-                    {review.is_active ? "Active" : "Inactive"}
+                    {review.is_active ? "Active" : "Pending"}
                   </span>
                 </div>
 
@@ -176,24 +184,28 @@ export function ReviewsManager({ reviews: initialReviews }: ReviewsManagerProps)
 
                 {/* Actions */}
                 <div className="flex items-center gap-2 pt-4 border-t">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={() => handleToggleStatus(review)}
-                    className="flex items-center gap-1 text-xs"
-                  >
-                    {review.is_active ? (
-                      <>
-                        <EyeOff className="h-3 w-3" />
-                        Hide
-                      </>
-                    ) : (
-                      <>
-                        <Eye className="h-3 w-3" />
-                        Show
-                      </>
-                    )}
-                  </Button>
+                  {!review.is_active && (
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => handleToggleStatus(review)}
+                      className="flex items-center gap-1 text-xs bg-green-50 text-green-700 border-green-300 hover:bg-green-100"
+                    >
+                      <Eye className="h-3 w-3" />
+                      Approve
+                    </Button>
+                  )}
+                  {review.is_active && (
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => handleToggleStatus(review)}
+                      className="flex items-center gap-1 text-xs"
+                    >
+                      <EyeOff className="h-3 w-3" />
+                      Hide
+                    </Button>
+                  )}
                   <Button
                     variant="outline"
                     size="sm"
