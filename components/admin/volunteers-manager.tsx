@@ -266,14 +266,14 @@ export function VolunteersManager({ volunteers: initialVolunteers, adminEmail }:
               <div className="flex items-start justify-between mb-4">
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-2">
-                    <h3 className="text-xl font-bold text-gray-900">{volunteer.name}</h3>
+                    <h3 className="text-xl font-bold text-foreground">{volunteer.name}</h3>
                     <span
                       className={`px-3 py-1 rounded-full text-xs font-medium ${
                         volunteer.is_approved
-                          ? "bg-green-100 text-green-700"
+                          ? "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300"
                           : volunteer.status === "pending"
-                          ? "bg-yellow-100 text-yellow-700"
-                          : "bg-red-100 text-red-700"
+                          ? "bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300"
+                          : "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300"
                       }`}
                     >
                       {volunteer.is_approved ? (
@@ -291,26 +291,26 @@ export function VolunteersManager({ volunteers: initialVolunteers, adminEmail }:
                   
                   <div className="grid md:grid-cols-2 gap-4 text-sm">
                     <div>
-                      <p className="text-gray-600">
+                      <p className="text-muted-foreground">
                         <span className="font-semibold">Email:</span> {volunteer.email}
                       </p>
-                      <p className="text-gray-600">
+                      <p className="text-muted-foreground">
                         <span className="font-semibold">Phone:</span> {volunteer.phone || "N/A"}
                       </p>
-                      <p className="text-gray-600">
+                      <p className="text-muted-foreground">
                         <span className="font-semibold">Location:</span> {volunteer.location}
                       </p>
                     </div>
                     <div>
-                      <p className="text-gray-600">
+                      <p className="text-muted-foreground">
                         <span className="font-semibold">Availability:</span> {volunteer.availability}
                       </p>
-                      <p className="text-gray-600">
+                      <p className="text-muted-foreground">
                         <span className="font-semibold">Applied:</span>{" "}
                         {new Date(volunteer.created_at).toLocaleDateString("en-US", { year: 'numeric', month: '2-digit', day: '2-digit' })}
                       </p>
                       {volunteer.approved_at && (
-                        <p className="text-gray-600 text-xs">
+                        <p className="text-muted-foreground text-xs">
                           Approved by {volunteer.approved_by} on {new Date(volunteer.approved_at).toLocaleDateString("en-US", { year: 'numeric', month: '2-digit', day: '2-digit' })}
                         </p>
                       )}
@@ -318,7 +318,7 @@ export function VolunteersManager({ volunteers: initialVolunteers, adminEmail }:
                   </div>
 
                   <div className="mt-3">
-                    <p className="text-sm font-semibold text-gray-700 mb-1">Interests:</p>
+                    <p className="text-sm font-semibold text-foreground mb-1">Interests:</p>
                     <div className="flex flex-wrap gap-2">
                       {volunteer.interests.map((interest, idx) => (
                         <span key={idx} className="px-2 py-1 bg-emca-primary/10 text-emca-primary rounded-full text-xs">
@@ -329,29 +329,29 @@ export function VolunteersManager({ volunteers: initialVolunteers, adminEmail }:
                   </div>
 
                   {volunteer.experience && (
-                    <div className="mt-3 p-3 bg-blue-50 rounded-lg border border-blue-200">
-                      <p className="text-xs font-semibold text-blue-900 mb-1">📋 Previous Experience:</p>
-                      <p className="text-sm text-blue-800 whitespace-pre-wrap">{volunteer.experience}</p>
+                    <div className="mt-3 p-3 bg-blue-50 dark:bg-blue-950/30 rounded-lg border border-blue-200 dark:border-blue-800">
+                      <p className="text-xs font-semibold text-blue-900 dark:text-blue-300 mb-1">📋 Previous Experience:</p>
+                      <p className="text-sm text-blue-800 dark:text-blue-200 whitespace-pre-wrap">{volunteer.experience}</p>
                     </div>
                   )}
 
                   {volunteer.message && (
-                    <div className="mt-3 p-3 bg-purple-50 rounded-lg border border-purple-200">
-                      <p className="text-xs font-semibold text-purple-900 mb-1">💬 Additional Message:</p>
-                      <p className="text-sm text-purple-800 whitespace-pre-wrap">{volunteer.message}</p>
+                    <div className="mt-3 p-3 bg-purple-50 dark:bg-purple-950/30 rounded-lg border border-purple-200 dark:border-purple-800">
+                      <p className="text-xs font-semibold text-purple-900 dark:text-purple-300 mb-1">💬 Additional Message:</p>
+                      <p className="text-sm text-purple-800 dark:text-purple-200 whitespace-pre-wrap">{volunteer.message}</p>
                     </div>
                   )}
 
                   {volunteer.notes && (
-                    <div className="mt-3 p-3 bg-gray-50 rounded-lg">
-                      <p className="text-xs font-semibold text-gray-700 mb-1">Admin Notes:</p>
-                      <p className="text-sm text-gray-600">{volunteer.notes}</p>
+                    <div className="mt-3 p-3 bg-muted rounded-lg">
+                      <p className="text-xs font-semibold text-foreground mb-1">Admin Notes:</p>
+                      <p className="text-sm text-muted-foreground">{volunteer.notes}</p>
                     </div>
                   )}
                 </div>
               </div>
 
-              <div className="flex flex-wrap gap-2 pt-4 border-t">
+              <div className="flex flex-wrap gap-2 pt-4 border-t border-border">
                 {volunteer.status === "pending" && !volunteer.is_approved && (
                   <>
                     <Button
