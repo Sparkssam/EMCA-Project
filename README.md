@@ -1,4 +1,4 @@
-# EMCA Project
+﻿# EMCA Project
 
 A modern Next.js web application focused on empowerment, community, and advocacy initiatives.
 
@@ -27,7 +27,7 @@ A modern Next.js web application focused on empowerment, community, and advocacy
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - pnpm (or npm/yarn)
 
 ### Installation
@@ -58,26 +58,26 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see the a
 ## Project Structure
 
 ```
-├── app/                  # Next.js app directory (pages and layouts)
-├── components/           # Reusable React components
-│   ├── ui/             # Base UI components (buttons, cards, etc.)
-│   ├── home/           # Homepage components
-│   ├── donate/         # Donation page components
-│   ├── empower/        # Empowerment page components
-│   ├── impact/         # Impact page components
-│   ├── partner/        # Partnership page components
-│   ├── philosophy/     # Philosophy page components
-│   ├── stories/        # Stories/blog components
-│   ├── gallery/        # Gallery components
-│   └── volunteer/      # Volunteer page components
-├── hooks/               # Custom React hooks
-├── lib/                 # Utility functions and helpers
-│   ├── actions/        # Server actions
-│   ├── queries/        # Data fetching queries
-│   └── supabase/       # Supabase client setup
-├── public/             # Static assets
-├── scripts/            # Database setup and seed scripts
-└── styles/             # Global styles
+app/                  # Next.js app directory (pages and layouts)
+components/           # Reusable React components
+  ui/             # Base UI components (buttons, cards, etc.)
+  home/           # Homepage components
+  donate/         # Donation page components
+  empower/        # Empowerment page components
+  impact/         # Impact page components
+  partner/        # Partnership page components
+  philosophy/     # Philosophy page components
+  stories/        # Stories/blog components
+  gallery/        # Gallery components
+  volunteer/      # Volunteer page components
+hooks/               # Custom React hooks
+lib/                 # Utility functions and helpers
+  actions/        # Server actions
+  queries/        # Data fetching queries
+  supabase/       # Supabase client setup
+public/             # Static assets
+scripts/            # Database setup and seed scripts
+styles/             # Global styles
 
 ```
 
