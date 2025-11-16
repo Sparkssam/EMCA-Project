@@ -4,10 +4,15 @@ import { getAllReviews } from "@/lib/actions/reviews"
 import { ReviewsManager } from "@/components/admin/reviews-manager"
 
 export default async function AdminReviewsPage() {
-  const user = await getCurrentUser()
+  const { success, user } = await getCurrentUser()
 
-  if (!user) {
+  if (!success || !user) {
     redirect("/login")
+  }
+
+  // Only allow admin role to access admin pages
+  if (user.role !== "admin") {
+    redirect("/") // Redirect volunteers to homepage
   }
 
   const reviews = await getAllReviews()

@@ -18,7 +18,7 @@ export async function submitVolunteerApplication(data: VolunteerData) {
   try {
     const supabase = await getSupabaseServerClient()
 
-    // Prepare data for database (map interests to skills for now)
+    // Prepare data for database
     const dbData = {
       name: data.name,
       email: data.email,
@@ -27,6 +27,8 @@ export async function submitVolunteerApplication(data: VolunteerData) {
       interests: data.interests,
       skills: data.interests, // Using interests as skills
       availability: data.availability,
+      experience: data.experience || null, // Save experience field
+      message: data.message || null, // Save message field
       status: 'pending'
     }
 

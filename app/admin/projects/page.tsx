@@ -4,10 +4,15 @@ import { getAllProjects } from "@/lib/actions/projects"
 import { ProjectsManager } from "@/components/admin/projects-manager"
 
 export default async function AdminProjectsPage() {
-  const user = await getCurrentUser()
+  const { success, user } = await getCurrentUser()
 
-  if (!user) {
+  if (!success || !user) {
     redirect("/login")
+  }
+
+  // Only allow admin role to access admin pages
+  if (user.role !== "admin") {
+    redirect("/") // Redirect volunteers to homepage
   }
 
   const projects = await getAllProjects()
