@@ -7,6 +7,8 @@ import Link from "next/link"
 import { Leaf, Mail, MapPin, Phone, Facebook, Twitter, Instagram, Linkedin, Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { subscribeToNewsletter } from "@/lib/actions/newsletter"
+import { toast } from "sonner"
 
 export function Footer() {
   const [email, setEmail] = useState("")
@@ -18,14 +20,24 @@ export function Footer() {
     setIsSubmitting(true)
     setMessage("")
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+    try {
+      const result = await subscribeToNewsletter(email)
+      
+      if (result.success) {
+        setMessage(result.message)
+        setEmail("")
+        toast.success(result.message)
+      } else {
+        setMessage(result.message)
+        toast.error(result.message)
+      }
+    } catch (error) {
+      setMessage("Something went wrong. Please try again.")
+      toast.error("Failed to subscribe. Please try again.")
+    }
 
-    setMessage("Thank you for subscribing!")
-    setEmail("")
     setIsSubmitting(false)
-
-    setTimeout(() => setMessage(""), 3000)
+    setTimeout(() => setMessage(""), 5000)
   }
 
   return (

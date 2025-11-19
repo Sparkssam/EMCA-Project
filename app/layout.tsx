@@ -7,6 +7,7 @@ import { Footer } from "@/components/footer"
 import { WhatsAppFloat } from "@/components/whatsapp-float"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { Toaster } from "sonner"
+import { getCurrentUser } from "@/lib/actions/auth"
 
 import { Poppins, Poppins as V0_Font_Poppins } from 'next/font/google'
 
@@ -86,11 +87,13 @@ export const viewport: Viewport = {
   ],
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const { success, user } = await getCurrentUser()
+  
   return (
     <html lang="en" className={poppins.variable} suppressHydrationWarning>
       <head>
@@ -105,7 +108,7 @@ export default function RootLayout({
         </a>
         <Toaster position="top-right" richColors />
         <ScrollToTop />
-        <Navigation />
+        <Navigation user={success ? user : null} />
         <main id="main-content" className="min-h-screen">
           {children}
         </main>

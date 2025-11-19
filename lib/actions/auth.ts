@@ -27,12 +27,16 @@ export async function loginWithEmail(email: string, password: string) {
       }
     }
 
+    // Get role from user_metadata
+    const userRole = data.user.user_metadata?.role || "user"
+
     return {
       success: true,
       message: "Login successful",
       user: {
         id: data.user.id,
         email: data.user.email,
+        role: userRole, // Include role for login redirect logic
       },
     }
   } catch (error) {

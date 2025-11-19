@@ -1,9 +1,54 @@
 {
   "node": {
+    "0082d13d68ace0f04513f2a37b6948d5a9c07bc5aa": {
+      "workers": {
+        "app/volunteer/page": {
+          "moduleId": "[project]/.next-internal/server/app/volunteer/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/volunteer.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "logout",
+          "filename": "lib/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/volunteer/page": "action-browser"
+      },
+      "exportedName": "logout",
+      "filename": "lib/actions/auth.ts"
+    },
+    "00da218bb7a7f0f92a95b492e21a5b5a745fc084f2": {
+      "workers": {
+        "app/volunteer/page": {
+          "moduleId": "[project]/.next-internal/server/app/volunteer/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/volunteer.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getCurrentUser",
+          "filename": "lib/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/volunteer/page": "rsc"
+      },
+      "exportedName": "getCurrentUser",
+      "filename": "lib/actions/auth.ts"
+    },
+    "6050d0441fa0c463138fb0192aec91fecfded05058": {
+      "workers": {
+        "app/volunteer/page": {
+          "moduleId": "[project]/.next-internal/server/app/volunteer/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/volunteer.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "loginWithEmail",
+          "filename": "lib/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/volunteer/page": "rsc"
+      },
+      "exportedName": "loginWithEmail",
+      "filename": "lib/actions/auth.ts"
+    },
     "40247d8d20f52f3253353278ef7099b92e8dc381d5": {
       "workers": {
         "app/volunteer/page": {
-          "moduleId": "[project]/.next-internal/server/app/volunteer/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/volunteer.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "moduleId": "[project]/.next-internal/server/app/volunteer/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/volunteer.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
           "exportedName": "submitVolunteerApplication",
           "filename": "lib/actions/volunteer.ts"

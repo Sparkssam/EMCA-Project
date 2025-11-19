@@ -6,10 +6,10 @@ export default function LoginPage() {
       <div className="max-w-md w-full space-y-8">
         <div className="text-center">
           <h2 className="text-4xl md:text-5xl font-pompiere text-foreground mb-2">
-            Admin Login
+            EMCA Login
           </h2>
           <p className="text-muted-foreground">
-            Sign in to access the admin dashboard
+            Sign in to your account
           </p>
         </div>
         <LoginForm />

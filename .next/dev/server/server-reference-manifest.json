@@ -1,422 +1,64 @@
 {
   "node": {
-    "0092031706c7ea110d49f6a4db5bfe7b6f99bae49a": {
-      "workers": {
-        "app/page": {
-          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/projects.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/reviews.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "getProjects",
-          "filename": "lib/actions/projects.ts"
-        }
-      },
-      "layer": {
-        "app/page": "rsc"
-      },
-      "filename": "lib/actions/projects.ts",
-      "exportedName": "getProjects"
-    },
-    "00c5c743782bd3082151e18a2703248b4c8370471d": {
-      "workers": {
-        "app/page": {
-          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/projects.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/reviews.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "getAllProjects",
-          "filename": "lib/actions/projects.ts"
-        }
-      },
-      "layer": {
-        "app/page": "rsc"
-      },
-      "filename": "lib/actions/projects.ts",
-      "exportedName": "getAllProjects"
-    },
-    "4009f882557c7f9cfcd879db4a694221735b61bc72": {
-      "workers": {
-        "app/page": {
-          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/projects.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/reviews.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "uploadProjectImage",
-          "filename": "lib/actions/projects.ts"
-        }
-      },
-      "layer": {
-        "app/page": "rsc"
-      },
-      "filename": "lib/actions/projects.ts",
-      "exportedName": "uploadProjectImage"
-    },
-    "405bf3b782546957c6651c2e392ba90b7981aa74f3": {
-      "workers": {
-        "app/page": {
-          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/projects.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/reviews.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "createProject",
-          "filename": "lib/actions/projects.ts"
-        }
-      },
-      "layer": {
-        "app/page": "rsc"
-      },
-      "filename": "lib/actions/projects.ts",
-      "exportedName": "createProject"
-    },
-    "40b4bce84b43265e64cc2f2a82c8173933c3ca0ad6": {
-      "workers": {
-        "app/page": {
-          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/projects.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/reviews.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "deleteProject",
-          "filename": "lib/actions/projects.ts"
-        }
-      },
-      "layer": {
-        "app/page": "rsc"
-      },
-      "filename": "lib/actions/projects.ts",
-      "exportedName": "deleteProject"
-    },
-    "40fd9fda6e9ebcd8af8fe93830fbe3dae6d3d4d6fd": {
-      "workers": {
-        "app/page": {
-          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/projects.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/reviews.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "getProjectById",
-          "filename": "lib/actions/projects.ts"
-        }
-      },
-      "layer": {
-        "app/page": "rsc"
-      },
-      "filename": "lib/actions/projects.ts",
-      "exportedName": "getProjectById"
-    },
-    "6039f511c7ed0b5aaa074bd0959e6ffa488f773033": {
-      "workers": {
-        "app/page": {
-          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/projects.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/reviews.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "updateProject",
-          "filename": "lib/actions/projects.ts"
-        }
-      },
-      "layer": {
-        "app/page": "rsc"
-      },
-      "filename": "lib/actions/projects.ts",
-      "exportedName": "updateProject"
-    },
-    "6092540784da8e7d799bd5e3d2cc2e2bc99bd9756e": {
-      "workers": {
-        "app/page": {
-          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/projects.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/reviews.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "toggleProjectStatus",
-          "filename": "lib/actions/projects.ts"
-        }
-      },
-      "layer": {
-        "app/page": "rsc"
-      },
-      "filename": "lib/actions/projects.ts",
-      "exportedName": "toggleProjectStatus"
-    },
-    "0046f5836ad198a730bd602089e39727ea67f4929f": {
-      "workers": {
-        "app/page": {
-          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/projects.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/reviews.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "getAllReviews",
-          "filename": "lib/actions/reviews.ts"
-        }
-      },
-      "layer": {
-        "app/page": "rsc"
-      },
-      "filename": "lib/actions/reviews.ts",
-      "exportedName": "getAllReviews"
-    },
-    "008143ebba0b2d97761e68f24b3c5c3b230a3c55c6": {
-      "workers": {
-        "app/page": {
-          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/projects.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/reviews.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "getReviews",
-          "filename": "lib/actions/reviews.ts"
-        }
-      },
-      "layer": {
-        "app/page": "rsc"
-      },
-      "filename": "lib/actions/reviews.ts",
-      "exportedName": "getReviews"
-    },
-    "4027727fdf70259acdd0a3f1319fea617084282700": {
-      "workers": {
-        "app/page": {
-          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/projects.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/reviews.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "createReview",
-          "filename": "lib/actions/reviews.ts"
-        }
-      },
-      "layer": {
-        "app/page": "rsc"
-      },
-      "filename": "lib/actions/reviews.ts",
-      "exportedName": "createReview"
-    },
-    "402d8a51c7647ad5c090191af5479bf22e7ae1a937": {
-      "workers": {
-        "app/page": {
-          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/projects.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/reviews.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "getReviewById",
-          "filename": "lib/actions/reviews.ts"
-        }
-      },
-      "layer": {
-        "app/page": "rsc"
-      },
-      "filename": "lib/actions/reviews.ts",
-      "exportedName": "getReviewById"
-    },
-    "407218afd2606db07505c23434fc032ab6e99f08fb": {
-      "workers": {
-        "app/page": {
-          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/projects.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/reviews.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "deleteReview",
-          "filename": "lib/actions/reviews.ts"
-        }
-      },
-      "layer": {
-        "app/page": "rsc"
-      },
-      "filename": "lib/actions/reviews.ts",
-      "exportedName": "deleteReview"
-    },
-    "40c052d7887f8c0b8cf8263477991f61644982c390": {
-      "workers": {
-        "app/page": {
-          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/projects.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/reviews.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "submitPublicReview",
-          "filename": "lib/actions/reviews.ts"
-        }
-      },
-      "layer": {
-        "app/page": "action-browser"
-      },
-      "filename": "lib/actions/reviews.ts",
-      "exportedName": "submitPublicReview"
-    },
-    "40fb2fcf6e9fe63ed80b03c95c089b98052f0ef9b5": {
-      "workers": {
-        "app/page": {
-          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/projects.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/reviews.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "uploadReviewImage",
-          "filename": "lib/actions/reviews.ts"
-        }
-      },
-      "layer": {
-        "app/page": "rsc"
-      },
-      "filename": "lib/actions/reviews.ts",
-      "exportedName": "uploadReviewImage"
-    },
-    "60c47d43d60af75dc54acdd63085c909d43d545ff0": {
-      "workers": {
-        "app/page": {
-          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/projects.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/reviews.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "toggleReviewStatus",
-          "filename": "lib/actions/reviews.ts"
-        }
-      },
-      "layer": {
-        "app/page": "rsc"
-      },
-      "filename": "lib/actions/reviews.ts",
-      "exportedName": "toggleReviewStatus"
-    },
-    "60d8a3f05177515d28cc6d7192056896e83b8bdc2d": {
-      "workers": {
-        "app/page": {
-          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/projects.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/reviews.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "updateReview",
-          "filename": "lib/actions/reviews.ts"
-        }
-      },
-      "layer": {
-        "app/page": "rsc"
-      },
-      "filename": "lib/actions/reviews.ts",
-      "exportedName": "updateReview"
-    },
-    "40247d8d20f52f3253353278ef7099b92e8dc381d5": {
-      "workers": {
-        "app/volunteer/page": {
-          "moduleId": "[project]/.next-internal/server/app/volunteer/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/volunteer.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "submitVolunteerApplication",
-          "filename": "lib/actions/volunteer.ts"
-        }
-      },
-      "layer": {
-        "app/volunteer/page": "action-browser"
-      },
-      "filename": "lib/actions/volunteer.ts",
-      "exportedName": "submitVolunteerApplication"
-    },
-    "6050d0441fa0c463138fb0192aec91fecfded05058": {
-      "workers": {
-        "app/admin/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "loginWithEmail",
-          "filename": "lib/actions/auth.ts"
-        },
-        "app/admin/volunteers/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/volunteers/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/volunteer-management.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "loginWithEmail",
-          "filename": "lib/actions/auth.ts"
-        },
-        "app/login/page": {
-          "moduleId": "[project]/.next-internal/server/app/login/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "loginWithEmail",
-          "filename": "lib/actions/auth.ts"
-        }
-      },
-      "layer": {
-        "app/admin/page": "rsc",
-        "app/admin/volunteers/page": "rsc",
-        "app/login/page": "action-browser"
-      },
-      "filename": "lib/actions/auth.ts",
-      "exportedName": "loginWithEmail"
-    },
     "0082d13d68ace0f04513f2a37b6948d5a9c07bc5aa": {
       "workers": {
-        "app/admin/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "logout",
-          "filename": "lib/actions/auth.ts"
-        },
-        "app/admin/volunteers/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/volunteers/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/volunteer-management.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+        "app/gallery/page": {
+          "moduleId": "[project]/.next-internal/server/app/gallery/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/newsletter.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
           "exportedName": "logout",
           "filename": "lib/actions/auth.ts"
         }
       },
       "layer": {
-        "app/admin/page": "action-browser",
-        "app/admin/volunteers/page": "rsc"
+        "app/gallery/page": "action-browser"
       },
       "filename": "lib/actions/auth.ts",
       "exportedName": "logout"
     },
     "00da218bb7a7f0f92a95b492e21a5b5a745fc084f2": {
       "workers": {
-        "app/admin/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "getCurrentUser",
-          "filename": "lib/actions/auth.ts"
-        },
-        "app/admin/volunteers/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/volunteers/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/volunteer-management.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+        "app/gallery/page": {
+          "moduleId": "[project]/.next-internal/server/app/gallery/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/newsletter.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
           "exportedName": "getCurrentUser",
           "filename": "lib/actions/auth.ts"
         }
       },
       "layer": {
-        "app/admin/page": "rsc",
-        "app/admin/volunteers/page": "rsc"
+        "app/gallery/page": "rsc"
       },
       "filename": "lib/actions/auth.ts",
       "exportedName": "getCurrentUser"
     },
-    "7058caa9bbe285de48d9d5d65dc6f378a76c44f46c": {
+    "6050d0441fa0c463138fb0192aec91fecfded05058": {
       "workers": {
-        "app/admin/volunteers/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/volunteers/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/volunteer-management.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+        "app/gallery/page": {
+          "moduleId": "[project]/.next-internal/server/app/gallery/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/newsletter.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
-          "exportedName": "approveVolunteerAndCreateAccount",
-          "filename": "lib/actions/volunteer-management.ts"
+          "exportedName": "loginWithEmail",
+          "filename": "lib/actions/auth.ts"
         }
       },
       "layer": {
-        "app/admin/volunteers/page": "action-browser"
+        "app/gallery/page": "rsc"
       },
-      "filename": "lib/actions/volunteer-management.ts",
-      "exportedName": "approveVolunteerAndCreateAccount"
+      "filename": "lib/actions/auth.ts",
+      "exportedName": "loginWithEmail"
     },
-    "6050ed304a2b0b4af09c7053e79aa9c14390a891f0": {
+    "400876340346265b6252b350c584a7059dc4481623": {
       "workers": {
-        "app/admin/volunteers/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/volunteers/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/volunteer-management.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+        "app/gallery/page": {
+          "moduleId": "[project]/.next-internal/server/app/gallery/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/newsletter.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
-          "exportedName": "updateVolunteerPassword",
-          "filename": "lib/actions/volunteer-management.ts"
+          "exportedName": "subscribeToNewsletter",
+          "filename": "lib/actions/newsletter.ts"
         }
       },
       "layer": {
-        "app/admin/volunteers/page": "action-browser"
+        "app/gallery/page": "action-browser"
       },
-      "filename": "lib/actions/volunteer-management.ts",
-      "exportedName": "updateVolunteerPassword"
-    },
-    "70168b4aa66cce5f1168518c7e3d3d6a53719134ee": {
-      "workers": {
-        "app/admin/volunteers/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/volunteers/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/volunteer-management.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "rejectVolunteer",
-          "filename": "lib/actions/volunteer-management.ts"
-        }
-      },
-      "layer": {
-        "app/admin/volunteers/page": "action-browser"
-      },
-      "filename": "lib/actions/volunteer-management.ts",
-      "exportedName": "rejectVolunteer"
-    },
-    "4034ca50a04dc592e8da724dc190d0126acf38890c": {
-      "workers": {
-        "app/admin/volunteers/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/volunteers/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/volunteer-management.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "deleteVolunteerAccount",
-          "filename": "lib/actions/volunteer-management.ts"
-        }
-      },
-      "layer": {
-        "app/admin/volunteers/page": "action-browser"
-      },
-      "filename": "lib/actions/volunteer-management.ts",
-      "exportedName": "deleteVolunteerAccount"
-    },
-    "6019be7f468b2e4133b3dd7324970d9812e2a00ebd": {
-      "workers": {
-        "app/admin/volunteers/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/volunteers/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/volunteer-management.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "addAdminNotes",
-          "filename": "lib/actions/volunteer-management.ts"
-        }
-      },
-      "layer": {
-        "app/admin/volunteers/page": "action-browser"
-      },
-      "filename": "lib/actions/volunteer-management.ts",
-      "exportedName": "addAdminNotes"
+      "filename": "lib/actions/newsletter.ts",
+      "exportedName": "subscribeToNewsletter"
     }
   },
   "edge": {},
