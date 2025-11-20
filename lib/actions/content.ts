@@ -378,3 +378,90 @@ export async function deleteSuccessStory(id: number) {
     return { success: false, error: "Failed to delete success story" }
   }
 }
+
+// ============================================
+// NEWS UPDATES ACTIONS
+// ============================================
+
+export interface NewsUpdate {
+  id: number
+  title: string
+  content: string
+  excerpt?: string
+  image?: string
+  author?: string
+  published_date: string
+  category?: string
+  active: boolean
+}
+
+export async function getAllNewsUpdates() {
+  try {
+    const supabase = await getSupabaseServerClient()
+    const { data, error } = await supabase
+      .from("news_updates")
+      .select("*")
+      .eq("active", true)
+      .order("published_date", { ascending: false })
+
+    if (error) throw error
+    return data || []
+  } catch (error) {
+    console.error("[Content] Error fetching news updates:", error)
+    return []
+  }
+}
+
+export async function createNewsUpdate(data: Omit<NewsUpdate, "id" | "published_date">, userEmail: string) {
+  try {
+    const supabase = await getSupabaseServerClient()
+    const { error } = await supabase
+      .from("news_updates")
+      .insert({ 
+        ...data, 
+        created_by: userEmail,
+        published_date: new Date().toISOString()
+      })
+
+    if (error) throw error
+
+    revalidatePath("/")
+    return { success: true }
+  } catch (error) {
+    console.error("[Content] Error creating news update:", error)
+    return { success: false, error: "Failed to create news update" }
+  }
+}
+
+export async function updateNewsUpdate(id: number, data: Partial<NewsUpdate>, userEmail: string) {
+  try {
+    const supabase = await getSupabaseServerClient()
+    const { error } = await supabase
+      .from("news_updates")
+      .update({ ...data, updated_by: userEmail, updated_at: new Date().toISOString() })
+      .eq("id", id)
+
+    if (error) throw error
+
+    revalidatePath("/")
+    return { success: true }
+  } catch (error) {
+    console.error("[Content] Error updating news update:", error)
+    return { success: false, error: "Failed to update news update" }
+  }
+}
+
+export async function deleteNewsUpdate(id: number) {
+  try {
+    const supabase = await getSupabaseServerClient()
+    const { error } = await supabase.from("news_updates").delete().eq("id", id)
+
+    if (error) throw error
+
+    revalidatePath("/")
+    return { success: true }
+  } catch (error) {
+    console.error("[Content] Error deleting news update:", error)
+    return { success: false, error: "Failed to delete news update" }
+  }
+}

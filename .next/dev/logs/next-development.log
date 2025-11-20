@@ -1,1430 +1,6 @@
-[00:00:02.400] Server  LOG      ✓ Ready in 1609ms
-[00:00:05.497] Server  LOG      ○ Compiling / ...
-[00:00:10.467] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:21.330] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
-[00:00:43.881] Server  LOG     [Auth] User email: "samwelmsuya10@gmail.com"
-[00:00:43.885] Server  LOG     [Auth] User metadata: {}
-[00:00:43.888] Server  LOG     [Auth] User role: "admin"
-[00:00:46.436] Server  LOG     [Auth] User email: "samwelmsuya10@gmail.com"
-[00:00:46.439] Server  LOG     [Auth] User metadata: {}
-[00:00:46.441] Server  LOG     [Auth] User role: "admin"
-[00:00:59.736] Server  LOG     [Auth] User email: "samwelmsuya10@gmail.com"
-[00:00:59.739] Server  LOG     [Auth] User metadata: {}
-[00:00:59.740] Server  LOG     [Auth] User role: "admin"
-[00:01:02.308] Server  LOG     [Auth] User email: "samwelmsuya10@gmail.com"
-[00:01:02.311] Server  LOG     [Auth] User metadata: {}
-[00:01:02.322] Server  LOG     [Auth] User role: "admin"
-[00:01:02.832] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:27.287] Server  LOG     [Auth] User email: "samwelmsuya10@gmail.com"
-[00:01:27.289] Server  LOG     [Auth] User metadata: {}
-[00:01:27.290] Server  LOG     [Auth] User role: "admin"
-[00:01:29.131] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:29.464] Server  LOG     [Auth] User email: "samwelmsuya10@gmail.com"
-[00:01:29.465] Server  LOG     [Auth] User metadata: {}
-[00:01:29.465] Server  LOG     [Auth] User role: "admin"
-[00:02:24.172] Server  LOG     [Auth] User email: "samwelmsuya10@gmail.com"
-[00:02:24.173] Server  LOG     [Auth] User metadata: {}
-[00:02:24.173] Server  LOG     [Auth] User role: "admin"
-[00:02:24.648] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:04:42.057] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:42.476] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:43.525] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:43.639] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:45.060] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:45.165] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:45.243] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:45.297] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:45.349] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:45.415] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:45.477] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:45.542] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:45.604] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:45.662] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:45.717] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:45.788] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:45.859] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:45.926] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:45.988] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:46.061] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:46.120] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:46.190] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:46.246] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:46.296] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:46.354] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:46.409] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:46.409] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:46.409] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:46.409] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:46.409] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:46.409] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:46.409] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:46.409] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:46.409] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:46.409] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:46.409] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:46.409] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:46.409] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:46.409] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:46.409] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:46.409] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:46.409] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:46.409] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:46.409] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:46.409] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:46.464] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:46.527] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:46.589] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:46.649] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:46.708] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:46.769] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:46.830] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:46.895] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:46.961] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:47.019] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:47.074] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:47.141] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:47.221] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:47.274] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:47.315] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:47.357] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:47.397] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:47.397] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:47.397] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:47.397] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:47.397] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:47.397] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:47.397] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:47.397] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:47.397] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:47.397] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:47.397] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:47.397] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:47.397] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:47.397] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:47.418] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:47.487] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:47.553] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:47.723] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:47.829] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:47.925] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:47.992] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:48.060] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:48.113] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:48.113] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:48.113] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:48.113] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:48.113] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:48.113] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:48.113] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:48.113] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:48.113] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:48.143] Server  ERROR    ⨯ ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:48.543] Browser ERROR   uncaughtError: Error: ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:04:49.497] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:04:49.497] Browser ERROR   ./app/admin/content/news/page.tsx:3:1
-Module not found: Can't resolve '@/components/admin/admin-news-manager'
-  1 | import { redirect } from "next/navigation"
-  2 | import { getSupabaseServerClient } from "@/lib/supabase/server"
-> 3 | import AdminNewsManager from "@/components/admin/admin-news-manager"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | export default async function AdminNewsPage() {
-  6 |   const supabase = await getSupabaseServerClient()
-
-Import map: aliased to relative './components/admin/admin-news-manager' inside of [project]/
-
-https://nextjs.org/docs/messages/module-not-found
-[00:05:23.547] Server  LOG      ✓ Compiled in 488ms
-[00:05:25.757] Server  LOG     [Auth] User email: "samwelmsuya10@gmail.com"
-[00:05:25.765] Server  LOG     [Auth] User metadata: {}
-[00:05:25.777] Server  LOG     [Auth] User role: "admin"
-[00:05:27.560] Server  ERROR    ⨯ Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
-[00:05:28.113] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:05:29.496] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
+[00:00:02.287] Server  LOG      ✓ Ready in 1813ms
+[00:00:06.054] Server  LOG      ○ Compiling /admin/content/news ...
+[00:00:10.286] Server  ERROR    ⨯ ./components/admin/admin-news-manager.tsx:31:1
 Export createNewsUpdate doesn't exist in target module
   29 | import { Plus, Edit, Trash2, Upload, X } from "lucide-react"
   30 | import { useToast } from "@/hooks/use-toast"
@@ -1452,7 +28,10 @@ Import trace:
   Server Component:
     ./components/admin/admin-news-manager.tsx
     ./app/admin/content/news/page.tsx
-[00:05:29.496] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
+
+
+
+./components/admin/admin-news-manager.tsx:31:1
 Export createNewsUpdate doesn't exist in target module
   29 | import { Plus, Edit, Trash2, Upload, X } from "lucide-react"
   30 | import { useToast } from "@/hooks/use-toast"
@@ -1480,7 +59,10 @@ Import trace:
   Server Component:
     ./components/admin/admin-news-manager.tsx
     ./app/admin/content/news/page.tsx
-[00:05:29.496] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
+
+
+
+./components/admin/admin-news-manager.tsx:31:1
 Export deleteNewsUpdate doesn't exist in target module
   29 | import { Plus, Edit, Trash2, Upload, X } from "lucide-react"
   30 | import { useToast } from "@/hooks/use-toast"
@@ -1508,7 +90,10 @@ Import trace:
   Server Component:
     ./components/admin/admin-news-manager.tsx
     ./app/admin/content/news/page.tsx
-[00:05:29.496] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
+
+
+
+./components/admin/admin-news-manager.tsx:31:1
 Export deleteNewsUpdate doesn't exist in target module
   29 | import { Plus, Edit, Trash2, Upload, X } from "lucide-react"
   30 | import { useToast } from "@/hooks/use-toast"
@@ -1536,7 +121,10 @@ Import trace:
   Server Component:
     ./components/admin/admin-news-manager.tsx
     ./app/admin/content/news/page.tsx
-[00:05:29.496] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
+
+
+
+./components/admin/admin-news-manager.tsx:31:1
 Export getAllNewsUpdates doesn't exist in target module
   29 | import { Plus, Edit, Trash2, Upload, X } from "lucide-react"
   30 | import { useToast } from "@/hooks/use-toast"
@@ -1564,7 +152,10 @@ Import trace:
   Server Component:
     ./components/admin/admin-news-manager.tsx
     ./app/admin/content/news/page.tsx
-[00:05:29.496] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
+
+
+
+./components/admin/admin-news-manager.tsx:31:1
 Export getAllNewsUpdates doesn't exist in target module
   29 | import { Plus, Edit, Trash2, Upload, X } from "lucide-react"
   30 | import { useToast } from "@/hooks/use-toast"
@@ -1592,7 +183,10 @@ Import trace:
   Server Component:
     ./components/admin/admin-news-manager.tsx
     ./app/admin/content/news/page.tsx
-[00:05:29.496] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
+
+
+
+./components/admin/admin-news-manager.tsx:31:1
 Export updateNewsUpdate doesn't exist in target module
   29 | import { Plus, Edit, Trash2, Upload, X } from "lucide-react"
   30 | import { useToast } from "@/hooks/use-toast"
@@ -1620,7 +214,10 @@ Import trace:
   Server Component:
     ./components/admin/admin-news-manager.tsx
     ./app/admin/content/news/page.tsx
-[00:05:29.496] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
+
+
+
+./components/admin/admin-news-manager.tsx:31:1
 Export updateNewsUpdate doesn't exist in target module
   29 | import { Plus, Edit, Trash2, Upload, X } from "lucide-react"
   30 | import { useToast } from "@/hooks/use-toast"
@@ -1648,7 +245,9 @@ Import trace:
   Server Component:
     ./components/admin/admin-news-manager.tsx
     ./app/admin/content/news/page.tsx
-[00:05:29.496] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
+
+
+[00:00:12.657] Browser ERROR   uncaughtError: Error: ./components/admin/admin-news-manager.tsx:31:1
 Export createNewsUpdate doesn't exist in target module
   29 | import { Plus, Edit, Trash2, Upload, X } from "lucide-react"
   30 | import { useToast } from "@/hooks/use-toast"
@@ -1676,206 +275,9 @@ Import trace:
   Server Component:
     ./components/admin/admin-news-manager.tsx
     ./app/admin/content/news/page.tsx
-[00:05:29.496] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
-Export createNewsUpdate doesn't exist in target module
-  29 | import { Plus, Edit, Trash2, Upload, X } from "lucide-react"
-  30 | import { useToast } from "@/hooks/use-toast"
-> 31 | import { 
-     | ^^^^^^^^^
-> 32 |   getAllNewsUpdates, 
-     | ^^^^^^^^^^^^^^^^^^^^^
-> 33 |   createNewsUpdate, 
-     | ^^^^^^^^^^^^^^^^^^^^^
-> 34 |   updateNewsUpdate, 
-     | ^^^^^^^^^^^^^^^^^^^^^
-> 35 |   deleteNewsUpdate 
-     | ^^^^^^^^^^^^^^^^^^^^^
-> 36 | } from "@/lib/actions/content"
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  37 | import { uploadEventImage } from "@/lib/actions/events"
-  38 |
-  39 | type NewsUpdate = {
 
-The export createNewsUpdate was not found in module [project]/lib/actions/content.ts [app-ssr] (ecmascript).
-Did you mean to import createPhilosophyItem?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
 
-Import trace:
-  Server Component:
-    ./components/admin/admin-news-manager.tsx
-    ./app/admin/content/news/page.tsx
-[00:05:29.496] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
-Export deleteNewsUpdate doesn't exist in target module
-  29 | import { Plus, Edit, Trash2, Upload, X } from "lucide-react"
-  30 | import { useToast } from "@/hooks/use-toast"
-> 31 | import { 
-     | ^^^^^^^^^
-> 32 |   getAllNewsUpdates, 
-     | ^^^^^^^^^^^^^^^^^^^^^
-> 33 |   createNewsUpdate, 
-     | ^^^^^^^^^^^^^^^^^^^^^
-> 34 |   updateNewsUpdate, 
-     | ^^^^^^^^^^^^^^^^^^^^^
-> 35 |   deleteNewsUpdate 
-     | ^^^^^^^^^^^^^^^^^^^^^
-> 36 | } from "@/lib/actions/content"
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  37 | import { uploadEventImage } from "@/lib/actions/events"
-  38 |
-  39 | type NewsUpdate = {
-
-The export deleteNewsUpdate was not found in module [project]/lib/actions/content.ts [app-client] (ecmascript).
-Did you mean to import deletePhilosophyItem?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import trace:
-  Server Component:
-    ./components/admin/admin-news-manager.tsx
-    ./app/admin/content/news/page.tsx
-[00:05:29.496] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
-Export deleteNewsUpdate doesn't exist in target module
-  29 | import { Plus, Edit, Trash2, Upload, X } from "lucide-react"
-  30 | import { useToast } from "@/hooks/use-toast"
-> 31 | import { 
-     | ^^^^^^^^^
-> 32 |   getAllNewsUpdates, 
-     | ^^^^^^^^^^^^^^^^^^^^^
-> 33 |   createNewsUpdate, 
-     | ^^^^^^^^^^^^^^^^^^^^^
-> 34 |   updateNewsUpdate, 
-     | ^^^^^^^^^^^^^^^^^^^^^
-> 35 |   deleteNewsUpdate 
-     | ^^^^^^^^^^^^^^^^^^^^^
-> 36 | } from "@/lib/actions/content"
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  37 | import { uploadEventImage } from "@/lib/actions/events"
-  38 |
-  39 | type NewsUpdate = {
-
-The export deleteNewsUpdate was not found in module [project]/lib/actions/content.ts [app-ssr] (ecmascript).
-Did you mean to import deletePhilosophyItem?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import trace:
-  Server Component:
-    ./components/admin/admin-news-manager.tsx
-    ./app/admin/content/news/page.tsx
-[00:05:29.496] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
-Export getAllNewsUpdates doesn't exist in target module
-  29 | import { Plus, Edit, Trash2, Upload, X } from "lucide-react"
-  30 | import { useToast } from "@/hooks/use-toast"
-> 31 | import { 
-     | ^^^^^^^^^
-> 32 |   getAllNewsUpdates, 
-     | ^^^^^^^^^^^^^^^^^^^^^
-> 33 |   createNewsUpdate, 
-     | ^^^^^^^^^^^^^^^^^^^^^
-> 34 |   updateNewsUpdate, 
-     | ^^^^^^^^^^^^^^^^^^^^^
-> 35 |   deleteNewsUpdate 
-     | ^^^^^^^^^^^^^^^^^^^^^
-> 36 | } from "@/lib/actions/content"
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  37 | import { uploadEventImage } from "@/lib/actions/events"
-  38 |
-  39 | type NewsUpdate = {
-
-The export getAllNewsUpdates was not found in module [project]/lib/actions/content.ts [app-client] (ecmascript).
-Did you mean to import getAllPhilosophyItems?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import trace:
-  Server Component:
-    ./components/admin/admin-news-manager.tsx
-    ./app/admin/content/news/page.tsx
-[00:05:29.496] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
-Export getAllNewsUpdates doesn't exist in target module
-  29 | import { Plus, Edit, Trash2, Upload, X } from "lucide-react"
-  30 | import { useToast } from "@/hooks/use-toast"
-> 31 | import { 
-     | ^^^^^^^^^
-> 32 |   getAllNewsUpdates, 
-     | ^^^^^^^^^^^^^^^^^^^^^
-> 33 |   createNewsUpdate, 
-     | ^^^^^^^^^^^^^^^^^^^^^
-> 34 |   updateNewsUpdate, 
-     | ^^^^^^^^^^^^^^^^^^^^^
-> 35 |   deleteNewsUpdate 
-     | ^^^^^^^^^^^^^^^^^^^^^
-> 36 | } from "@/lib/actions/content"
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  37 | import { uploadEventImage } from "@/lib/actions/events"
-  38 |
-  39 | type NewsUpdate = {
-
-The export getAllNewsUpdates was not found in module [project]/lib/actions/content.ts [app-ssr] (ecmascript).
-Did you mean to import getAllPhilosophyItems?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import trace:
-  Server Component:
-    ./components/admin/admin-news-manager.tsx
-    ./app/admin/content/news/page.tsx
-[00:05:29.496] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
-Export updateNewsUpdate doesn't exist in target module
-  29 | import { Plus, Edit, Trash2, Upload, X } from "lucide-react"
-  30 | import { useToast } from "@/hooks/use-toast"
-> 31 | import { 
-     | ^^^^^^^^^
-> 32 |   getAllNewsUpdates, 
-     | ^^^^^^^^^^^^^^^^^^^^^
-> 33 |   createNewsUpdate, 
-     | ^^^^^^^^^^^^^^^^^^^^^
-> 34 |   updateNewsUpdate, 
-     | ^^^^^^^^^^^^^^^^^^^^^
-> 35 |   deleteNewsUpdate 
-     | ^^^^^^^^^^^^^^^^^^^^^
-> 36 | } from "@/lib/actions/content"
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  37 | import { uploadEventImage } from "@/lib/actions/events"
-  38 |
-  39 | type NewsUpdate = {
-
-The export updateNewsUpdate was not found in module [project]/lib/actions/content.ts [app-client] (ecmascript).
-Did you mean to import updatePhilosophyItem?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import trace:
-  Server Component:
-    ./components/admin/admin-news-manager.tsx
-    ./app/admin/content/news/page.tsx
-[00:05:29.496] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
-Export updateNewsUpdate doesn't exist in target module
-  29 | import { Plus, Edit, Trash2, Upload, X } from "lucide-react"
-  30 | import { useToast } from "@/hooks/use-toast"
-> 31 | import { 
-     | ^^^^^^^^^
-> 32 |   getAllNewsUpdates, 
-     | ^^^^^^^^^^^^^^^^^^^^^
-> 33 |   createNewsUpdate, 
-     | ^^^^^^^^^^^^^^^^^^^^^
-> 34 |   updateNewsUpdate, 
-     | ^^^^^^^^^^^^^^^^^^^^^
-> 35 |   deleteNewsUpdate 
-     | ^^^^^^^^^^^^^^^^^^^^^
-> 36 | } from "@/lib/actions/content"
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  37 | import { uploadEventImage } from "@/lib/actions/events"
-  38 |
-  39 | type NewsUpdate = {
-
-The export updateNewsUpdate was not found in module [project]/lib/actions/content.ts [app-ssr] (ecmascript).
-Did you mean to import updatePhilosophyItem?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import trace:
-  Server Component:
-    ./components/admin/admin-news-manager.tsx
-    ./app/admin/content/news/page.tsx
-[00:05:29.496] Browser ERROR   uncaughtError: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
-
-Check the render method of `AdminNewsPage`.
-[00:05:44.502] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
+[00:00:13.913] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
 Export createNewsUpdate doesn't exist in target module
   29 | import { Plus, Edit, Trash2, Upload, X } from "lucide-react"
   30 | import { useToast } from "@/hooks/use-toast"
@@ -1903,7 +305,7 @@ Import trace:
   Server Component:
     ./components/admin/admin-news-manager.tsx
     ./app/admin/content/news/page.tsx
-[00:05:44.502] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
+[00:00:13.913] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
 Export createNewsUpdate doesn't exist in target module
   29 | import { Plus, Edit, Trash2, Upload, X } from "lucide-react"
   30 | import { useToast } from "@/hooks/use-toast"
@@ -1931,7 +333,7 @@ Import trace:
   Server Component:
     ./components/admin/admin-news-manager.tsx
     ./app/admin/content/news/page.tsx
-[00:05:44.502] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
+[00:00:13.913] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
 Export deleteNewsUpdate doesn't exist in target module
   29 | import { Plus, Edit, Trash2, Upload, X } from "lucide-react"
   30 | import { useToast } from "@/hooks/use-toast"
@@ -1959,7 +361,7 @@ Import trace:
   Server Component:
     ./components/admin/admin-news-manager.tsx
     ./app/admin/content/news/page.tsx
-[00:05:44.502] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
+[00:00:13.913] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
 Export deleteNewsUpdate doesn't exist in target module
   29 | import { Plus, Edit, Trash2, Upload, X } from "lucide-react"
   30 | import { useToast } from "@/hooks/use-toast"
@@ -1987,7 +389,7 @@ Import trace:
   Server Component:
     ./components/admin/admin-news-manager.tsx
     ./app/admin/content/news/page.tsx
-[00:05:44.502] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
+[00:00:13.913] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
 Export getAllNewsUpdates doesn't exist in target module
   29 | import { Plus, Edit, Trash2, Upload, X } from "lucide-react"
   30 | import { useToast } from "@/hooks/use-toast"
@@ -2015,7 +417,7 @@ Import trace:
   Server Component:
     ./components/admin/admin-news-manager.tsx
     ./app/admin/content/news/page.tsx
-[00:05:44.502] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
+[00:00:13.913] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
 Export getAllNewsUpdates doesn't exist in target module
   29 | import { Plus, Edit, Trash2, Upload, X } from "lucide-react"
   30 | import { useToast } from "@/hooks/use-toast"
@@ -2043,7 +445,7 @@ Import trace:
   Server Component:
     ./components/admin/admin-news-manager.tsx
     ./app/admin/content/news/page.tsx
-[00:05:44.502] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
+[00:00:13.914] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
 Export updateNewsUpdate doesn't exist in target module
   29 | import { Plus, Edit, Trash2, Upload, X } from "lucide-react"
   30 | import { useToast } from "@/hooks/use-toast"
@@ -2071,7 +473,7 @@ Import trace:
   Server Component:
     ./components/admin/admin-news-manager.tsx
     ./app/admin/content/news/page.tsx
-[00:05:44.503] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
+[00:00:13.914] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
 Export updateNewsUpdate doesn't exist in target module
   29 | import { Plus, Edit, Trash2, Upload, X } from "lucide-react"
   30 | import { useToast } from "@/hooks/use-toast"
@@ -2099,7 +501,7 @@ Import trace:
   Server Component:
     ./components/admin/admin-news-manager.tsx
     ./app/admin/content/news/page.tsx
-[00:05:44.503] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
+[00:00:13.914] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
 Export createNewsUpdate doesn't exist in target module
   29 | import { Plus, Edit, Trash2, Upload, X } from "lucide-react"
   30 | import { useToast } from "@/hooks/use-toast"
@@ -2127,7 +529,7 @@ Import trace:
   Server Component:
     ./components/admin/admin-news-manager.tsx
     ./app/admin/content/news/page.tsx
-[00:05:44.503] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
+[00:00:13.914] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
 Export createNewsUpdate doesn't exist in target module
   29 | import { Plus, Edit, Trash2, Upload, X } from "lucide-react"
   30 | import { useToast } from "@/hooks/use-toast"
@@ -2155,7 +557,7 @@ Import trace:
   Server Component:
     ./components/admin/admin-news-manager.tsx
     ./app/admin/content/news/page.tsx
-[00:05:44.503] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
+[00:00:13.914] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
 Export deleteNewsUpdate doesn't exist in target module
   29 | import { Plus, Edit, Trash2, Upload, X } from "lucide-react"
   30 | import { useToast } from "@/hooks/use-toast"
@@ -2183,7 +585,7 @@ Import trace:
   Server Component:
     ./components/admin/admin-news-manager.tsx
     ./app/admin/content/news/page.tsx
-[00:05:44.503] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
+[00:00:13.914] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
 Export deleteNewsUpdate doesn't exist in target module
   29 | import { Plus, Edit, Trash2, Upload, X } from "lucide-react"
   30 | import { useToast } from "@/hooks/use-toast"
@@ -2211,7 +613,7 @@ Import trace:
   Server Component:
     ./components/admin/admin-news-manager.tsx
     ./app/admin/content/news/page.tsx
-[00:05:44.503] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
+[00:00:13.914] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
 Export getAllNewsUpdates doesn't exist in target module
   29 | import { Plus, Edit, Trash2, Upload, X } from "lucide-react"
   30 | import { useToast } from "@/hooks/use-toast"
@@ -2239,7 +641,7 @@ Import trace:
   Server Component:
     ./components/admin/admin-news-manager.tsx
     ./app/admin/content/news/page.tsx
-[00:05:44.503] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
+[00:00:13.914] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
 Export getAllNewsUpdates doesn't exist in target module
   29 | import { Plus, Edit, Trash2, Upload, X } from "lucide-react"
   30 | import { useToast } from "@/hooks/use-toast"
@@ -2267,7 +669,7 @@ Import trace:
   Server Component:
     ./components/admin/admin-news-manager.tsx
     ./app/admin/content/news/page.tsx
-[00:05:44.503] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
+[00:00:13.914] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
 Export updateNewsUpdate doesn't exist in target module
   29 | import { Plus, Edit, Trash2, Upload, X } from "lucide-react"
   30 | import { useToast } from "@/hooks/use-toast"
@@ -2295,7 +697,7 @@ Import trace:
   Server Component:
     ./components/admin/admin-news-manager.tsx
     ./app/admin/content/news/page.tsx
-[00:05:44.503] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
+[00:00:13.914] Browser ERROR   ./components/admin/admin-news-manager.tsx:31:1
 Export updateNewsUpdate doesn't exist in target module
   29 | import { Plus, Edit, Trash2, Upload, X } from "lucide-react"
   30 | import { useToast } from "@/hooks/use-toast"
@@ -2323,3 +725,8 @@ Import trace:
   Server Component:
     ./components/admin/admin-news-manager.tsx
     ./app/admin/content/news/page.tsx
+[00:00:39.736] Server  LOG      ✓ Compiled in 336ms
+[00:00:41.278] Server  LOG     [Auth] User email: "samwelmsuya10@gmail.com"
+[00:00:41.283] Server  LOG     [Auth] User metadata: {}
+[00:00:41.283] Server  LOG     [Auth] User role: "admin"
+[00:00:42.129] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
