@@ -12,20 +12,22 @@ export async function subscribeToNewsletter(email: string) {
   try {
     const supabase = await getSupabaseServerClient()
 
+    // Try to insert the email
     const { error } = await supabase.from("newsletter_subscribers").insert({ email })
 
+    // If email already exists (23505 is duplicate key error), still send the welcome email
+    if (error && error.code === "23505") {
+      console.log(`[Newsletter] Email already subscribed, sending welcome email anyway: ${email}`)
+      await sendWelcomeEmailWithPDF(email)
+      return { success: true, message: "Thank you! Check your email for the welcome guide." }
+    }
+
+    // If different error, throw it
     if (error) {
-      if (error.code === "23505") {
-        return { success: false, message: "Email already subscribed" }
-      }
       throw error
     }
 
-    // Send welcome email with PDF attachment
-    // Make sure you have:
-    // 1. Installed Resend: npm install resend
-    // 2. Added RESEND_API_KEY to .env.local
-    // 3. Placed PDF in public/documents/emca-welcome-guide.pdf
+    // New subscription - send welcome email with PDF attachment
     await sendWelcomeEmailWithPDF(email)
 
     return { success: true, message: "Successfully subscribed! Check your email for a welcome gift." }

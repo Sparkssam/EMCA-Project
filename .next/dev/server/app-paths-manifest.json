@@ -1,3 +1,12 @@
 {
-  "/gallery/page": "app/gallery/page.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/about/page": "app/about/page.js",
+  "/admin/projects/page": "app/admin/projects/page.js",
+  "/gallery/page": "app/gallery/page.js",
+  "/impact/page": "app/impact/page.js",
+  "/page": "app/page.js",
+  "/philosophy/page": "app/philosophy/page.js",
+  "/projects/page": "app/projects/page.js",
+  "/stories/page": "app/stories/page.js",
+  "/volunteer/page": "app/volunteer/page.js"
 }

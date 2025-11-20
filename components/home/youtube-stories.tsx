@@ -42,7 +42,7 @@ const youtubeVideos = [
   },
 ]
 
-export function YoutubeStories() {
+export function YoutubeStories({ isAdmin = false }: { isAdmin?: boolean }) {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null)
 
