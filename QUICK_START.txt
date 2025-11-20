@@ -1,0 +1,99 @@
+═══════════════════════════════════════════════════════════════
+  📧 NEWSLETTER PDF EMAIL - QUICK START GUIDE
+═══════════════════════════════════════════════════════════════
+
+✅ STEP 1: Add Your PDF File
+────────────────────────────────────────────────────────────────
+1. Save your PDF file (e.g., "emca-welcome-guide.pdf")
+2. Put it here: public/documents/emca-welcome-guide.pdf
+
+   If your PDF has a different name, update line 42 in:
+   lib/actions/newsletter.ts
+
+
+✅ STEP 2: Set Up Resend (Email Service)
+────────────────────────────────────────────────────────────────
+1. Create account: https://resend.com/signup
+2. Get API key: https://resend.com/api-keys
+   (Copy the key that starts with "re_")
+3. Add to .env.local:
+   
+   RESEND_API_KEY=re_your_actual_key_here
+
+
+✅ STEP 3: Install Resend Package
+────────────────────────────────────────────────────────────────
+Run this command in your terminal:
+
+   npm install resend
+
+
+✅ STEP 4: Restart Dev Server
+────────────────────────────────────────────────────────────────
+Stop the dev server (Ctrl+C) and restart:
+
+   npm run dev
+
+
+✅ STEP 5: Test It!
+────────────────────────────────────────────────────────────────
+1. Go to your homepage
+2. Scroll to the footer newsletter section
+3. Enter your email
+4. Click Subscribe
+5. Check your email inbox!
+
+
+═══════════════════════════════════════════════════════════════
+  🎨 CUSTOMIZATION
+═══════════════════════════════════════════════════════════════
+
+Change PDF filename:
+→ Edit line 42 in lib/actions/newsletter.ts
+
+Change email subject:
+→ Edit line 50 in lib/actions/newsletter.ts
+
+Change sender name:
+→ Edit line 48 in lib/actions/newsletter.ts
+   (After verifying your domain in Resend)
+
+Change email design:
+→ Edit the HTML template (lines 51-112) in lib/actions/newsletter.ts
+
+
+═══════════════════════════════════════════════════════════════
+  🚨 TROUBLESHOOTING
+═══════════════════════════════════════════════════════════════
+
+❌ "Cannot find module 'resend'"
+   → Run: npm install resend
+
+❌ "PDF file not found"
+   → Check the file is in: public/documents/
+   → Check the filename matches exactly
+
+❌ "API key invalid"
+   → Check .env.local has RESEND_API_KEY=re_...
+   → Restart dev server after adding key
+
+❌ "Email not received"
+   → Check spam folder
+   → Check Resend dashboard: https://resend.com/emails
+   → Verify domain or use onboarding@resend.dev
+
+
+═══════════════════════════════════════════════════════════════
+  📊 WHAT YOU GET
+═══════════════════════════════════════════════════════════════
+
+✅ Automatic email sending on newsletter signup
+✅ Beautiful HTML email with EMCA branding
+✅ PDF attachment included
+✅ Email saved to database (newsletter_subscribers)
+✅ Free tier: 3,000 emails/month
+
+
+═══════════════════════════════════════════════════════════════
+
+For detailed instructions, see: NEWSLETTER_PDF_SETUP.md

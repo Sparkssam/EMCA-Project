@@ -1,0 +1,405 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Light mode - EMCA official green palette */
+  --background: oklch(0.99 0.01 160);
+  --foreground: oklch(0.15 0.04 165);
+  --card: oklch(0.98 0.01 160);
+  --card-foreground: oklch(0.15 0.04 165);
+  --popover: oklch(0.98 0.01 160);
+  --popover-foreground: oklch(0.15 0.04 165);
+  --primary: oklch(0.45 0.08 165);
+  --primary-foreground: oklch(0.99 0.01 160);
+  --secondary: oklch(0.85 0.12 95);
+  --secondary-foreground: oklch(0.15 0.04 165);
+  --muted: oklch(0.95 0.01 160);
+  --muted-foreground: oklch(0.35 0.04 165);
+  --accent: oklch(0.88 0.15 100);
+  --accent-foreground: oklch(0.15 0.04 165);
+  --destructive: oklch(0.5 0.2 27);
+  --destructive-foreground: oklch(0.99 0.01 160);
+  --border: oklch(0.85 0.02 160);
+  --input: oklch(0.92 0.02 160);
+  --ring: oklch(0.45 0.08 165);
+  --chart-1: oklch(0.45 0.08 165);
+  --chart-2: oklch(0.35 0.08 168);
+  --chart-3: oklch(0.85 0.12 95);
+  --chart-4: oklch(0.88 0.15 100);
+  --chart-5: oklch(0.25 0.03 165);
+  --radius: 1rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  /* Dark mode - EMCA official green palette with darker tones */
+  --background: oklch(0.18 0.03 165); /* #06231D - darkest green */
+  --foreground: oklch(0.96 0.01 160); /* Lighter for better contrast */
+  --card: oklch(0.25 0.03 165); /* #0C342C */
+  --card-foreground: oklch(0.96 0.01 160); /* Lighter for better contrast */
+  --popover: oklch(0.25 0.03 165);
+  --popover-foreground: oklch(0.96 0.01 160);
+  --primary: oklch(0.5 0.08 165); /* Lighter #076653 for visibility */
+  --primary-foreground: oklch(0.99 0.01 160);
+  --secondary: oklch(0.85 0.12 95); /* #FDC70C - yellow accent */
+  --secondary-foreground: oklch(0.15 0.04 165);
+  --muted: oklch(0.35 0.05 165);
+  --muted-foreground: oklch(0.75 0.03 160); /* Lighter for better readability */
+  --accent: oklch(0.88 0.15 100); /* #E3EF26 - lime green */
+  --accent-foreground: oklch(0.15 0.04 165);
+  --destructive: oklch(0.6 0.2 27);
+  --destructive-foreground: oklch(0.96 0.01 160);
+  --border: oklch(0.35 0.03 165);
+  --input: oklch(0.35 0.03 165);
+  --ring: oklch(0.5 0.08 165);
+  --chart-1: oklch(0.5 0.08 165);
+  --chart-2: oklch(0.45 0.08 168);
+  --chart-3: oklch(0.85 0.12 95);
+  --chart-4: oklch(0.88 0.15 100);
+  --chart-5: oklch(0.65 0.03 160);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+/* Updated font system to use Poppins throughout */
+@theme inline {
+  --font-poppins: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Poppins', 'Poppins Fallback';
+
+  /* EMCA official color palette */
+  --color-emca-darkest: #06231d; /* Deep forest green - text */
+  --color-emca-dark: #0c342c; /* Dark green */
+  --color-emca-medium: #076653; /* Medium teal green */
+  --color-emca-primary: #1a724f; /* Primary green */
+  --color-emca-yellow: #fdc70c; /* Bright yellow accent */
+  --color-emca-lime: #e3ef26; /* Lime green accent */
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Updated heading styles for Poppins with proper font weights */
+  h1 {
+    @apply font-poppins font-bold text-foreground;
+  }
+  h2 {
+    @apply font-poppins font-semibold text-foreground;
+  }
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-poppins font-medium text-foreground;
+  }
+
+  p {
+    @apply text-foreground font-normal;
+  }
+
+  a {
+    @apply text-foreground;
+  }
+}
+
+/* Subtle animations for Framer Motion-like effects */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.5s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.6s ease-out forwards;
+}
+
+/* Minimal glass morphism with flat design principles */
+.glass {
+  background: rgba(26, 114, 79, 0.05);
+  backdrop-filter: blur(8px) saturate(150%);
+  -webkit-backdrop-filter: blur(8px) saturate(150%);
+  border: 1px solid rgba(26, 114, 79, 0.15);
+}
+
+.dark .glass {
+  background: rgba(7, 102, 83, 0.1);
+  border: 1px solid rgba(26, 114, 79, 0.25);
+}
+
+/* Gradient text with EMCA greens */
+.gradient-text {
+  background: linear-gradient(135deg, #1a724f 0%, #076653 50%, #0c342c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-accent {
+  background: linear-gradient(135deg, #fdc70c 0%, #e3ef26 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Add forest color utilities for EMCA green palette */
+@layer utilities {
+  .text-forest-50 {
+    color: #f0f9f6;
+  }
+  .text-forest-100 {
+    color: #d9f2ea;
+  }
+  .text-forest-200 {
+    color: #b3e5d5;
+  }
+  .text-forest-300 {
+    color: #8cd8c0;
+  }
+  .text-forest-400 {
+    color: #66cbab;
+  }
+  .text-forest-500 {
+    color: #1a724f;
+  }
+  .text-forest-600 {
+    color: #076653;
+  }
+  .text-forest-700 {
+    color: #0c342c;
+  }
+  .text-forest-800 {
+    color: #06231d;
+  }
+  .text-forest-900 {
+    color: #031510;
+  }
+
+  .bg-forest-50 {
+    background-color: #f0f9f6;
+  }
+  .bg-forest-100 {
+    background-color: #d9f2ea;
+  }
+  .bg-forest-200 {
+    background-color: #b3e5d5;
+  }
+  .bg-forest-300 {
+    background-color: #8cd8c0;
+  }
+  .bg-forest-400 {
+    background-color: #66cbab;
+  }
+  .bg-forest-500 {
+    background-color: #1a724f;
+  }
+  .bg-forest-600 {
+    background-color: #076653;
+  }
+  .bg-forest-700 {
+    background-color: #0c342c;
+  }
+  .bg-forest-800 {
+    background-color: #06231d;
+  }
+  .bg-forest-900 {
+    background-color: #031510;
+  }
+
+  .border-forest-500 {
+    border-color: #1a724f;
+  }
+  .border-forest-600 {
+    border-color: #076653;
+  }
+
+  .hover\:bg-forest-700:hover {
+    background-color: #0c342c;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Performance optimization - reduce repaints */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  content-visibility: auto;
+}
+
+/* Custom scrollbar with EMCA green */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: oklch(0.95 0.01 160);
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: oklch(0.18 0.03 165);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #1a724f, #076653);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #22875e, #099070);
+}
+
+/* Minimal hover effect for flat design */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+}
+
+.dark .card-hover:hover {
+  transform: translateY(-4px);
+}
+
+/* Added scrollbar-hide utility for horizontal scrolling */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Added utility for staggered animation delays */
+.animation-delay-100 {
+  animation-delay: 100ms;
+}
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+
+/* Minimal flat design with subtle shadows */
+.card-minimal {
+  @apply bg-card border border-border rounded-2xl transition-all duration-300;
+}
+
+.card-minimal:hover {
+  @apply shadow-lg;
+}
