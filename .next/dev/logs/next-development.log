@@ -47,3 +47,4 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
 [00:01:48.782] Server  LOG     [Auth] User email: "samwelmsuya10@gmail.com"
 [00:01:48.783] Server  LOG     [Auth] User metadata: {}
 [00:01:48.784] Server  LOG     [Auth] User role: "admin"
+[00:05:20.730] Server  LOG      ✓ Compiled in 215ms

@@ -33,6 +33,7 @@ export function LoginForm() {
           })
           setTimeout(() => {
             router.push("/admin")
+            router.refresh()
           }, 1000)
         } else if (userRole === "volunteer") {
           toast.success("Welcome Volunteer!", {
@@ -48,6 +49,7 @@ export function LoginForm() {
           })
           setTimeout(() => {
             router.push("/")
+            router.refresh()
           }, 1000)
         }
       } else {
