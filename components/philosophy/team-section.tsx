@@ -12,7 +12,9 @@ const team = [
   {
     name: "Frank Kalago",
     role: "Programs Manager",
-    bio: "At EMCA, I design and implement strategies that balance economic growth with environmental responsibility. Through scientific research, project management, and community engagement, I actively promote conservation and sustainable development.",
+    bio: "At EMCA, I design and implement strategies that balance economic growth with environmental responsibility. Through scientific research, project management, and community engagement, I actively promote conservation and sustainable development.
+Collaboration lies at the heart of our work — by partnering with policymakers, industry leaders, and local communities, we drive impactful initiatives that foster a greener and more resilient future.
+Continuous learning fuels my commitment to sustainability. By embracing emerging technologies and best practices, I strive to safeguard natural resources, reduce environmental risks, and create lasting positive change.",
     image: "/team-member-2.png",
   },
   {
@@ -22,10 +24,10 @@ const team = [
     image: "/team-member-3.png",
   },
   {
-    name: "Grace Mollel",
-    role: "Partnerships Manager",
+    name: "Elvida James",
+    role: "Accountant",
     bio: "Building bridges between communities, organizations, and funders for collective impact.",
-    image: "/team-member-4.jpg",
+    image: "/team-member-4.png",
   },
 ]
 
