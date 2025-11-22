@@ -98,7 +98,8 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
                   className="hover:bg-muted"
                   onClick={() =>
                     window.open(
-                      `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`,
+                      `https://www.linkedin.com/sharing/share-offsite/?url=https://www.linkedin.com/company/emca.or.tz/
+`,
                       "_blank",
                     )
                   }

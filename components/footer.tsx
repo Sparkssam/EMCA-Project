@@ -94,7 +94,7 @@ export function Footer() {
                 className="hover:bg-emca-dark hover:text-emca-yellow transition-all rounded-full"
                 asChild
               >
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/company/emca.or.tz/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                   <Linkedin className="h-5 w-5" />
                 </a>
               </Button>
