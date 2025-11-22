@@ -10,10 +10,12 @@ const team = [
     image: "/team-member-1.png",
   },
   {
-    name: "Sarah Kimathi",
-    role: "Programs Director",
-    bio: "Community development specialist with 8+ years experience in sustainable agriculture.",
-    image: "/team-member-2.jpg",
+    name: "Frank Kalago",
+    role: "Programs Manager",
+    bio: "At EMCA, I design and implement strategies that balance economic growth with environmental responsibility. Through scientific research, project management, and community engagement, I actively promote conservation and sustainable development.
+Collaboration lies at the heart of our work — by partnering with policymakers, industry leaders, and local communities, we drive impactful initiatives that foster a greener and more resilient future.
+Continuous learning fuels my commitment to sustainability. By embracing emerging technologies and best practices, I strive to safeguard natural resources, reduce environmental risks, and create lasting positive change.",
+    image: "/team-member-2.png",
   },
   {
     name: "ADV. JOHN .R. CHUA ",
