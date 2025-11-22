@@ -84,7 +84,7 @@ export function Footer() {
                 className="hover:bg-emca-dark hover:text-emca-yellow transition-all rounded-full"
                 asChild
               >
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <a href="https://www.instagram.com/emcaorganization?igsh=NTdodXBnYTdrdTF5&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                   <Instagram className="h-5 w-5" />
                 </a>
               </Button>
