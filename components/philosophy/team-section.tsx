@@ -7,7 +7,7 @@ const team = [
     name: "Emmanuel Mwakasege",
     role: "Founder & Executive Director",
     bio: "Environmental scientist and youth advocate passionate about grassroots climate action.",
-    image: "/team-member-1.jpg",
+    image: "/team-member-1.png",
   },
   {
     name: "Sarah Kimathi",
