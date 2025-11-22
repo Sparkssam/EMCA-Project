@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Mail } from "lucide-react"
 import { useState } from "react"
+import { subscribeToNewsletter } from "@/lib/actions/newsletter"
+import { toast } from "sonner"
 
 export function NewsletterSignup() {
   const [email, setEmail] = useState("")
@@ -16,22 +18,29 @@ export function NewsletterSignup() {
     e.preventDefault()
     setStatus("loading")
 
-    // Simulate API call
-    setTimeout(() => {
-      if (email && email.includes("@")) {
+    try {
+      const result = await subscribeToNewsletter(email)
+      
+      if (result.success) {
         setStatus("success")
-        setMessage("Welcome! Check your email to confirm your subscription.")
+        setMessage(result.message)
         setEmail("")
+        toast.success(result.message)
       } else {
         setStatus("error")
-        setMessage("Please enter a valid email address.")
+        setMessage(result.message)
+        toast.error(result.message)
       }
+    } catch (error) {
+      setStatus("error")
+      setMessage("Something went wrong. Please try again.")
+      toast.error("Failed to subscribe. Please try again.")
+    }
 
-      setTimeout(() => {
-        setStatus("idle")
-        setMessage("")
-      }, 5000)
-    }, 1000)
+    setTimeout(() => {
+      setStatus("idle")
+      setMessage("")
+    }, 5000)
   }
 
   return (

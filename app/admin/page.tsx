@@ -9,5 +9,10 @@ export default async function AdminPage() {
     redirect("/login")
   }
 
+  // Only allow admin role to access admin pages
+  if (user.role !== "admin") {
+    redirect("/") // Redirect volunteers to homepage
+  }
+
   return <AdminDashboard user={user} />
 }

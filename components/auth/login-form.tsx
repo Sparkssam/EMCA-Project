@@ -24,13 +24,34 @@ export function LoginForm() {
       const result = await loginWithEmail(formData.email, formData.password)
 
       if (result.success) {
-        toast.success("Login Successful!", {
-          description: "Redirecting to admin dashboard...",
-        })
-        // Redirect to admin dashboard
-        setTimeout(() => {
-          router.push("/admin")
-        }, 1000)
+        // Check user role and redirect accordingly
+        const userRole = result.user?.role
+        
+        if (userRole === "admin") {
+          toast.success("Welcome Admin!", {
+            description: "Redirecting to admin dashboard...",
+          })
+          setTimeout(() => {
+            router.push("/admin")
+            router.refresh()
+          }, 1000)
+        } else if (userRole === "volunteer") {
+          toast.success("Welcome Volunteer!", {
+            description: "Login successful!",
+          })
+          setTimeout(() => {
+            router.push("/") // Redirect volunteers to homepage
+            router.refresh()
+          }, 1000)
+        } else {
+          toast.success("Login Successful!", {
+            description: "Welcome!",
+          })
+          setTimeout(() => {
+            router.push("/")
+            router.refresh()
+          }, 1000)
+        }
       } else {
         toast.error("Login Failed", {
           description: result.message,

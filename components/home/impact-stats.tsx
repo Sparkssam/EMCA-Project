@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from "react"
 import { Sprout, Users, Recycle, TreePine } from "lucide-react"
+import { AdminSectionButton } from "@/components/admin/admin-section-button"
 
 const stats = [
   {
@@ -89,14 +90,17 @@ function CountUp({ end, duration = 2000 }: { end: number; duration?: number }) {
   )
 }
 
-export function ImpactStats() {
+export function ImpactStats({ isAdmin = false }: { isAdmin?: boolean }) {
   return (
     <section className="py-16 sm:py-20 md:py-24 bg-gradient-to-b from-background to-emca-primary/5">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-14 md:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 sm:mb-6 font-serif">
-            Impact by the <span className="gradient-text">Numbers</span>
-          </h2>
+          <div className="flex items-center justify-center gap-4 mb-4 sm:mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground font-serif">
+              Impact by the <span className="gradient-text">Numbers</span>
+            </h2>
+            <AdminSectionButton section="Impact Stats" href="/admin/content/impact-stats" isAdmin={isAdmin} />
+          </div>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground leading-relaxed px-4">
             Every action counts. Here's how our community is making measurable change across Tanzania.
           </p>

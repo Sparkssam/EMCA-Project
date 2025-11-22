@@ -1,12 +1,50 @@
-[00:00:01.935] Server  LOG      ✓ Ready in 1243ms
-[00:00:04.982] Server  LOG      ○ Compiling /admin ...
-[00:00:12.519] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:15.663] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
-[00:02:01.898] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:03:12.991] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
-[00:06:05.035] Server  LOG      ✓ Compiled in 485ms
-[00:06:06.892] Server  ERROR    ⨯ ReferenceError: submitted is not defined
-[00:06:07.306] Browser ERROR   uncaughtError: ReferenceError: submitted is not defined
-[00:06:38.333] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:06:38.351] Server  LOG      ✓ Compiled in 331ms
-[00:06:41.225] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:01.819] Server  LOG      ✓ Ready in 1142ms
+[00:00:07.602] Server  LOG      ○ Compiling / ...
+[00:00:14.664] Server  ERROR   AuthApiError: Invalid Refresh Token: Refresh Token Not Found
+[00:00:14.758] Server  ERROR   AuthApiError: Invalid Refresh Token: Refresh Token Not Found
+[00:00:14.887] Server  ERROR   AuthApiError: Invalid Refresh Token: Refresh Token Not Found
+[00:00:14.953] Server  ERROR   AuthApiError: Invalid Refresh Token: Refresh Token Not Found
+[00:00:16.819] Server  ERROR   AuthApiError: Invalid Refresh Token: Refresh Token Not Found
+[00:00:16.888] Server  ERROR   AuthApiError: Invalid Refresh Token: Refresh Token Not Found
+[00:00:17.495] Server  ERROR   AuthApiError: Invalid Refresh Token: Refresh Token Not Found
+[00:00:17.564] Server  ERROR   AuthApiError: Invalid Refresh Token: Refresh Token Not Found
+[00:00:19.135] Server  WARN     ⚠ Cross origin request detected from 192.168.0.15 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+[00:00:19.259] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:20.321] Server  ERROR   AuthApiError: Invalid Refresh Token: Refresh Token Not Found
+[00:00:20.381] Server  ERROR   AuthApiError: Invalid Refresh Token: Refresh Token Not Found
+[00:00:33.222] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:00:39.672] Server  LOG     [Auth] User email: "anethmhidze@gmail.com"
+[00:00:39.674] Server  LOG     [Auth] User metadata: {}
+[00:00:39.676] Server  LOG     [Auth] User role: "volunteer"
+[00:00:41.149] Server  LOG     [Auth] User email: "anethmhidze@gmail.com"
+[00:00:41.151] Server  LOG     [Auth] User metadata: {}
+[00:00:41.152] Server  LOG     [Auth] User role: "volunteer"
+[00:00:45.707] Server  LOG     [Auth] User email: "anethmhidze@gmail.com"
+[00:00:45.710] Server  LOG     [Auth] User metadata: {}
+[00:00:45.711] Server  LOG     [Auth] User role: "volunteer"
+[00:01:10.989] Server  LOG     [Auth] User email: "samwelmsuya10@gmail.com"
+[00:01:10.990] Server  LOG     [Auth] User metadata: {}
+[00:01:10.991] Server  LOG     [Auth] User role: "admin"
+[00:01:13.349] Server  LOG     [Auth] User email: "samwelmsuya10@gmail.com"
+[00:01:13.350] Server  LOG     [Auth] User metadata: {}
+[00:01:13.350] Server  LOG     [Auth] User role: "admin"
+[00:01:21.235] Server  LOG     [Auth] User email: "samwelmsuya10@gmail.com"
+[00:01:21.236] Server  LOG     [Auth] User metadata: {}
+[00:01:21.237] Server  LOG     [Auth] User role: "admin"
+[00:01:27.062] Server  LOG     [Auth] User email: "samwelmsuya10@gmail.com"
+[00:01:27.063] Server  LOG     [Auth] User metadata: {}
+[00:01:27.064] Server  LOG     [Auth] User role: "admin"
+[00:01:32.256] Server  LOG     [Auth] User email: "samwelmsuya10@gmail.com"
+[00:01:32.257] Server  LOG     [Auth] User metadata: {}
+[00:01:32.258] Server  LOG     [Auth] User role: "admin"
+[00:01:39.674] Server  LOG     [Auth] User email: "samwelmsuya10@gmail.com"
+[00:01:39.675] Server  LOG     [Auth] User metadata: {}
+[00:01:39.676] Server  LOG     [Auth] User role: "admin"
+[00:01:46.194] Server  LOG     [Auth] User email: "samwelmsuya10@gmail.com"
+[00:01:46.195] Server  LOG     [Auth] User metadata: {}
+[00:01:46.196] Server  LOG     [Auth] User role: "admin"
+[00:01:48.782] Server  LOG     [Auth] User email: "samwelmsuya10@gmail.com"
+[00:01:48.783] Server  LOG     [Auth] User metadata: {}
+[00:01:48.784] Server  LOG     [Auth] User role: "admin"
+[00:05:20.730] Server  LOG      ✓ Compiled in 215ms

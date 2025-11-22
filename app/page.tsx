@@ -9,9 +9,15 @@ import { NewsUpdates } from "@/components/home/news-updates"
 import { EventsSection } from "@/components/home/events-section"
 import { CallToAction } from "@/components/home/call-to-action"
 import { getProjects } from "@/lib/actions/projects"
+import { getSupabaseServerClient } from "@/lib/supabase/server"
 
 export default async function HomePage() {
   const projects = await getProjects()
+  
+  // Check if user is admin
+  const supabase = await getSupabaseServerClient()
+  const { data: { user } } = await supabase.auth.getUser()
+  const isAdmin = user?.user_metadata?.role === "admin"
   
   return (
     <div className="flex flex-col">
@@ -19,11 +25,11 @@ export default async function HomePage() {
       <AboutSection />
       <PhilosophyPreview />
       <ProjectsSection projects={projects} />
-      <ImpactStats />
+      <ImpactStats isAdmin={isAdmin} />
       <YoutubeStories />
       <ReviewsSection />
-      <NewsUpdates />
-      <EventsSection />
+      <NewsUpdates isAdmin={isAdmin} />
+      <EventsSection isAdmin={isAdmin} />
       <CallToAction />
     </div>
   )

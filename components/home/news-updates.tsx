@@ -5,6 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Calendar, Clock, ArrowRight, Leaf, Users, Lightbulb } from 'lucide-react'
 import { Button } from "@/components/ui/button"
+import { AdminSectionButton } from "@/components/admin/admin-section-button"
 
 const newsCategories = [
   { id: "all", label: "All Updates", icon: null },
@@ -76,7 +77,7 @@ const newsArticles = [
   },
 ]
 
-export function NewsUpdates() {
+export function NewsUpdates({ isAdmin = false }: { isAdmin?: boolean }) {
   const [selectedCategory, setSelectedCategory] = useState("all")
 
   const filteredArticles =
@@ -87,7 +88,10 @@ export function NewsUpdates() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-pompiere text-foreground mb-4">News & Updates</h2>
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <h2 className="text-4xl md:text-5xl font-pompiere text-foreground">News & Updates</h2>
+            <AdminSectionButton section="News" href="/admin/content/news" isAdmin={isAdmin} />
+          </div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Stay informed about our latest activities, environmental tips, and project milestones as we work together for
             a sustainable future.
