@@ -1,50 +1,18 @@
-[00:00:01.819] Server  LOG      ✓ Ready in 1142ms
-[00:00:07.602] Server  LOG      ○ Compiling / ...
-[00:00:14.664] Server  ERROR   AuthApiError: Invalid Refresh Token: Refresh Token Not Found
-[00:00:14.758] Server  ERROR   AuthApiError: Invalid Refresh Token: Refresh Token Not Found
-[00:00:14.887] Server  ERROR   AuthApiError: Invalid Refresh Token: Refresh Token Not Found
-[00:00:14.953] Server  ERROR   AuthApiError: Invalid Refresh Token: Refresh Token Not Found
-[00:00:16.819] Server  ERROR   AuthApiError: Invalid Refresh Token: Refresh Token Not Found
-[00:00:16.888] Server  ERROR   AuthApiError: Invalid Refresh Token: Refresh Token Not Found
-[00:00:17.495] Server  ERROR   AuthApiError: Invalid Refresh Token: Refresh Token Not Found
-[00:00:17.564] Server  ERROR   AuthApiError: Invalid Refresh Token: Refresh Token Not Found
-[00:00:19.135] Server  WARN     ⚠ Cross origin request detected from 192.168.0.15 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
-Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
-[00:00:19.259] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:20.321] Server  ERROR   AuthApiError: Invalid Refresh Token: Refresh Token Not Found
-[00:00:20.381] Server  ERROR   AuthApiError: Invalid Refresh Token: Refresh Token Not Found
-[00:00:33.222] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
-[00:00:39.672] Server  LOG     [Auth] User email: "anethmhidze@gmail.com"
-[00:00:39.674] Server  LOG     [Auth] User metadata: {}
-[00:00:39.676] Server  LOG     [Auth] User role: "volunteer"
-[00:00:41.149] Server  LOG     [Auth] User email: "anethmhidze@gmail.com"
-[00:00:41.151] Server  LOG     [Auth] User metadata: {}
-[00:00:41.152] Server  LOG     [Auth] User role: "volunteer"
-[00:00:45.707] Server  LOG     [Auth] User email: "anethmhidze@gmail.com"
-[00:00:45.710] Server  LOG     [Auth] User metadata: {}
-[00:00:45.711] Server  LOG     [Auth] User role: "volunteer"
-[00:01:10.989] Server  LOG     [Auth] User email: "samwelmsuya10@gmail.com"
-[00:01:10.990] Server  LOG     [Auth] User metadata: {}
-[00:01:10.991] Server  LOG     [Auth] User role: "admin"
-[00:01:13.349] Server  LOG     [Auth] User email: "samwelmsuya10@gmail.com"
-[00:01:13.350] Server  LOG     [Auth] User metadata: {}
-[00:01:13.350] Server  LOG     [Auth] User role: "admin"
-[00:01:21.235] Server  LOG     [Auth] User email: "samwelmsuya10@gmail.com"
-[00:01:21.236] Server  LOG     [Auth] User metadata: {}
-[00:01:21.237] Server  LOG     [Auth] User role: "admin"
-[00:01:27.062] Server  LOG     [Auth] User email: "samwelmsuya10@gmail.com"
-[00:01:27.063] Server  LOG     [Auth] User metadata: {}
-[00:01:27.064] Server  LOG     [Auth] User role: "admin"
-[00:01:32.256] Server  LOG     [Auth] User email: "samwelmsuya10@gmail.com"
-[00:01:32.257] Server  LOG     [Auth] User metadata: {}
-[00:01:32.258] Server  LOG     [Auth] User role: "admin"
-[00:01:39.674] Server  LOG     [Auth] User email: "samwelmsuya10@gmail.com"
-[00:01:39.675] Server  LOG     [Auth] User metadata: {}
-[00:01:39.676] Server  LOG     [Auth] User role: "admin"
-[00:01:46.194] Server  LOG     [Auth] User email: "samwelmsuya10@gmail.com"
-[00:01:46.195] Server  LOG     [Auth] User metadata: {}
-[00:01:46.196] Server  LOG     [Auth] User role: "admin"
-[00:01:48.782] Server  LOG     [Auth] User email: "samwelmsuya10@gmail.com"
-[00:01:48.783] Server  LOG     [Auth] User metadata: {}
-[00:01:48.784] Server  LOG     [Auth] User role: "admin"
-[00:05:20.730] Server  LOG      ✓ Compiled in 215ms
+[00:00:02.231] Server  LOG      ✓ Ready in 1655ms
+[00:00:08.761] Server  LOG      ○ Compiling / ...
+[00:00:13.704] Server  ERROR   [Auth] Get user error: Error: Your project's URL and Key are required to create a Supabase client!
+
+Check your Supabase project's API settings to find these values
+
+https://supabase.com/dashboard/project/_/settings/api
+[00:00:13.810] Server  ERROR    ⨯ Error: Your project's URL and Key are required to create a Supabase client!
+
+Check your Supabase project's API settings to find these values
+
+https://supabase.com/dashboard/project/_/settings/api
+[00:00:16.474] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:16.954] Browser ERROR   uncaughtError: Error: Your project's URL and Key are required to create a Supabase client!
+
+Check your Supabase project's API settings to find these values
+
+https://supabase.com/dashboard/project/_/settings/api
