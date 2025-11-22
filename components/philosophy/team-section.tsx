@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 
 const team = [
   {
-    name: "Emmanuel Mwakasege",
+    name: "Zafarani",
     role: "Founder & Executive Director",
     bio: "Environmental scientist and youth advocate passionate about grassroots climate action.",
     image: "/team-member-1.png",
