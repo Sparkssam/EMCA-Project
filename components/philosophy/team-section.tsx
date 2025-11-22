@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button"
 
 const team = [
   {
-    name: "Zafarani",
-    role: "Founder & Executive Director",
+    name: "Zafarani Ramadhani",
+    role: " Executive Director",
     bio: "Environmental scientist and youth advocate passionate about grassroots climate action.",
     image: "/team-member-1.png",
   },
@@ -16,10 +16,11 @@ const team = [
     image: "/team-member-2.jpg",
   },
   {
-    name: "David Mtui",
-    role: "Youth Engagement Lead",
-    bio: "Former teacher turned environmental educator, inspiring the next generation of leaders.",
-    image: "/team-member-3.jpg",
+    name: "ADV. JOHN .R. CHUA ",
+    role: "Secretary ",
+    bio: "We are at the center of an evolving world where technological progress continues to redefine how we live, work, and connect. However, this rapid advancement has also intensified environmental degradation — from resource depletion to biodiversity loss. The challenge before us is not to reject technology, but to harness it responsibly for the good of both humanity and the planet.
+As a dedicated member of the Creative Team, I am passionate about driving initiatives that promote responsible consumption, recycling, and environmental conservation. My vision is to see every industrial product serve a full and sustainable life cycle — from production to reuse — reducing waste and minimizing ecological harm.",
+    image: "/team-member-3.png",
   },
   {
     name: "Grace Mollel",
