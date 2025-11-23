@@ -152,7 +152,7 @@ export function PartnershipForm() {
                 <Input 
                   id="contact-phone" 
                   type="tel" 
-                  placeholder="+255 XXX XXX XXX" 
+                  placeholder="+255 692 880 644" 
                   value={formData.contact_phone}
                   onChange={(e) => setFormData({ ...formData, contact_phone: e.target.value })}
                 />

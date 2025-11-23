@@ -120,7 +120,7 @@ export function DonationForm() {
                 <Input
                   id="phone"
                   type="tel"
-                  placeholder="+255 XXX XXX XXX"
+                  placeholder="+255 628 957 390 , +255 692 880 644"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   className="h-12 rounded-2xl border-2"

@@ -43,8 +43,8 @@ export function ContactSection() {
                     </div>
                     <div>
                       <p className="font-medium text-foreground mb-1">Phone</p>
-                      <p className="text-muted-foreground">+255 XXX XXX XXX</p>
-                      <p className="text-muted-foreground">+255 XXX XXX XXX (Partnerships)</p>
+                      <p className="text-muted-foreground">+255 692 880 644</p>
+                      <p className="text-muted-foreground">+255 628 957 390 (Partnerships)</p>
                     </div>
                   </div>
 

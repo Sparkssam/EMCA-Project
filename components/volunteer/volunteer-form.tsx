@@ -173,7 +173,7 @@ export function VolunteerForm() {
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   className="w-full px-4 py-3 bg-background border-2 border-border rounded-2xl text-foreground focus:border-emca-primary focus:outline-none transition-colors"
-                  placeholder="+255 XXX XXX XXX"
+                  placeholder="+255 692 880 644"
                 />
               </div>
 
