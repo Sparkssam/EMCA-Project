@@ -6,27 +6,25 @@ const team = [
   {
     name: "Zafarani Ramadhani",
     role: " Executive Director",
-    bio: "Environmental scientist and youth advocate passionate about grassroots climate action.",
+    bio: "A visionary leader dedicated to empowering communities and driving sustainable environmental action. Leads EMCA with purpose, integrity, and a passion for creating long-term impact.",
     image: "/team-member-1.png",
   },
   {
     name: "Frank Kalago",
     role: "Programs Manager",
-    bio: "At EMCA, I design and implement strategies that balance economic growth with environmental responsibility. Through scientific research, project management, and community engagement, I actively promote conservation and sustainable development.
-Collaboration lies at the heart of our work — by partnering with policymakers, industry leaders, and local communities, we drive impactful initiatives that foster a greener and more resilient future.
-Continuous learning fuels my commitment to sustainability. By embracing emerging technologies and best practices, I strive to safeguard natural resources, reduce environmental risks, and create lasting positive change.",
+    bio: "Oversees project planning, execution, and community engagement. Ensures every initiative delivers real impact and aligns with EMCA’s mission for sustainable development.",
     image: "/team-member-2.png",
   },
   {
     name: "ADV. JOHN .R. CHUA ",
     role: "Secretary ",
-    bio: "We are at the center of an evolving world where technological progress continues to redefine how we live, work, and connect. However, this rapid advancement has also intensified environmental degradation — from resource depletion to biodiversity loss. The challenge before us is not to reject technology, but to harness it responsibly for the good of both humanity and the planet riving initiatives that promote responsible consumption, recycling, and environmental conservation. My vision is to see every industrial product serve a full and sustainable life cycle — from production to reuse — reducing waste and minimizing ecological harm.",
+    bio: "The organizational backbone of EMCA managing communication, documentation, and coordination with clarity, professionalism, and reliability.",
     image: "/team-member-3.png",
   },
   {
     name: "Elvida James",
     role: "Accountant",
-    bio: "Building bridges between communities, organizations, and funders for collective impact.",
+    bio: "Ensures transparent, accurate, and efficient financial management. Committed to maintaining accountability and supporting EMCA’s mission through responsible budgeting.",
     image: "/team-member-4.png",
   },
 ]
