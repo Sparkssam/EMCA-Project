@@ -24,19 +24,24 @@ export async function createPartnership(data: Omit<Partnership, "id" | "created_
   try {
     const supabase = await getSupabaseServerClient()
     
+    // Build insert object with only provided fields
+    const insertData: any = {
+      organization_name: data.organization_name,
+      organization_type: data.organization_type,
+      contact_name: data.contact_name,
+      contact_email: data.contact_email,
+      partnership_interest: data.partnership_interest,
+      message: data.message,
+      status: "pending",
+    }
+    
+    // Only add optional fields if they have values
+    if (data.contact_title) insertData.contact_title = data.contact_title
+    if (data.contact_phone) insertData.contact_phone = data.contact_phone
+    
     const { error } = await supabase
       .from("partnerships")
-      .insert({
-        organization_name: data.organization_name,
-        organization_type: data.organization_type,
-        contact_name: data.contact_name,
-        contact_title: data.contact_title,
-        contact_email: data.contact_email,
-        contact_phone: data.contact_phone,
-        partnership_interest: data.partnership_interest,
-        message: data.message,
-        status: "pending",
-      })
+      .insert(insertData)
 
     if (error) throw error
 
