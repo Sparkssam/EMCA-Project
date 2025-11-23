@@ -141,7 +141,8 @@ export function Footer() {
                     rel="noopener noreferrer"
                     className="hover:text-emca-lime transition-colors text-white"
                   >
-                    Dar es Salaam, Tanzania
+                    P.O. Box 23
+                    USA River, Arusha, Tanzania
                   </a>
                 </div>
               </li>

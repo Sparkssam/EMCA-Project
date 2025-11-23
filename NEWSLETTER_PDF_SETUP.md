@@ -179,7 +179,8 @@ async function sendWelcomeEmailWithPDF(email: string) {
           <div style="background: #f5f5f5; padding: 20px; text-align: center; color: #999; font-size: 14px;">
             <p style="margin: 0;">
               Environmental Management & Community Awareness (EMCA)<br>
-              Dar es Salaam, Tanzania
+              
+            USA River, Arusha, Tanzania
             </p>
             <p style="margin: 10px 0 0 0;">
               <a href="mailto:info@emca-tanzania.org" style="color: #1A724F; text-decoration: none;">

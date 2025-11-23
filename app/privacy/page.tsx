@@ -163,7 +163,7 @@ export default function PrivacyPage() {
                   <strong>Phone:</strong> +255 628 957 390
                 </p>
                 <p>
-                  <strong>Address:</strong> Dar es Salaam, Tanzania
+                  <strong>Address:</strong> P.O. Box 23,  USA River, Arusha, Tanzania
                 </p>
               </div>
             </div>

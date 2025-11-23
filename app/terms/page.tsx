@@ -193,7 +193,7 @@ export default function TermsPage() {
                   <strong>Phone:</strong> +255 628 957 390
                 </p>
                 <p>
-                  <strong>Address:</strong> Dar es Salaam, Tanzania
+                  <strong>Address:</strong> USA River, Arusha, Tanzania
                 </p>
               </div>
             </div>

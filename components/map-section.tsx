@@ -39,7 +39,7 @@ export function MapSection() {
                   <MapPin className="h-6 w-6 text-emca-yellow flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="font-semibold text-lg mb-1 text-white">Address</h4>
-                    <p className="text-secondary">Dar es Salaam, Tanzania</p>
+                    <p className="text-secondary">USA River, Arusha, Tanzania</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">

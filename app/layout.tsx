@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     "Tuelimishe Mazingira",
     "cleanup drives Tanzania",
     "environmental education",
-    "Dar es Salaam NGO",
+    "USA River, Arusha NGO",
   ],
   authors: [{ name: "EMCA Tanzania" }],
   creator: "EMCA Tanzania",
