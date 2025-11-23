@@ -135,7 +135,7 @@ export function YoutubeStories({ isAdmin = false }: { isAdmin?: boolean }) {
             <div className="w-full max-w-5xl aspect-video" onClick={(e) => e.stopPropagation()}>
               <iframe
                 className="w-full h-full rounded-2xl"
-                src={`https://www.youtube.com/embed/${selectedVideo}?autoplay=1`}
+                src={`https://www.youtube.com/embed/6Cp6mKbRTQY?autoplay=1`}
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
