@@ -17,7 +17,7 @@ const actions = [
     icon: Users,
     title: "Volunteer",
     description: "Join our team and make a direct impact in your community",
-    href: "/empower",
+    href: "/volunteer",
     gradient: "from-emca-primary to-emca-medium",
   },
   {
