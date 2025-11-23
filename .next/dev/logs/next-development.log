@@ -1,17 +1,17 @@
-[00:00:02.231] Server  LOG      ✓ Ready in 1655ms
-[00:00:08.761] Server  LOG      ○ Compiling / ...
-[00:00:13.704] Server  ERROR   [Auth] Get user error: Error: Your project's URL and Key are required to create a Supabase client!
+[00:00:04.022] Server  LOG      ✓ Ready in 2.7s
+[00:00:26.546] Server  LOG      ○ Compiling / ...
+[00:00:35.449] Server  ERROR   [Auth] Get user error: Error: Your project's URL and Key are required to create a Supabase client!
 
 Check your Supabase project's API settings to find these values
 
 https://supabase.com/dashboard/project/_/settings/api
-[00:00:13.810] Server  ERROR    ⨯ Error: Your project's URL and Key are required to create a Supabase client!
+[00:00:35.719] Server  ERROR    ⨯ Error: Your project's URL and Key are required to create a Supabase client!
 
 Check your Supabase project's API settings to find these values
 
 https://supabase.com/dashboard/project/_/settings/api
-[00:00:16.474] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:16.954] Browser ERROR   uncaughtError: Error: Your project's URL and Key are required to create a Supabase client!
+[00:00:41.351] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:41.784] Browser ERROR   uncaughtError: Error: Your project's URL and Key are required to create a Supabase client!
 
 Check your Supabase project's API settings to find these values
 

@@ -6,7 +6,7 @@ export function WhatsAppFloat() {
   const handleClick = () => {
     // Replace with EMCA's actual WhatsApp number
     window.open(
-      "https://wa.me/255123456789?text=Hello%20EMCA!%20I%20would%20like%20to%20know%20more%20about%20your%20work.",
+      "https://wa.me/255760309999?text=Hello%20EMCA!%20I%20would%20like%20to%20know%20more%20about%20your%20work.",
       "_blank",
     )
   }
