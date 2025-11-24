@@ -8,6 +8,30 @@
           "exportedName": "logout",
           "filename": "lib/actions/auth.ts"
         },
+        "app/admin/events/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/events/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/newsletter.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/lib/actions/events.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "logout",
+          "filename": "lib/actions/auth.ts"
+        },
+        "app/admin/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/newsletter.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "logout",
+          "filename": "lib/actions/auth.ts"
+        },
+        "app/admin/partnerships/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/partnerships/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/newsletter.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/lib/actions/partnerships.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "logout",
+          "filename": "lib/actions/auth.ts"
+        },
+        "app/login/page": {
+          "moduleId": "[project]/.next-internal/server/app/login/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/newsletter.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "logout",
+          "filename": "lib/actions/auth.ts"
+        },
         "app/page": {
           "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/newsletter.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/lib/actions/projects.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/lib/actions/reviews.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE4 => \"[project]/lib/actions/events.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
@@ -23,6 +47,10 @@
       },
       "layer": {
         "app/_not-found/page": "action-browser",
+        "app/admin/events/page": "action-browser",
+        "app/admin/page": "action-browser",
+        "app/admin/partnerships/page": "action-browser",
+        "app/login/page": "action-browser",
         "app/page": "action-browser",
         "app/partner/page": "action-browser"
       },
@@ -37,6 +65,30 @@
           "exportedName": "getCurrentUser",
           "filename": "lib/actions/auth.ts"
         },
+        "app/admin/events/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/events/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/newsletter.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/lib/actions/events.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getCurrentUser",
+          "filename": "lib/actions/auth.ts"
+        },
+        "app/admin/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/newsletter.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getCurrentUser",
+          "filename": "lib/actions/auth.ts"
+        },
+        "app/admin/partnerships/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/partnerships/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/newsletter.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/lib/actions/partnerships.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getCurrentUser",
+          "filename": "lib/actions/auth.ts"
+        },
+        "app/login/page": {
+          "moduleId": "[project]/.next-internal/server/app/login/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/newsletter.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getCurrentUser",
+          "filename": "lib/actions/auth.ts"
+        },
         "app/page": {
           "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/newsletter.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/lib/actions/projects.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/lib/actions/reviews.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE4 => \"[project]/lib/actions/events.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
@@ -52,6 +104,10 @@
       },
       "layer": {
         "app/_not-found/page": "rsc",
+        "app/admin/events/page": "rsc",
+        "app/admin/page": "rsc",
+        "app/admin/partnerships/page": "rsc",
+        "app/login/page": "rsc",
         "app/page": "rsc",
         "app/partner/page": "rsc"
       },
@@ -66,6 +122,30 @@
           "exportedName": "loginWithEmail",
           "filename": "lib/actions/auth.ts"
         },
+        "app/admin/events/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/events/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/newsletter.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/lib/actions/events.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "loginWithEmail",
+          "filename": "lib/actions/auth.ts"
+        },
+        "app/admin/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/newsletter.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "loginWithEmail",
+          "filename": "lib/actions/auth.ts"
+        },
+        "app/admin/partnerships/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/partnerships/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/newsletter.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/lib/actions/partnerships.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "loginWithEmail",
+          "filename": "lib/actions/auth.ts"
+        },
+        "app/login/page": {
+          "moduleId": "[project]/.next-internal/server/app/login/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/newsletter.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "loginWithEmail",
+          "filename": "lib/actions/auth.ts"
+        },
         "app/page": {
           "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/newsletter.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/lib/actions/projects.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/lib/actions/reviews.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE4 => \"[project]/lib/actions/events.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
@@ -81,6 +161,10 @@
       },
       "layer": {
         "app/_not-found/page": "rsc",
+        "app/admin/events/page": "rsc",
+        "app/admin/page": "rsc",
+        "app/admin/partnerships/page": "rsc",
+        "app/login/page": "action-browser",
         "app/page": "rsc",
         "app/partner/page": "rsc"
       },
@@ -91,6 +175,30 @@
       "workers": {
         "app/_not-found/page": {
           "moduleId": "[project]/.next-internal/server/app/_not-found/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/newsletter.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "subscribeToNewsletter",
+          "filename": "lib/actions/newsletter.ts"
+        },
+        "app/admin/events/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/events/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/newsletter.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/lib/actions/events.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "subscribeToNewsletter",
+          "filename": "lib/actions/newsletter.ts"
+        },
+        "app/admin/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/newsletter.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "subscribeToNewsletter",
+          "filename": "lib/actions/newsletter.ts"
+        },
+        "app/admin/partnerships/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/partnerships/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/newsletter.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/lib/actions/partnerships.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "subscribeToNewsletter",
+          "filename": "lib/actions/newsletter.ts"
+        },
+        "app/login/page": {
+          "moduleId": "[project]/.next-internal/server/app/login/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/newsletter.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
           "exportedName": "subscribeToNewsletter",
           "filename": "lib/actions/newsletter.ts"
@@ -110,6 +218,10 @@
       },
       "layer": {
         "app/_not-found/page": "action-browser",
+        "app/admin/events/page": "action-browser",
+        "app/admin/page": "action-browser",
+        "app/admin/partnerships/page": "action-browser",
+        "app/login/page": "action-browser",
         "app/page": "action-browser",
         "app/partner/page": "action-browser"
       },
@@ -130,6 +242,51 @@
       },
       "filename": "lib/actions/partnerships.ts",
       "exportedName": "createPartnership"
+    },
+    "0020cfe53b2113cf45e8bd9a5f18132c80f25f6a8e": {
+      "workers": {
+        "app/admin/partnerships/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/partnerships/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/newsletter.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/lib/actions/partnerships.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getAllPartnerships",
+          "filename": "lib/actions/partnerships.ts"
+        }
+      },
+      "layer": {
+        "app/admin/partnerships/page": "action-browser"
+      },
+      "filename": "lib/actions/partnerships.ts",
+      "exportedName": "getAllPartnerships"
+    },
+    "78ef5d14f247fd5d70ac81fb107104611750337413": {
+      "workers": {
+        "app/admin/partnerships/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/partnerships/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/newsletter.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/lib/actions/partnerships.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "updatePartnershipStatus",
+          "filename": "lib/actions/partnerships.ts"
+        }
+      },
+      "layer": {
+        "app/admin/partnerships/page": "action-browser"
+      },
+      "filename": "lib/actions/partnerships.ts",
+      "exportedName": "updatePartnershipStatus"
+    },
+    "40ff44844d0b79db0a47153a7c3ca893604a272348": {
+      "workers": {
+        "app/admin/partnerships/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/partnerships/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/newsletter.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/lib/actions/partnerships.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "deletePartnership",
+          "filename": "lib/actions/partnerships.ts"
+        }
+      },
+      "layer": {
+        "app/admin/partnerships/page": "action-browser"
+      },
+      "filename": "lib/actions/partnerships.ts",
+      "exportedName": "deletePartnership"
     },
     "0092031706c7ea110d49f6a4db5bfe7b6f99bae49a": {
       "workers": {
@@ -388,6 +545,12 @@
     },
     "00474ffcf961a0cfe0d61c6947fa6adc9dfa3133c5": {
       "workers": {
+        "app/admin/events/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/events/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/newsletter.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/lib/actions/events.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getAllEvents",
+          "filename": "lib/actions/events.ts"
+        },
         "app/page": {
           "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/newsletter.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/lib/actions/projects.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/lib/actions/reviews.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE4 => \"[project]/lib/actions/events.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
@@ -396,10 +559,71 @@
         }
       },
       "layer": {
+        "app/admin/events/page": "action-browser",
         "app/page": "action-browser"
       },
       "filename": "lib/actions/events.ts",
       "exportedName": "getAllEvents"
+    },
+    "6040df6ee99c952cc02d99cbf3271d69f896b19459": {
+      "workers": {
+        "app/admin/events/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/events/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/newsletter.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/lib/actions/events.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "createEvent",
+          "filename": "lib/actions/events.ts"
+        }
+      },
+      "layer": {
+        "app/admin/events/page": "action-browser"
+      },
+      "filename": "lib/actions/events.ts",
+      "exportedName": "createEvent"
+    },
+    "705dfe4ab2889b8ef42d329e551aa3a78c1fa40015": {
+      "workers": {
+        "app/admin/events/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/events/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/newsletter.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/lib/actions/events.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "updateEvent",
+          "filename": "lib/actions/events.ts"
+        }
+      },
+      "layer": {
+        "app/admin/events/page": "action-browser"
+      },
+      "filename": "lib/actions/events.ts",
+      "exportedName": "updateEvent"
+    },
+    "40f7d69374753b327cc18f6e29ab62c5917255655f": {
+      "workers": {
+        "app/admin/events/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/events/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/newsletter.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/lib/actions/events.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "deleteEvent",
+          "filename": "lib/actions/events.ts"
+        }
+      },
+      "layer": {
+        "app/admin/events/page": "action-browser"
+      },
+      "filename": "lib/actions/events.ts",
+      "exportedName": "deleteEvent"
+    },
+    "400d1cf2c19f300684b494115d1b1f3a7841d6a786": {
+      "workers": {
+        "app/admin/events/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/events/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/lib/actions/newsletter.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/lib/actions/events.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "uploadEventImage",
+          "filename": "lib/actions/events.ts"
+        }
+      },
+      "layer": {
+        "app/admin/events/page": "action-browser"
+      },
+      "filename": "lib/actions/events.ts",
+      "exportedName": "uploadEventImage"
     }
   },
   "edge": {},
