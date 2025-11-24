@@ -136,12 +136,12 @@ export function Footer() {
                 <div>
                   <p className="font-medium text-white mb-1">Office Location</p>
                   <a
-                    href="https://www.google.com/maps/search/?api=1&query=Dar+es+Salaam,+Tanzania"
+                    href="https://www.google.com/maps/search/?api=1&query=Usa+River,+Arusha,+Tanzania"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-emca-lime transition-colors text-white"
                   >
-                    Dar es Salaam, Tanzania
+                    Usa River, Arusha, Tanzania
                   </a>
                 </div>
               </li>
