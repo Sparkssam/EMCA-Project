@@ -121,13 +121,20 @@ export default function AdminNewsManager() {
       // Upload image if selected
       if (imageFile) {
         setUploadingImage(true)
-        const uploadResult = await uploadEventImage(imageFile)
+        const uploadFormData = new FormData()
+        uploadFormData.append("file", imageFile)
+        
+        const uploadResult = await uploadEventImage(uploadFormData)
+        console.log("[News] Upload result:", uploadResult)
+        
         if (uploadResult.success && uploadResult.url) {
           imageUrl = uploadResult.url
+          console.log("[News] Image uploaded successfully:", imageUrl)
         } else {
+          console.error("[News] Image upload failed:", uploadResult.error)
           toast({
             title: "Warning",
-            description: "Image upload failed, but news will be saved without image",
+            description: uploadResult.error || "Image upload failed, but news will be saved without image",
             variant: "destructive",
           })
         }
@@ -138,6 +145,8 @@ export default function AdminNewsManager() {
         ...formData,
         image: imageUrl,
       }
+
+      console.log("[News] Saving news with data:", newsData)
 
       if (editingNews) {
         await updateNewsUpdate(editingNews.id, newsData, "admin@emca.org")
@@ -206,7 +215,7 @@ export default function AdminNewsManager() {
       excerpt: "",
       image: "",
       author: "",
-      category: "General",
+      category: "Activities",
       active: true,
     })
     setEditingNews(null)
@@ -214,7 +223,7 @@ export default function AdminNewsManager() {
     setImagePreview(null)
   }
 
-  const categories = ["General", "Events", "Impact", "Community", "Environment", "Education"]
+  const categories = ["Activities", "Eco Tips", "Projects", "General", "Events", "Impact", "Community", "Environment", "Education"]
 
   if (loading) {
     return <div className="text-center py-8">Loading...</div>

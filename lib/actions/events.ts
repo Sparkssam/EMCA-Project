@@ -157,6 +157,8 @@ export async function uploadEventImage(formData: FormData) {
     const supabase = await getSupabaseServerClient()
     const file = formData.get("file") as File
     
+    console.log("[Upload] Starting upload, file:", file?.name, file?.type, file?.size)
+    
     if (!file) {
       return { success: false, error: "No file provided", url: null }
     }
@@ -176,9 +178,13 @@ export async function uploadEventImage(formData: FormData) {
     const fileName = `event-${Date.now()}-${Math.random().toString(36).substring(7)}.${fileExt}`
     const filePath = `events/${fileName}`
     
+    console.log("[Upload] Generated file path:", filePath)
+    
     // Convert File to ArrayBuffer for server-side upload
     const arrayBuffer = await file.arrayBuffer()
     const buffer = Buffer.from(arrayBuffer)
+    
+    console.log("[Upload] Converted to buffer, size:", buffer.length)
     
     // Upload to Supabase Storage
     const { data, error } = await supabase.storage
@@ -189,12 +195,19 @@ export async function uploadEventImage(formData: FormData) {
         upsert: false,
       })
     
-    if (error) throw error
+    if (error) {
+      console.error("[Upload] Supabase storage error:", error)
+      throw error
+    }
+    
+    console.log("[Upload] Upload successful, data:", data)
     
     // Get public URL
     const { data: { publicUrl } } = supabase.storage
       .from("images")
       .getPublicUrl(filePath)
+    
+    console.log("[Upload] Generated public URL:", publicUrl)
     
     return { success: true, url: publicUrl }
   } catch (error) {
