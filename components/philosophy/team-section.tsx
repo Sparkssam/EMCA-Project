@@ -12,15 +12,15 @@ const team = [
   {
     name: "Frank Kalago",
     role: "Programs Manager",
-    bio: "At EMCA, I design and implement strategies that balance economic growth with environmental responsibility. Through scientific research, project management, and community engagement, I actively promote conservation and sustainable development.
+    bio: `At EMCA, I design and implement strategies that balance economic growth with environmental responsibility. Through scientific research, project management, and community engagement, I actively promote conservation and sustainable development.
 Collaboration lies at the heart of our work — by partnering with policymakers, industry leaders, and local communities, we drive impactful initiatives that foster a greener and more resilient future.
-Continuous learning fuels my commitment to sustainability. By embracing emerging technologies and best practices, I strive to safeguard natural resources, reduce environmental risks, and create lasting positive change.",
+Continuous learning fuels my commitment to sustainability. By embracing emerging technologies and best practices, I strive to safeguard natural resources, reduce environmental risks, and create lasting positive change.`,
     image: "/team-member-2.png",
   },
   {
     name: "ADV. JOHN .R. CHUA ",
     role: "Secretary ",
-    bio: "We are at the center of an evolving world where technological progress continues to redefine how we live, work, and connect. However, this rapid advancement has also intensified environmental degradation — from resource depletion to biodiversity loss. The challenge before us is not to reject technology, but to harness it responsibly for the good of both humanity and the planet riving initiatives that promote responsible consumption, recycling, and environmental conservation. My vision is to see every industrial product serve a full and sustainable life cycle — from production to reuse — reducing waste and minimizing ecological harm.",
+    bio: `We are at the center of an evolving world where technological progress continues to redefine how we live, work, and connect. However, this rapid advancement has also intensified environmental degradation — from resource depletion to biodiversity loss. The challenge before us is not to reject technology, but to harness it responsibly for the good of both humanity and the planet riving initiatives that promote responsible consumption, recycling, and environmental conservation. My vision is to see every industrial product serve a full and sustainable life cycle — from production to reuse — reducing waste and minimizing ecological harm.`,
     image: "/team-member-3.png",
   },
   {
@@ -55,7 +55,7 @@ export function TeamSection() {
                   src={member.image || "/placeholder.svg"}
                   alt={member.name}
                   fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="object-contain group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
               <div className="p-6 space-y-3">

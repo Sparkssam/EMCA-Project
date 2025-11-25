@@ -465,3 +465,4 @@ export async function deleteNewsUpdate(id: number) {
     return { success: false, error: "Failed to delete news update" }
   }
 }
+
