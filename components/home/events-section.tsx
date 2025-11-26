@@ -210,8 +210,8 @@ export function EventsSection({ isAdmin = false }: { isAdmin?: boolean }) {
                   )}
 
                   {/* Registration Button */}
-                  {event.registration_link && event.status === "upcoming" && (
-                    <Link href={`${event.registration_link}?event=${encodeURIComponent(event.title)}&eventId=${event.id}`}>
+                  {event.status === "upcoming" && (
+                    <Link href={event.registration_link || `/volunteer?event=${encodeURIComponent(event.title)}&eventId=${event.id}`}>
                       <Button className="w-full bg-emca-primary hover:bg-emca-secondary text-white">
                         Register Now
                         <ExternalLink className="ml-2 h-4 w-4" />

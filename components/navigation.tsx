@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Menu, X, Leaf, Heart, User, LogOut } from 'lucide-react'
 import { cn } from "@/lib/utils"
@@ -56,16 +57,17 @@ export function Navigation({ user }: NavigationProps) {
   }
 
   return (
-    <nav
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 leading-10 tracking-wide",
-        isScrolled
-          ? "bg-background/95 backdrop-blur-xl shadow-lg border-b border-border"
-          : "bg-gradient-to-b from-emca-darkest/90 to-transparent backdrop-blur-sm",
-      )}
-    >
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-20 font-serif tracking-widest">
+    <>
+      <nav
+        className={cn(
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-500 leading-10 tracking-wide",
+          isScrolled
+            ? "bg-background/95 backdrop-blur-xl shadow-lg border-b border-border"
+            : "bg-gradient-to-b from-emca-darkest/90 to-transparent backdrop-blur-sm",
+        )}
+      >
+        <div className="container mx-auto px-6">
+          <div className="flex items-center justify-between h-20 font-serif tracking-widest">
           <Link href="/" className="flex items-center gap-4 group text-3xl font-semibold leading-7">
             <div className="relative">
               <Leaf className="h-9 w-9 text-emca-yellow transition-all duration-500 group-hover:scale-110 group-hover:rotate-12" />
@@ -287,7 +289,22 @@ export function Navigation({ user }: NavigationProps) {
             </div>
           </div>
         )}
+        </div>
+      </nav>
+      
+      {/* Main Logo Below Navigation */}
+      <div className="fixed top-20 left-0 right-0 z-40 bg-background/95 backdrop-blur-sm border-b border-border">
+        <div className="container mx-auto px-6 py-4 flex justify-center">
+          <Image
+            src="/WEBSITE.svg"
+            alt="EMCA Logo"
+            width={400}
+            height={100}
+            className="h-auto w-auto max-h-24 object-contain"
+            priority
+          />
+        </div>
       </div>
-    </nav>
+    </>
   )
 }

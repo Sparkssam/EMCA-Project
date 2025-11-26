@@ -10,6 +10,18 @@ const team = [
     image: "/team-member-1.png",
   },
   {
+    name: "Thomson Mushi",
+    role: "Chief Operating Officer",
+    bio: `With extensive experience in operational management and strategic planning, Thomson oversees the day-to-day operations of EMCA, ensuring that our programs run efficiently and effectively. His leadership in coordinating field activities, managing resources, and streamlining processes has been instrumental in scaling our environmental initiatives across Tanzania. Thomson's commitment to operational excellence ensures that every project delivers measurable impact while maintaining the highest standards of accountability and transparency.`,
+    image: "/THOMSON MUSHI.png",
+  },
+  {
+    name: "Zephania",
+    role: "Managing Director",
+    bio: `As Managing Director, Zephania provides strategic leadership and vision for EMCA's growth and development. With a strong background in environmental management and organizational development, he works closely with stakeholders to forge partnerships, secure funding, and expand our reach. His innovative approach to sustainability and community engagement has positioned EMCA as a leading voice in environmental conservation. Zephania is dedicated to building a resilient organization that empowers communities while protecting Tanzania's natural heritage for future generations.`,
+    image: "/ZEPHANIA.png",
+  },
+  {
     name: "Frank Kalago",
     role: "Programs Manager",
     bio: `At EMCA, I design and implement strategies that balance economic growth with environmental responsibility. Through scientific research, project management, and community engagement, I actively promote conservation and sustainable development.
@@ -44,7 +56,7 @@ export function TeamSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {team.map((member, index) => (
             <div
               key={index}

@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 const youtubeVideos = [
   {
     id: "1",
-    videoId: "dQw4w9WgXcQ",
+    videoId: "NaGLVS5b_ZY",
     title: "EMCA Beach Cleanup 2024",
     description: "Join us as we clean up the beautiful beaches of Dar es Salaam",
     thumbnail: "/beach-cleanup-volunteers-tanzania-coast.jpg",
@@ -21,24 +21,17 @@ const youtubeVideos = [
   },
   {
     id: "3",
-    videoId: "dQw4w9WgXcQ",
+    videoId: "h_D3VFfhvs4",
     title: "Tree Planting Campaign",
     description: "Over 5,000 trees planted with local communities",
     thumbnail: "/tree-planting-tanzania-youth-reforestation.jpg",
   },
   {
     id: "4",
-    videoId: "dQw4w9WgXcQ",
+    videoId: "YQHsXMglC9A",
     title: "Youth Leadership Training",
     description: "Training the next generation of environmental leaders",
     thumbnail: "/young-african-leaders--youth-empowerment-tanzania.jpg",
-  },
-  {
-    id: "5",
-    videoId: "dQw4w9WgXcQ",
-    title: "Community Workshops",
-    description: "Environmental education in local communities",
-    thumbnail: "/african-community-gathering--empowerment-workshop.jpg",
   },
 ]
 
