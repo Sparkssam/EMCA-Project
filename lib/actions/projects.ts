@@ -15,6 +15,14 @@ export type Project = {
   link: string | null
   display_order: number
   is_active: boolean
+  status?: string | null
+  location?: string | null
+  duration?: string | null
+  beneficiaries?: string | null
+  funded_by?: string | null
+  objectives?: string[] | null
+  key_activity?: string | null
+  outcomes?: string[] | null
   created_at: string
   updated_at: string
 }
@@ -30,6 +38,14 @@ export type ProjectFormData = {
   link?: string
   display_order?: number
   is_active?: boolean
+  status?: string
+  location?: string
+  duration?: string
+  beneficiaries?: string
+  funded_by?: string
+  objectives?: string[]
+  key_activity?: string
+  outcomes?: string[]
 }
 
 export async function getProjects() {
@@ -100,6 +116,14 @@ export async function createProject(formData: ProjectFormData) {
           link: formData.link || null,
           display_order: formData.display_order || 0,
           is_active: formData.is_active ?? true,
+          status: formData.status || null,
+          location: formData.location || null,
+          duration: formData.duration || null,
+          beneficiaries: formData.beneficiaries || null,
+          funded_by: formData.funded_by || null,
+          objectives: formData.objectives || null,
+          key_activity: formData.key_activity || null,
+          outcomes: formData.outcomes || null,
         },
       ])
       .select()
@@ -138,6 +162,14 @@ export async function updateProject(id: string, formData: ProjectFormData) {
         link: formData.link || null,
         display_order: formData.display_order ?? 0,
         is_active: formData.is_active ?? true,
+        status: formData.status || null,
+        location: formData.location || null,
+        duration: formData.duration || null,
+        beneficiaries: formData.beneficiaries || null,
+        funded_by: formData.funded_by || null,
+        objectives: formData.objectives || null,
+        key_activity: formData.key_activity || null,
+        outcomes: formData.outcomes || null,
       })
       .eq("id", id)
       .select()

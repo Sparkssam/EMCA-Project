@@ -7,6 +7,7 @@ import { Calendar, Clock, ArrowRight, Leaf, Users, Lightbulb } from 'lucide-reac
 import { Button } from "@/components/ui/button"
 import { AdminSectionButton } from "@/components/admin/admin-section-button"
 import { getAllNewsUpdates } from "@/lib/actions/content"
+import { getProjects } from "@/lib/actions/projects"
 
 const newsCategories = [
   { id: "all", label: "All Updates", icon: null },
@@ -30,18 +31,23 @@ type NewsArticle = {
 export function NewsUpdates({ isAdmin = false }: { isAdmin?: boolean }) {
   const [selectedCategory, setSelectedCategory] = useState("all")
   const [newsArticles, setNewsArticles] = useState<NewsArticle[]>([])
+  const [projects, setProjects] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    loadNews()
+    loadData()
   }, [])
 
-  const loadNews = async () => {
+  const loadData = async () => {
     try {
-      const data = await getAllNewsUpdates()
-      setNewsArticles(data)
+      const [newsData, projectsData] = await Promise.all([
+        getAllNewsUpdates(),
+        getProjects()
+      ])
+      setNewsArticles(newsData)
+      setProjects(projectsData)
     } catch (error) {
-      console.error("Failed to load news:", error)
+      console.error("Failed to load data:", error)
     } finally {
       setLoading(false)
     }
@@ -49,6 +55,8 @@ export function NewsUpdates({ isAdmin = false }: { isAdmin?: boolean }) {
 
   const filteredArticles =
     selectedCategory === "all" ? newsArticles : newsArticles.filter((article) => article.category === selectedCategory)
+  
+  const displayItems = selectedCategory === "Projects" ? projects : filteredArticles
 
   return (
     <section className="py-20 sm:py-28 bg-background">
@@ -94,12 +102,48 @@ export function NewsUpdates({ isAdmin = false }: { isAdmin?: boolean }) {
             <div className="col-span-full text-center py-12">
               <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emca-primary mx-auto"></div>
             </div>
-          ) : filteredArticles.length === 0 ? (
+          ) : selectedCategory === "Projects" ? (
+            projects.length === 0 ? (
+              <div className="col-span-full text-center py-12 text-muted-foreground">
+                No projects found.
+              </div>
+            ) : (
+              projects.map((project) => (
+                <Link key={project.id} href={`/projects/${project.id}`}>
+                  <article className="bg-card border-2 border-border rounded-2xl overflow-hidden hover:border-emca-primary/40 transition-all duration-500 group h-full">
+                    <div className="relative h-48 overflow-hidden">
+                      <img
+                        src={project.image_url || "/placeholder.svg"}
+                        alt={project.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className={`absolute inset-0 bg-gradient-to-t ${project.color} opacity-30`} />
+                      <div className="absolute top-4 left-4">
+                        <span className={`px-3 py-1 bg-gradient-to-r ${project.color} text-white text-xs font-medium rounded-full`}>
+                          {project.impact}
+                        </span>
+                      </div>
+                    </div>
+                    <div className="p-6 space-y-4">
+                      <h3 className="text-xl font-pompiere text-foreground leading-snug group-hover:text-emca-primary transition-colors">
+                        {project.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground font-medium">{project.subtitle}</p>
+                      <p className="text-muted-foreground leading-relaxed line-clamp-3">{project.description}</p>
+                      <div className="inline-flex items-center gap-2 text-emca-primary font-medium hover:gap-3 transition-all">
+                        Learn More <ArrowRight className="h-4 w-4" />
+                      </div>
+                    </div>
+                  </article>
+                </Link>
+              ))
+            )
+          ) : displayItems.length === 0 ? (
             <div className="col-span-full text-center py-12 text-muted-foreground">
               No news articles found. {selectedCategory !== "all" && "Try selecting a different category."}
             </div>
           ) : (
-            filteredArticles.map((article) => (
+            displayItems.map((article) => (
             <article
               key={article.id}
               className="bg-card border-2 border-border rounded-2xl overflow-hidden hover:border-emca-primary/40 transition-all duration-500 group"

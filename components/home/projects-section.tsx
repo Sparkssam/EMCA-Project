@@ -105,7 +105,7 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
                       asChild
                       className="bg-gradient-to-r from-emca-primary to-emca-medium hover:from-emca-medium hover:to-emca-primary text-white rounded-full px-6 sm:px-8 h-11 sm:h-12 text-sm sm:text-base font-medium shadow-lg hover:shadow-xl transition-all duration-300 w-fit group border-0"
                     >
-                      <Link href={project.link || "#"}>
+                      <Link href={`/projects/${project.id}`}>
                         Learn More
                         <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-2 transition-transform duration-300" />
                       </Link>

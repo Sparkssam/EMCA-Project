@@ -21,7 +21,7 @@ import {
 } from "@/components/ui/select"
 import { Project, createProject, updateProject, uploadProjectImage } from "@/lib/actions/projects"
 import { toast } from "sonner"
-import { Upload, X } from "lucide-react"
+import { Upload, X, Plus, Trash } from "lucide-react"
 import Image from "next/image"
 
 interface ProjectFormDialogProps {
@@ -65,6 +65,14 @@ export function ProjectFormDialog({ isOpen, onClose, project }: ProjectFormDialo
     link: "",
     display_order: 0,
     is_active: true,
+    status: "",
+    location: "",
+    duration: "",
+    beneficiaries: "",
+    funded_by: "",
+    objectives: [] as string[],
+    key_activity: "",
+    outcomes: [] as string[],
   })
 
   useEffect(() => {
@@ -80,6 +88,14 @@ export function ProjectFormDialog({ isOpen, onClose, project }: ProjectFormDialo
         link: project.link || "",
         display_order: project.display_order,
         is_active: project.is_active,
+        status: project.status || "",
+        location: project.location || "",
+        duration: project.duration || "",
+        beneficiaries: project.beneficiaries || "",
+        funded_by: project.funded_by || "",
+        objectives: project.objectives || [],
+        key_activity: project.key_activity || "",
+        outcomes: project.outcomes || [],
       })
       setImagePreview(project.image_url || "")
     } else {
@@ -94,6 +110,14 @@ export function ProjectFormDialog({ isOpen, onClose, project }: ProjectFormDialo
         link: "",
         display_order: 0,
         is_active: true,
+        status: "",
+        location: "",
+        duration: "",
+        beneficiaries: "",
+        funded_by: "",
+        objectives: [],
+        key_activity: "",
+        outcomes: [],
       })
       setImagePreview("")
     }
@@ -137,6 +161,36 @@ export function ProjectFormDialog({ isOpen, onClose, project }: ProjectFormDialo
   const handleRemoveImage = () => {
     setFormData({ ...formData, image_url: "" })
     setImagePreview("")
+  }
+
+  const handleAddObjective = () => {
+    setFormData({ ...formData, objectives: [...formData.objectives, ""] })
+  }
+
+  const handleRemoveObjective = (index: number) => {
+    const newObjectives = formData.objectives.filter((_, i) => i !== index)
+    setFormData({ ...formData, objectives: newObjectives })
+  }
+
+  const handleObjectiveChange = (index: number, value: string) => {
+    const newObjectives = [...formData.objectives]
+    newObjectives[index] = value
+    setFormData({ ...formData, objectives: newObjectives })
+  }
+
+  const handleAddOutcome = () => {
+    setFormData({ ...formData, outcomes: [...formData.outcomes, ""] })
+  }
+
+  const handleRemoveOutcome = (index: number) => {
+    const newOutcomes = formData.outcomes.filter((_, i) => i !== index)
+    setFormData({ ...formData, outcomes: newOutcomes })
+  }
+
+  const handleOutcomeChange = (index: number, value: string) => {
+    const newOutcomes = [...formData.outcomes]
+    newOutcomes[index] = value
+    setFormData({ ...formData, outcomes: newOutcomes })
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -314,6 +368,138 @@ export function ProjectFormDialog({ isOpen, onClose, project }: ProjectFormDialo
               onChange={(e) => setFormData({ ...formData, link: e.target.value })}
               placeholder="e.g., /projects#binti-mazingira"
             />
+          </div>
+
+          {/* Status */}
+          <div className="space-y-2">
+            <Label htmlFor="status">Project Status</Label>
+            <Input
+              id="status"
+              value={formData.status}
+              onChange={(e) => setFormData({ ...formData, status: e.target.value })}
+              placeholder="e.g., Ongoing, Active, Monthly, Completed"
+            />
+          </div>
+
+          {/* Location */}
+          <div className="space-y-2">
+            <Label htmlFor="location">Location</Label>
+            <Input
+              id="location"
+              value={formData.location}
+              onChange={(e) => setFormData({ ...formData, location: e.target.value })}
+              placeholder="e.g., Muheza District, Tanga"
+            />
+          </div>
+
+          {/* Duration */}
+          <div className="space-y-2">
+            <Label htmlFor="duration">Duration</Label>
+            <Input
+              id="duration"
+              value={formData.duration}
+              onChange={(e) => setFormData({ ...formData, duration: e.target.value })}
+              placeholder="e.g., 6 months, 2 years"
+            />
+          </div>
+
+          {/* Beneficiaries */}
+          <div className="space-y-2">
+            <Label htmlFor="beneficiaries">Beneficiaries</Label>
+            <Input
+              id="beneficiaries"
+              value={formData.beneficiaries}
+              onChange={(e) => setFormData({ ...formData, beneficiaries: e.target.value })}
+              placeholder="e.g., 500+ school girls, 12 youth tailors"
+            />
+          </div>
+
+          {/* Funded By */}
+          <div className="space-y-2">
+            <Label htmlFor="funded_by">Funded By (optional)</Label>
+            <Textarea
+              id="funded_by"
+              value={formData.funded_by}
+              onChange={(e) => setFormData({ ...formData, funded_by: e.target.value })}
+              placeholder="e.g., Ireland Embassy for Tanzania in collaboration with..."
+              rows={2}
+            />
+          </div>
+
+          {/* Project Objectives */}
+          <div className="space-y-2">
+            <div className="flex items-center justify-between">
+              <Label>Project Objectives</Label>
+              <Button type="button" size="sm" variant="outline" onClick={handleAddObjective}>
+                <Plus className="h-4 w-4 mr-1" />
+                Add Objective
+              </Button>
+            </div>
+            <div className="space-y-2">
+              {formData.objectives.map((objective, index) => (
+                <div key={index} className="flex gap-2">
+                  <Textarea
+                    value={objective}
+                    onChange={(e) => handleObjectiveChange(index, e.target.value)}
+                    placeholder={`Objective ${index + 1}`}
+                    rows={2}
+                    className="flex-1"
+                  />
+                  <Button
+                    type="button"
+                    size="icon"
+                    variant="destructive"
+                    onClick={() => handleRemoveObjective(index)}
+                  >
+                    <Trash className="h-4 w-4" />
+                  </Button>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Key Activity */}
+          <div className="space-y-2">
+            <Label htmlFor="key_activity">Key Activity (optional)</Label>
+            <Textarea
+              id="key_activity"
+              value={formData.key_activity}
+              onChange={(e) => setFormData({ ...formData, key_activity: e.target.value })}
+              placeholder="Highlight a key activity or achievement..."
+              rows={3}
+            />
+          </div>
+
+          {/* Expected Outcomes */}
+          <div className="space-y-2">
+            <div className="flex items-center justify-between">
+              <Label>Expected Outcomes</Label>
+              <Button type="button" size="sm" variant="outline" onClick={handleAddOutcome}>
+                <Plus className="h-4 w-4 mr-1" />
+                Add Outcome
+              </Button>
+            </div>
+            <div className="space-y-2">
+              {formData.outcomes.map((outcome, index) => (
+                <div key={index} className="flex gap-2">
+                  <Textarea
+                    value={outcome}
+                    onChange={(e) => handleOutcomeChange(index, e.target.value)}
+                    placeholder={`Outcome ${index + 1}`}
+                    rows={2}
+                    className="flex-1"
+                  />
+                  <Button
+                    type="button"
+                    size="icon"
+                    variant="destructive"
+                    onClick={() => handleRemoveOutcome(index)}
+                  >
+                    <Trash className="h-4 w-4" />
+                  </Button>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Display Order */}
