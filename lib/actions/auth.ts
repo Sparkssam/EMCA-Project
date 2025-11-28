@@ -90,11 +90,6 @@ export async function getCurrentUser() {
     // Get role from user_metadata (set during account creation)
     const userRole = user.user_metadata?.role || "user"
 
-    // Debug logging
-    console.log("[Auth] User email:", user.email)
-    console.log("[Auth] User metadata:", user.user_metadata)
-    console.log("[Auth] User role:", userRole)
-
     return {
       success: true,
       user: {
