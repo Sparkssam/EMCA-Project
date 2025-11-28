@@ -2,6 +2,7 @@
 
 import { getSupabaseServerClient } from "@/lib/supabase/server"
 import { revalidatePath } from "next/cache"
+import { handleActionError } from "@/lib/utils/error-handling"
 
 export interface Partnership {
   id: number
@@ -48,8 +49,7 @@ export async function createPartnership(data: Omit<Partnership, "id" | "created_
     revalidatePath("/admin/partnerships")
     return { success: true, message: "Partnership inquiry submitted successfully!" }
   } catch (error) {
-    console.error("[Partnerships] Error creating partnership:", error)
-    return { success: false, message: "Failed to submit partnership inquiry. Please try again." }
+    return handleActionError(error)
   }
 }
 
@@ -87,15 +87,14 @@ export async function updatePartnershipStatus(id: number, status: string, notes?
     if (error) throw error
 
     revalidatePath("/admin/partnerships")
+    revalidatePath("/admin/partnerships")
     return { success: true, message: "Partnership status updated successfully!" }
   } catch (error) {
-    console.error("[Partnerships] Error updating partnership:", error)
-    return { success: false, message: "Failed to update partnership status." }
+    return handleActionError(error)
   }
 }
 
 export async function deletePartnership(id: number) {
-  try {
     const supabase = await getSupabaseServerClient()
     
     const { error } = await supabase
@@ -106,9 +105,9 @@ export async function deletePartnership(id: number) {
     if (error) throw error
 
     revalidatePath("/admin/partnerships")
+    revalidatePath("/admin/partnerships")
     return { success: true, message: "Partnership deleted successfully!" }
   } catch (error) {
-    console.error("[Partnerships] Error deleting partnership:", error)
-    return { success: false, message: "Failed to delete partnership." }
+    return handleActionError(error)
   }
 }

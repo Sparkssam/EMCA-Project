@@ -2,6 +2,7 @@
 
 import { getSupabaseServerClient } from "@/lib/supabase/server"
 import { revalidatePath } from "next/cache"
+import { handleActionError } from "@/lib/utils/error-handling"
 
 export type Review = {
   id: string
@@ -106,8 +107,7 @@ export async function createReview(formData: ReviewFormData) {
 
     return { success: true, data }
   } catch (error) {
-    console.error("Error in createReview:", error)
-    return { success: false, error: "Failed to create review" }
+    return handleActionError(error)
   }
 }
 
@@ -142,16 +142,15 @@ export async function submitPublicReview(formData: {
     }
 
     revalidatePath("/admin/reviews")
+    revalidatePath("/admin/reviews")
 
     return { success: true, data }
   } catch (error) {
-    console.error("Error in submitPublicReview:", error)
-    return { success: false, error: "Failed to submit review" }
+    return handleActionError(error)
   }
 }
 
 export async function updateReview(id: string, formData: ReviewFormData) {
-  try {
     const supabase = await getSupabaseServerClient()
 
     const { data, error } = await supabase
@@ -176,16 +175,15 @@ export async function updateReview(id: string, formData: ReviewFormData) {
 
     revalidatePath("/")
     revalidatePath("/admin/reviews")
+    revalidatePath("/admin/reviews")
 
     return { success: true, data }
   } catch (error) {
-    console.error("Error in updateReview:", error)
-    return { success: false, error: "Failed to update review" }
+    return handleActionError(error)
   }
 }
 
 export async function deleteReview(id: string) {
-  try {
     const supabase = await getSupabaseServerClient()
 
     const { error } = await supabase
@@ -201,16 +199,15 @@ export async function deleteReview(id: string) {
     revalidatePath("/")
     revalidatePath("/admin/reviews")
 
+    revalidatePath("/admin/reviews")
+
     return { success: true }
   } catch (error) {
-    console.error("Error in deleteReview:", error)
-    return { success: false, error: "Failed to delete review" }
+    return handleActionError(error)
   }
 }
 
 export async function toggleReviewStatus(id: string, isActive: boolean) {
-  try {
-    const supabase = await getSupabaseServerClient()
 
     const { data, error } = await supabase
       .from("reviews")
@@ -227,16 +224,15 @@ export async function toggleReviewStatus(id: string, isActive: boolean) {
     revalidatePath("/")
     revalidatePath("/admin/reviews")
 
+    revalidatePath("/admin/reviews")
+
     return { success: true, data }
   } catch (error) {
-    console.error("Error in toggleReviewStatus:", error)
-    return { success: false, error: "Failed to toggle review status" }
+    return handleActionError(error)
   }
 }
 
 export async function uploadReviewImage(file: File) {
-  try {
-    const supabase = await getSupabaseServerClient()
 
     // Create a unique filename
     const fileExt = file.name.split(".").pop()
@@ -264,6 +260,8 @@ export async function uploadReviewImage(file: File) {
     return { success: true, url: publicUrl }
   } catch (error) {
     console.error("Error in uploadReviewImage:", error)
-    return { success: false, error: "Failed to upload image" }
+    return { success: true, url: publicUrl }
+  } catch (error) {
+    return handleActionError(error)
   }
 }

@@ -2,6 +2,7 @@
 
 import { getSupabaseServerClient } from "@/lib/supabase/server"
 import { revalidatePath } from "next/cache"
+import { handleActionError } from "@/lib/utils/error-handling"
 
 export interface Event {
   id: number
@@ -35,8 +36,8 @@ export async function getAllEvents() {
     
     return { success: true, data: data as Event[] }
   } catch (error) {
-    console.error("[Events] Error fetching events:", error)
-    return { success: false, error: "Failed to fetch events", data: [] }
+    const result = handleActionError(error)
+    return { ...result, data: [] }
   }
 }
 
@@ -54,8 +55,8 @@ export async function getEventsByStatus(status: "upcoming" | "ongoing" | "past")
     
     return { success: true, data: data as Event[] }
   } catch (error) {
-    console.error("[Events] Error fetching events by status:", error)
-    return { success: false, error: "Failed to fetch events", data: [] }
+    const result = handleActionError(error)
+    return { ...result, data: [] }
   }
 }
 
@@ -73,8 +74,8 @@ export async function getEventById(id: number) {
     
     return { success: true, data: data as Event }
   } catch (error) {
-    console.error("[Events] Error fetching event:", error)
-    return { success: false, error: "Failed to fetch event", data: null }
+    const result = handleActionError(error)
+    return { ...result, data: null }
   }
 }
 
@@ -99,8 +100,8 @@ export async function createEvent(eventData: Omit<Event, "id" | "created_at" | "
     
     return { success: true, message: "Event created successfully", data: data as Event }
   } catch (error) {
-    console.error("[Events] Error creating event:", error)
-    return { success: false, error: "Failed to create event", data: null }
+    const result = handleActionError(error)
+    return { ...result, data: null }
   }
 }
 
@@ -126,8 +127,8 @@ export async function updateEvent(id: number, eventData: Partial<Event>, userEma
     
     return { success: true, message: "Event updated successfully", data: data as Event }
   } catch (error) {
-    console.error("[Events] Error updating event:", error)
-    return { success: false, error: "Failed to update event", data: null }
+    const result = handleActionError(error)
+    return { ...result, data: null }
   }
 }
 
@@ -147,8 +148,7 @@ export async function deleteEvent(id: number) {
     
     return { success: true, message: "Event deleted successfully" }
   } catch (error) {
-    console.error("[Events] Error deleting event:", error)
-    return { success: false, error: "Failed to delete event" }
+    return handleActionError(error)
   }
 }
 
@@ -211,7 +211,7 @@ export async function uploadEventImage(formData: FormData) {
     
     return { success: true, url: publicUrl }
   } catch (error) {
-    console.error("[Events] Error uploading image:", error)
-    return { success: false, error: error instanceof Error ? error.message : "Failed to upload image", url: null }
+    const result = handleActionError(error)
+    return { ...result, url: null }
   }
 }

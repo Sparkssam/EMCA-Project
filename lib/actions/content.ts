@@ -2,6 +2,7 @@
 
 import { getSupabaseServerClient } from "@/lib/supabase/server"
 import { revalidatePath } from "next/cache"
+import { handleActionError } from "@/lib/utils/error-handling"
 
 // ============================================
 // HERO CONTENT ACTIONS
@@ -32,8 +33,7 @@ export async function getHeroContent(page: string) {
     if (error && error.code !== "PGRST116") throw error
     return { success: true, data }
   } catch (error) {
-    console.error("[Content] Error fetching hero content:", error)
-    return { success: false, error: "Failed to fetch hero content" }
+    return handleActionError(error)
   }
 }
 
@@ -51,8 +51,7 @@ export async function updateHeroContent(id: number, data: Partial<HeroContent>, 
     revalidatePath(`/${data.page}`)
     return { success: true }
   } catch (error) {
-    console.error("[Content] Error updating hero content:", error)
-    return { success: false, error: "Failed to update hero content" }
+    return handleActionError(error)
   }
 }
 
@@ -81,8 +80,7 @@ export async function getAllAboutSections() {
     if (error) throw error
     return { success: true, data }
   } catch (error) {
-    console.error("[Content] Error fetching about sections:", error)
-    return { success: false, error: "Failed to fetch about sections" }
+    return handleActionError(error)
   }
 }
 
@@ -96,8 +94,7 @@ export async function createAboutSection(data: Omit<AboutSection, "id">, userEma
     revalidatePath("/about")
     return { success: true }
   } catch (error) {
-    console.error("[Content] Error creating about section:", error)
-    return { success: false, error: "Failed to create about section" }
+    return handleActionError(error)
   }
 }
 
@@ -114,8 +111,7 @@ export async function updateAboutSection(id: number, data: Partial<AboutSection>
     revalidatePath("/about")
     return { success: true }
   } catch (error) {
-    console.error("[Content] Error updating about section:", error)
-    return { success: false, error: "Failed to update about section" }
+    return handleActionError(error)
   }
 }
 
@@ -129,8 +125,7 @@ export async function deleteAboutSection(id: number) {
     revalidatePath("/about")
     return { success: true }
   } catch (error) {
-    console.error("[Content] Error deleting about section:", error)
-    return { success: false, error: "Failed to delete about section" }
+    return handleActionError(error)
   }
 }
 
@@ -160,8 +155,7 @@ export async function getAllPhilosophyItems() {
     if (error) throw error
     return { success: true, data }
   } catch (error) {
-    console.error("[Content] Error fetching philosophy items:", error)
-    return { success: false, error: "Failed to fetch philosophy items" }
+    return handleActionError(error)
   }
 }
 
@@ -176,8 +170,7 @@ export async function createPhilosophyItem(data: Omit<PhilosophyItem, "id">, use
     revalidatePath("/")
     return { success: true }
   } catch (error) {
-    console.error("[Content] Error creating philosophy item:", error)
-    return { success: false, error: "Failed to create philosophy item" }
+    return handleActionError(error)
   }
 }
 
@@ -195,8 +188,7 @@ export async function updatePhilosophyItem(id: number, data: Partial<PhilosophyI
     revalidatePath("/")
     return { success: true }
   } catch (error) {
-    console.error("[Content] Error updating philosophy item:", error)
-    return { success: false, error: "Failed to update philosophy item" }
+    return handleActionError(error)
   }
 }
 
@@ -211,8 +203,7 @@ export async function deletePhilosophyItem(id: number) {
     revalidatePath("/")
     return { success: true }
   } catch (error) {
-    console.error("[Content] Error deleting philosophy item:", error)
-    return { success: false, error: "Failed to delete philosophy item" }
+    return handleActionError(error)
   }
 }
 
@@ -242,8 +233,7 @@ export async function getAllImpactStats() {
     if (error) throw error
     return { success: true, data }
   } catch (error) {
-    console.error("[Content] Error fetching impact stats:", error)
-    return { success: false, error: "Failed to fetch impact stats" }
+    return handleActionError(error)
   }
 }
 
@@ -258,8 +248,7 @@ export async function createImpactStat(data: Omit<ImpactStat, "id">, userEmail: 
     revalidatePath("/")
     return { success: true }
   } catch (error) {
-    console.error("[Content] Error creating impact stat:", error)
-    return { success: false, error: "Failed to create impact stat" }
+    return handleActionError(error)
   }
 }
 
@@ -277,8 +266,7 @@ export async function updateImpactStat(id: number, data: Partial<ImpactStat>, us
     revalidatePath("/")
     return { success: true }
   } catch (error) {
-    console.error("[Content] Error updating impact stat:", error)
-    return { success: false, error: "Failed to update impact stat" }
+    return handleActionError(error)
   }
 }
 
@@ -293,8 +281,7 @@ export async function deleteImpactStat(id: number) {
     revalidatePath("/")
     return { success: true }
   } catch (error) {
-    console.error("[Content] Error deleting impact stat:", error)
-    return { success: false, error: "Failed to delete impact stat" }
+    return handleActionError(error)
   }
 }
 
@@ -326,8 +313,7 @@ export async function getAllSuccessStories() {
     if (error) throw error
     return { success: true, data }
   } catch (error) {
-    console.error("[Content] Error fetching success stories:", error)
-    return { success: false, error: "Failed to fetch success stories" }
+    return handleActionError(error)
   }
 }
 
@@ -341,8 +327,7 @@ export async function createSuccessStory(data: Omit<SuccessStory, "id">, userEma
     revalidatePath("/projects")
     return { success: true }
   } catch (error) {
-    console.error("[Content] Error creating success story:", error)
-    return { success: false, error: "Failed to create success story" }
+    return handleActionError(error)
   }
 }
 
@@ -359,8 +344,7 @@ export async function updateSuccessStory(id: number, data: Partial<SuccessStory>
     revalidatePath("/projects")
     return { success: true }
   } catch (error) {
-    console.error("[Content] Error updating success story:", error)
-    return { success: false, error: "Failed to update success story" }
+    return handleActionError(error)
   }
 }
 
@@ -374,8 +358,7 @@ export async function deleteSuccessStory(id: number) {
     revalidatePath("/projects")
     return { success: true }
   } catch (error) {
-    console.error("[Content] Error deleting success story:", error)
-    return { success: false, error: "Failed to delete success story" }
+    return handleActionError(error)
   }
 }
 
@@ -428,8 +411,7 @@ export async function createNewsUpdate(data: Omit<NewsUpdate, "id" | "published_
     revalidatePath("/")
     return { success: true }
   } catch (error) {
-    console.error("[Content] Error creating news update:", error)
-    return { success: false, error: "Failed to create news update" }
+    return handleActionError(error)
   }
 }
 
@@ -446,8 +428,7 @@ export async function updateNewsUpdate(id: number, data: Partial<NewsUpdate>, us
     revalidatePath("/")
     return { success: true }
   } catch (error) {
-    console.error("[Content] Error updating news update:", error)
-    return { success: false, error: "Failed to update news update" }
+    return handleActionError(error)
   }
 }
 
@@ -461,8 +442,6 @@ export async function deleteNewsUpdate(id: number) {
     revalidatePath("/")
     return { success: true }
   } catch (error) {
-    console.error("[Content] Error deleting news update:", error)
-    return { success: false, error: "Failed to delete news update" }
+    return handleActionError(error)
   }
 }
-

@@ -2,6 +2,7 @@
 
 import { getSupabaseServerClient } from "@/lib/supabase/server"
 import { revalidatePath } from "next/cache"
+import { handleActionError } from "@/lib/utils/error-handling"
 
 export type Project = {
   id: string
@@ -195,8 +196,7 @@ export async function createProject(formData: ProjectFormData) {
 
     return { success: true, data }
   } catch (error) {
-    console.error("Error in createProject:", error)
-    return { success: false, error: "Failed to create project" }
+    return handleActionError(error)
   }
 }
 
@@ -250,16 +250,15 @@ export async function updateProject(id: string, formData: ProjectFormData) {
     revalidatePath("/")
     revalidatePath("/projects")
     revalidatePath("/admin/projects")
+    revalidatePath("/admin/projects")
 
     return { success: true, data }
   } catch (error) {
-    console.error("Error in updateProject:", error)
-    return { success: false, error: "Failed to update project" }
+    return handleActionError(error)
   }
 }
 
 export async function deleteProject(id: string) {
-  try {
     const supabase = await getSupabaseServerClient()
 
     // Check authorization
@@ -282,16 +281,15 @@ export async function deleteProject(id: string) {
     revalidatePath("/projects")
     revalidatePath("/admin/projects")
 
+    revalidatePath("/admin/projects")
+
     return { success: true }
   } catch (error) {
-    console.error("Error in deleteProject:", error)
-    return { success: false, error: "Failed to delete project" }
+    return handleActionError(error)
   }
 }
 
 export async function toggleProjectStatus(id: string, isActive: boolean) {
-  try {
-    const supabase = await getSupabaseServerClient()
 
     // Check authorization
     const authCheck = await checkAdminAuth(supabase)
@@ -315,16 +313,15 @@ export async function toggleProjectStatus(id: string, isActive: boolean) {
     revalidatePath("/projects")
     revalidatePath("/admin/projects")
 
+    revalidatePath("/admin/projects")
+
     return { success: true, data }
   } catch (error) {
-    console.error("Error in toggleProjectStatus:", error)
-    return { success: false, error: "Failed to toggle project status" }
+    return handleActionError(error)
   }
 }
 
 export async function uploadProjectImage(file: File) {
-  try {
-    const supabase = await getSupabaseServerClient()
 
     // Check authorization
     const authCheck = await checkAdminAuth(supabase)
@@ -378,6 +375,8 @@ export async function uploadProjectImage(file: File) {
     return { success: true, url: publicUrl }
   } catch (error) {
     console.error("Error in uploadProjectImage:", error)
-    return { success: false, error: "Failed to upload image" }
+    return { success: true, url: publicUrl }
+  } catch (error) {
+    return handleActionError(error)
   }
 }
