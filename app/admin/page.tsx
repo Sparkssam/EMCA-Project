@@ -1,20 +1,16 @@
-import { redirect } from "next/navigation"
-import { getCurrentUser } from "@/lib/actions/auth"
+import { requireAdmin } from "@/lib/auth/utils"
 import { AdminDashboard } from "@/components/admin/admin-dashboard"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft } from "lucide-react"
 
 export default async function AdminPage() {
-  const { success, user } = await getCurrentUser()
+  const user = await requireAdmin()
 
-  if (!success || !user) {
-    redirect("/login")
-  }
-
-  // Only allow admin role to access admin pages
-  if (user.role !== "admin") {
-    redirect("/") // Redirect volunteers to homepage
+  const dashboardUser = {
+    id: user.id,
+    email: user.email,
+    role: user.user_metadata?.role
   }
 
   return (
@@ -27,7 +23,7 @@ export default async function AdminPage() {
           </Button>
         </Link>
       </div>
-      <AdminDashboard user={user} />
+      <AdminDashboard user={dashboardUser} />
     </div>
   )
 }

@@ -1,5 +1,4 @@
-import { redirect } from "next/navigation"
-import { getSupabaseServerClient } from "@/lib/supabase/server"
+import { requireAdmin } from "@/lib/auth/utils"
 import { AdminEventsManager } from "@/components/admin/admin-events-manager"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -11,23 +10,7 @@ export const metadata = {
 }
 
 export default async function AdminEventsPage() {
-  const supabase = await getSupabaseServerClient()
-
-  // Check if user is authenticated
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
-
-  if (!user) {
-    redirect("/login")
-  }
-
-  // Check if user is an admin
-  const isAdmin = user.user_metadata?.role === "admin"
-
-  if (!isAdmin) {
-    redirect("/")
-  }
+  const user = await requireAdmin()
 
   return (
     <div className="min-h-screen bg-background pt-32 py-12 px-4 sm:px-6 lg:px-8">

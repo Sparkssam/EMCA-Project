@@ -1,5 +1,4 @@
-import { redirect } from "next/navigation"
-import { getSupabaseServerClient } from "@/lib/supabase/server"
+import { requireAdmin } from "@/lib/auth/utils"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { 
@@ -95,21 +94,7 @@ const contentSections = [
 ]
 
 export default async function AdminContentPage() {
-  const supabase = await getSupabaseServerClient()
-
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
-
-  if (!user) {
-    redirect("/login")
-  }
-
-  const isAdmin = user.user_metadata?.role === "admin"
-
-  if (!isAdmin) {
-    redirect("/")
-  }
+  await requireAdmin()
 
   return (
     <div className="min-h-screen bg-background pt-32 py-12 px-4 sm:px-6 lg:px-8">

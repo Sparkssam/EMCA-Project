@@ -48,6 +48,49 @@ export type ProjectFormData = {
   outcomes?: string[]
 }
 
+// Helper function to validate project input
+function validateProjectInput(formData: ProjectFormData) {
+  const errors: string[] = []
+  
+  // Validate title
+  if (!formData.title?.trim() || formData.title.length > 100) {
+    errors.push("Title must be between 1-100 characters")
+  }
+  
+  // Sanitize description (basic length check)
+  if (formData.description && formData.description.length > 5000) {
+    errors.push("Description too long (max 5000 characters)")
+  }
+  
+  // Validate objectives
+  if (formData.objectives && !Array.isArray(formData.objectives)) {
+    errors.push("Objectives must be an array")
+  }
+  
+  // Validate outcomes
+  if (formData.outcomes && !Array.isArray(formData.outcomes)) {
+    errors.push("Outcomes must be an array")
+  }
+  
+  return errors
+}
+
+// Helper function to check admin authorization
+async function checkAdminAuth(supabase: any) {
+  const { data: { user }, error: authError } = await supabase.auth.getUser()
+  
+  if (authError || !user) {
+    return { authorized: false, error: "Unauthorized" }
+  }
+  
+  const userRole = user.user_metadata?.role
+  if (userRole !== "admin") {
+    return { authorized: false, error: "Insufficient permissions" }
+  }
+  
+  return { authorized: true }
+}
+
 export async function getProjects() {
   const supabase = await getSupabaseServerClient()
   
@@ -102,6 +145,18 @@ export async function createProject(formData: ProjectFormData) {
   try {
     const supabase = await getSupabaseServerClient()
 
+    // Check authorization
+    const authCheck = await checkAdminAuth(supabase)
+    if (!authCheck.authorized) {
+      return { success: false, error: authCheck.error }
+    }
+
+    // Validate input
+    const validationErrors = validateProjectInput(formData)
+    if (validationErrors.length > 0) {
+      return { success: false, error: validationErrors.join(', ') }
+    }
+
     const { data, error } = await supabase
       .from("projects")
       .insert([
@@ -149,6 +204,18 @@ export async function updateProject(id: string, formData: ProjectFormData) {
   try {
     const supabase = await getSupabaseServerClient()
 
+    // Check authorization
+    const authCheck = await checkAdminAuth(supabase)
+    if (!authCheck.authorized) {
+      return { success: false, error: authCheck.error }
+    }
+
+    // Validate input
+    const validationErrors = validateProjectInput(formData)
+    if (validationErrors.length > 0) {
+      return { success: false, error: validationErrors.join(', ') }
+    }
+
     const { data, error } = await supabase
       .from("projects")
       .update({
@@ -195,6 +262,12 @@ export async function deleteProject(id: string) {
   try {
     const supabase = await getSupabaseServerClient()
 
+    // Check authorization
+    const authCheck = await checkAdminAuth(supabase)
+    if (!authCheck.authorized) {
+      return { success: false, error: authCheck.error }
+    }
+
     const { error } = await supabase
       .from("projects")
       .delete()
@@ -219,6 +292,12 @@ export async function deleteProject(id: string) {
 export async function toggleProjectStatus(id: string, isActive: boolean) {
   try {
     const supabase = await getSupabaseServerClient()
+
+    // Check authorization
+    const authCheck = await checkAdminAuth(supabase)
+    if (!authCheck.authorized) {
+      return { success: false, error: authCheck.error }
+    }
 
     const { data, error } = await supabase
       .from("projects")
@@ -247,8 +326,34 @@ export async function uploadProjectImage(file: File) {
   try {
     const supabase = await getSupabaseServerClient()
 
+    // Check authorization
+    const authCheck = await checkAdminAuth(supabase)
+    if (!authCheck.authorized) {
+      return { success: false, error: authCheck.error }
+    }
+
+    // Validate file type
+    const allowedTypes = ['image/jpeg', 'image/png', 'image/webp', 'image/gif']
+    if (!allowedTypes.includes(file.type)) {
+      return { success: false, error: "Invalid file type. Only JPEG, PNG, WebP, and GIF are allowed." }
+    }
+    
+    // Validate file size (e.g., 5MB max)
+    const maxSize = 5 * 1024 * 1024 // 5MB
+    if (file.size > maxSize) {
+      return { success: false, error: "File too large. Maximum size is 5MB." }
+    }
+    
+    // Sanitize filename
+    const originalName = file.name.replace(/[^a-zA-Z0-9.-]/g, '_')
+    const fileExt = originalName.split('.').pop()?.toLowerCase()
+    const allowedExtensions = ['jpg', 'jpeg', 'png', 'webp', 'gif']
+    
+    if (!fileExt || !allowedExtensions.includes(fileExt)) {
+      return { success: false, error: "Invalid file extension" }
+    }
+
     // Create a unique filename
-    const fileExt = file.name.split(".").pop()
     const fileName = `${Math.random().toString(36).substring(2)}-${Date.now()}.${fileExt}`
     const filePath = `projects/${fileName}`
 

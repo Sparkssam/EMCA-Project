@@ -1,5 +1,4 @@
-import { redirect } from "next/navigation"
-import { getCurrentUser } from "@/lib/actions/auth"
+import { requireAdmin } from "@/lib/auth/utils"
 import { getSupabaseServerClient } from "@/lib/supabase/server"
 import { VolunteersManager } from "@/components/admin/volunteers-manager"
 import Link from "next/link"
@@ -7,16 +6,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowLeft } from "lucide-react"
 
 export default async function AdminVolunteersPage() {
-  const { success, user } = await getCurrentUser()
-
-  if (!success || !user) {
-    redirect("/login")
-  }
-
-  // Only allow admin role to access admin pages
-  if (user.role !== "admin") {
-    redirect("/") // Redirect volunteers to homepage
-  }
+  const user = await requireAdmin()
 
   // Fetch volunteers from database
   const supabase = await getSupabaseServerClient()

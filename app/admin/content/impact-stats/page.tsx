@@ -1,5 +1,4 @@
-import { redirect } from "next/navigation"
-import { getCurrentUser } from "@/lib/actions/auth"
+import { requireAdmin } from "@/lib/auth/utils"
 import { getAllImpactStats } from "@/lib/actions/content"
 import { ImpactStatsManager } from "@/components/admin/impact-stats-manager"
 import Link from "next/link"
@@ -12,16 +11,7 @@ export const metadata = {
 }
 
 export default async function AdminImpactStatsPage() {
-  const { success, user } = await getCurrentUser()
-
-  if (!success || !user) {
-    redirect("/login")
-  }
-
-  // Only allow admin role to access admin pages
-  if (user.role !== "admin") {
-    redirect("/")
-  }
+  const user = await requireAdmin()
 
   const result = await getAllImpactStats()
   const stats = result.success ? result.data || [] : []
