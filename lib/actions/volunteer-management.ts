@@ -114,7 +114,6 @@ export async function updateVolunteerPassword(
     return { 
       success: true, 
       message: `Password updated successfully for ${volunteer.name}`
-      message: `Password updated successfully for ${volunteer.name}`
     }
   } catch (error) {
     return handleActionError(error)
@@ -122,6 +121,7 @@ export async function updateVolunteerPassword(
 }
 
 export async function rejectVolunteer(
+  volunteerId: string,
   reason: string,
   adminEmail: string
 ) {
@@ -151,8 +151,8 @@ export async function rejectVolunteer(
     return handleActionError(error)
   }
 }
-
 export async function deleteVolunteerAccount(volunteerId: string) {
+  try {
     const supabase = await getSupabaseServerClient()
 
     // Get volunteer's user_id
@@ -189,8 +189,6 @@ export async function deleteVolunteerAccount(volunteerId: string) {
 
     return { 
       success: true, 
-    return { 
-      success: true, 
       message: `Volunteer ${volunteer.name} deleted successfully`
     }
   } catch (error) {
@@ -199,6 +197,8 @@ export async function deleteVolunteerAccount(volunteerId: string) {
 }
 
 export async function addAdminNotes(volunteerId: string, notes: string) {
+  try {
+    const supabase = await getSupabaseServerClient()
 
     const { error } = await supabase
       .from("volunteers")
@@ -209,8 +209,6 @@ export async function addAdminNotes(volunteerId: string, notes: string) {
       console.error("Error adding notes:", error)
       return { success: false, error: error.message }
     }
-
-    revalidatePath("/admin/volunteers")
 
     revalidatePath("/admin/volunteers")
 

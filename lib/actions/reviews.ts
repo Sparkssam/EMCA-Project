@@ -151,6 +151,7 @@ export async function submitPublicReview(formData: {
 }
 
 export async function updateReview(id: string, formData: ReviewFormData) {
+  try {
     const supabase = await getSupabaseServerClient()
 
     const { data, error } = await supabase
@@ -175,7 +176,6 @@ export async function updateReview(id: string, formData: ReviewFormData) {
 
     revalidatePath("/")
     revalidatePath("/admin/reviews")
-    revalidatePath("/admin/reviews")
 
     return { success: true, data }
   } catch (error) {
@@ -184,6 +184,7 @@ export async function updateReview(id: string, formData: ReviewFormData) {
 }
 
 export async function deleteReview(id: string) {
+  try {
     const supabase = await getSupabaseServerClient()
 
     const { error } = await supabase
@@ -199,8 +200,6 @@ export async function deleteReview(id: string) {
     revalidatePath("/")
     revalidatePath("/admin/reviews")
 
-    revalidatePath("/admin/reviews")
-
     return { success: true }
   } catch (error) {
     return handleActionError(error)
@@ -208,6 +207,8 @@ export async function deleteReview(id: string) {
 }
 
 export async function toggleReviewStatus(id: string, isActive: boolean) {
+  try {
+    const supabase = await getSupabaseServerClient()
 
     const { data, error } = await supabase
       .from("reviews")
@@ -224,15 +225,14 @@ export async function toggleReviewStatus(id: string, isActive: boolean) {
     revalidatePath("/")
     revalidatePath("/admin/reviews")
 
-    revalidatePath("/admin/reviews")
-
     return { success: true, data }
   } catch (error) {
     return handleActionError(error)
   }
 }
-
 export async function uploadReviewImage(file: File) {
+  try {
+    const supabase = await getSupabaseServerClient()
 
     // Create a unique filename
     const fileExt = file.name.split(".").pop()
@@ -257,9 +257,6 @@ export async function uploadReviewImage(file: File) {
       .from("project-images")
       .getPublicUrl(filePath)
 
-    return { success: true, url: publicUrl }
-  } catch (error) {
-    console.error("Error in uploadReviewImage:", error)
     return { success: true, url: publicUrl }
   } catch (error) {
     return handleActionError(error)

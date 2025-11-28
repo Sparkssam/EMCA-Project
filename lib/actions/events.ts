@@ -23,8 +23,44 @@ export interface Event {
   updated_by: string | null
 }
 
+// Helper function to automatically update event statuses based on current time
+async function refreshEventStatuses() {
+  const supabase = await getSupabaseServerClient()
+  const now = new Date().toISOString()
+
+  try {
+    // Update to 'ongoing': Started but not yet ended
+    await supabase
+      .from("events")
+      .update({ status: "ongoing" })
+      .lte("start_date", now)
+      .gte("end_date", now)
+      .neq("status", "ongoing")
+
+    // Update to 'past': End date has passed
+    await supabase
+      .from("events")
+      .update({ status: "past" })
+      .lt("end_date", now)
+      .neq("status", "past")
+      
+    // Update to 'upcoming': Start date is in the future
+    await supabase
+      .from("events")
+      .update({ status: "upcoming" })
+      .gt("start_date", now)
+      .neq("status", "upcoming")
+  } catch (error) {
+    console.error("Error refreshing event statuses:", error)
+    // Continue execution even if status update fails
+  }
+}
+
 export async function getAllEvents() {
   try {
+    // Refresh statuses before fetching
+    await refreshEventStatuses()
+
     const supabase = await getSupabaseServerClient()
     
     const { data, error } = await supabase
@@ -43,6 +79,9 @@ export async function getAllEvents() {
 
 export async function getEventsByStatus(status: "upcoming" | "ongoing" | "past") {
   try {
+    // Refresh statuses before fetching
+    await refreshEventStatuses()
+
     const supabase = await getSupabaseServerClient()
     
     const { data, error } = await supabase
@@ -62,6 +101,9 @@ export async function getEventsByStatus(status: "upcoming" | "ongoing" | "past")
 
 export async function getEventById(id: number) {
   try {
+    // Refresh statuses before fetching
+    await refreshEventStatuses()
+
     const supabase = await getSupabaseServerClient()
     
     const { data, error } = await supabase

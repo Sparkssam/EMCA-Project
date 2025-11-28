@@ -95,6 +95,7 @@ export async function updatePartnershipStatus(id: number, status: string, notes?
 }
 
 export async function deletePartnership(id: number) {
+  try {
     const supabase = await getSupabaseServerClient()
     
     const { error } = await supabase
