@@ -68,28 +68,15 @@ export function Navigation({ user }: NavigationProps) {
       >
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between h-20 font-serif tracking-widest">
-          <Link href="/" className="flex items-center gap-4 group text-3xl font-semibold leading-7">
-            <div className="relative">
-              <Leaf className="h-9 w-9 text-emca-yellow transition-all duration-500 group-hover:scale-110 group-hover:rotate-12" />
-            </div>
-            <div className="flex flex-col -space-y-1">
-              <span
-                className={cn(
-                  "text-2xl font-bold tracking-tight transition-colors duration-300",
-                  isScrolled ? "text-foreground" : "text-white",
-                )}
-              >
-                EMCA
-              </span>
-              <span
-                className={cn(
-                  "text-xs tracking-wider uppercase transition-colors duration-300",
-                  isScrolled ? "text-muted-foreground" : "text-emca-lime/90",
-                )}
-              >
-                Tanzania
-              </span>
-            </div>
+          <Link href="/" className="flex items-center group">
+            <Image
+              src="/logo.jpg"
+              alt="EMCA Tanzania Logo"
+              width={120}
+              height={50}
+              className="h-12 w-auto transition-all duration-500 group-hover:scale-105"
+              priority
+            />
           </Link>
 
           <div className="hidden lg:flex items-center gap-1">
