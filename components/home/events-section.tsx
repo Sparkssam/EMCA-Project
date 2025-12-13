@@ -100,7 +100,7 @@ export function EventsSection({ isAdmin = false }: { isAdmin?: boolean }) {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-4 mb-4">
-            <h2 className="text-4xl md:text-5xl font-pompiere text-foreground">Events & Activities</h2>
+            <h2 className="text-4xl md:text-5xl font-pompiere text-foreground">EVENTS & ACTIVITIES</h2>
             {isAdmin && (
               <Link href="/admin/events">
                 <Button variant="outline" size="sm" className="gap-2">

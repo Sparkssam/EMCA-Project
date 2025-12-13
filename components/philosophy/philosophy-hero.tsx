@@ -12,7 +12,7 @@ export function PhilosophyHero() {
           </div>
 
           <h1 className="font-display text-4xl sm:text-5xl md:text-7xl font-bold text-white leading-tight font-serif">
-            The Roots That <span className="text-emca-lime">Ground Us</span>
+            THE ROOTS THAT <span className="text-emca-lime">GROUND US</span>
           </h1>
 
           <p className="text-lg sm:text-xl md:text-2xl text-white/80 leading-relaxed max-w-3xl mx-auto font-serif">

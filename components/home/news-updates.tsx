@@ -64,7 +64,7 @@ export function NewsUpdates({ isAdmin = false }: { isAdmin?: boolean }) {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-4 mb-4">
-            <h2 className="text-4xl md:text-5xl font-pompiere text-foreground">News & Updates</h2>
+            <h2 className="text-4xl md:text-5xl font-pompiere text-foreground">NEWS & UPDATES</h2>
             <AdminSectionButton section="News" href="/admin/content/news" isAdmin={isAdmin} />
           </div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

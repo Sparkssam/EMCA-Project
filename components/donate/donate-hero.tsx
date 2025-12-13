@@ -16,7 +16,7 @@ export function DonateHero() {
           </div>
 
           <h1 className="font-serif text-5xl md:text-7xl font-bold text-foreground leading-tight">
-            Give Back to <span className="text-forest-600">Earth</span>
+            GIVE BACK TO <span className="text-forest-600">EARTH</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto font-serif">

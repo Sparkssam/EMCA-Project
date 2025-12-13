@@ -238,7 +238,7 @@ export default function BlogPostPage({ params }: { params: Promise<{ id: string 
         <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <h2 className="font-pompiere text-3xl font-bold text-foreground mb-8">Related Stories</h2>
+              <h2 className="font-pompiere text-3xl font-bold text-foreground mb-8">RELATED STORIES</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {relatedArticles.map((related) => (
                   <Link

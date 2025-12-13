@@ -8,7 +8,7 @@ export function ContactSection() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Get in <span className="text-forest-600">Touch</span>
+              GET IN <span className="text-forest-600">TOUCH</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Have questions? Want to visit our office? We'd love to hear from you.

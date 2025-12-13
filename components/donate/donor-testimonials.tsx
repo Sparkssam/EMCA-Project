@@ -24,7 +24,7 @@ export function DonorTestimonials() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Why Donors <span className="text-forest-600">Trust Us</span>
+              WHY DONORS <span className="text-forest-600">TRUST US</span>
             </h2>
           </div>
 

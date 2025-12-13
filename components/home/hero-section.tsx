@@ -41,11 +41,11 @@ export function HeroSection() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <span className="text-balance block text-white drop-shadow-2xl font-serif">Environmental Management</span>
+            <span className="text-balance block text-white drop-shadow-2xl font-serif">ENVIRONMENTAL MANAGEMENT</span>
             <span className="text-balance block text-white drop-shadow-2xl text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl my-2">
               &
             </span>
-            <span className="gradient-text-accent block text-balance drop-shadow-2xl">Community Awareness</span>
+            <span className="gradient-text-accent block text-balance drop-shadow-2xl">COMMUNITY AWARENESS</span>
           </h1>
 
           <p

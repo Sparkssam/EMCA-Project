@@ -72,7 +72,7 @@ export function PartnershipForm() {
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Start a <span className="text-forest-600">Conversation</span>
+              START A <span className="text-forest-600">CONVERSATION</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Tell us about your organization and how you envision collaborating with EMCA.

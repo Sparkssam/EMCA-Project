@@ -116,7 +116,7 @@ export function VolunteerForm() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12 space-y-4">
-            <h2 className="text-4xl md:text-5xl font-pompiere text-foreground font-serif">Register to Volunteer</h2>
+            <h2 className="text-4xl md:text-5xl font-pompiere text-foreground font-serif">REGISTER TO VOLUNTEER</h2>
             <p className="text-lg text-muted-foreground">
               Fill out the form below and we'll match you with opportunities that fit your interests and skills.
             </p>

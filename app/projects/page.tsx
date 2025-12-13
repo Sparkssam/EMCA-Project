@@ -113,7 +113,7 @@ export default async function ProjectsPage() {
 
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h1 className="font-pompiere text-5xl sm:text-6xl md:text-7xl font-normal text-white leading-tight">
-              Our <span className="text-emca-yellow">Projects</span>
+              OUR <span className="text-emca-yellow">PROJECTS</span>
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-emca-lime/90 leading-relaxed">
               Flagship initiatives driving environmental transformation across Tanzania
@@ -128,7 +128,7 @@ export default async function ProjectsPage() {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <div className="flex items-center justify-center gap-4 mb-6">
               <h2 className="font-pompiere text-4xl md:text-5xl font-normal text-foreground">
-                Impact in <span className="text-emca-primary">Motion</span>
+                IMPACT IN <span className="text-emca-primary">MOTION</span>
               </h2>
               {isAdmin && (
                 <Link href="/admin/content/impact-stats">
@@ -191,7 +191,7 @@ export default async function ProjectsPage() {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <div className="flex items-center justify-center gap-4 mb-6">
               <h2 className="font-pompiere text-4xl md:text-5xl font-normal text-foreground">
-                Our <span className="text-emca-primary">Projects</span>
+                OUR <span className="text-emca-primary">PROJECTS</span>
               </h2>
               {isAdmin && (
                 <Link href="/admin/projects">
@@ -466,7 +466,7 @@ export default async function ProjectsPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="font-pompiere text-4xl md:text-5xl font-normal text-foreground mb-6">
-              Stories of <span className="text-emca-primary">Transformation</span>
+              STORIES OF <span className="text-emca-primary">TRANSFORMATION</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Behind every statistic is a human story. These are the transformations that inspire us to keep going.
@@ -549,7 +549,7 @@ export default async function ProjectsPage() {
               <Target className="h-8 w-8 text-blue-600" />
             </div>
             <h2 className="font-pompiere text-4xl md:text-5xl font-normal text-foreground mb-6">
-              Aligned with <span className="text-blue-600">UN SDGs</span>
+              ALIGNED WITH <span className="text-blue-600">UN SDGs</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Our work directly contributes to the United Nations Sustainable Development Goals, creating global impact through local action.
@@ -636,7 +636,7 @@ export default async function ProjectsPage() {
       <section className="py-24 bg-gradient-to-br from-emca-darkest via-emca-dark to-emca-primary">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="font-pompiere text-4xl md:text-5xl font-normal text-white mb-6">Find Us</h2>
+            <h2 className="font-pompiere text-4xl md:text-5xl font-normal text-white mb-6">FIND US</h2>
             <p className="text-lg text-emca-lime/90 leading-relaxed">
               Visit our office or reach out to collaborate on environmental action
             </p>

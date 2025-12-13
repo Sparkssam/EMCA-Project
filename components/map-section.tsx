@@ -9,7 +9,7 @@ export function MapSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16 space-y-4">
           <h2 className="font-pompiere text-4xl sm:text-5xl md:text-6xl font-normal text-foreground font-serif">
-            Find <span className="text-emca-primary">Us</span>
+            FIND <span className="text-emca-primary">US</span>
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed font-serif">
             Visit our office or reach out to collaborate on environmental action

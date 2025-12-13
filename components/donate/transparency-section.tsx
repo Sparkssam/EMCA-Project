@@ -7,7 +7,7 @@ export function TransparencySection() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Your Money, <span className="text-forest-600">Transparently Used</span>
+              YOUR MONEY, <span className="text-forest-600">TRANSPARENTLY USED</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               We believe in complete transparency. Here's exactly how your donations create impact.

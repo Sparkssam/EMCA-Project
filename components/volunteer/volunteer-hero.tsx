@@ -19,7 +19,7 @@ export function VolunteerHero() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-pompiere text-white leading-tight font-serif">
-            Volunteer with <span className="text-emca-lime">EMCA</span>
+            VOLUNTEER WITH <span className="text-emca-lime">EMCA</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto font-serif">

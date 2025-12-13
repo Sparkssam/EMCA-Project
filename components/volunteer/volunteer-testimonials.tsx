@@ -30,7 +30,7 @@ export function VolunteerTestimonials() {
     <section className="py-20 sm:py-28 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-pompiere text-foreground font-serif">Volunteer Stories</h2>
+          <h2 className="text-4xl md:text-5xl font-pompiere text-foreground font-serif">VOLUNTEER STORIES</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Hear from our amazing volunteers about their experiences with EMCA
           </p>

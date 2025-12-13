@@ -36,7 +36,7 @@ export function PartnershipBenefits() {
       <div className="container mx-auto px-4 relative z-10 bg-primary">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">
-            Why Partner with <span className="text-forest-300">EMCA?</span>
+            WHY PARTNER WITH <span className="text-forest-300">EMCA?</span>
           </h2>
           <p className="text-xl text-forest-100 leading-relaxed">
             Beyond impact, partnerships with EMCA offer strategic value for your organization.

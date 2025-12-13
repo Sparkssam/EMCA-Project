@@ -16,7 +16,7 @@ export function JoinCommunity() {
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">
-              Join Our <span className="text-forest-300">Community</span>
+              JOIN OUR <span className="text-forest-300">COMMUNITY</span>
             </h2>
             <p className="text-xl text-forest-100 leading-relaxed">
               Tell us about yourself and how you'd like to get involved. We'll connect you with the right opportunities.

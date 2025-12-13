@@ -11,7 +11,7 @@ export function TheoryOfChange() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-secondary">
-              Our Theory of <span className="text-forest-300">Change</span>
+              OUR THEORY OF <span className="text-forest-300">CHANGE</span>
             </h2>
             <p className="text-lg text-forest-100 leading-relaxed">
               How we believe lasting environmental and social transformation happens

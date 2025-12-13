@@ -29,7 +29,7 @@ export function DonationForm() {
               <Heart className="h-8 w-8 text-white" fill="white" />
             </div>
             <h2 className="font-pompiere text-4xl sm:text-5xl font-normal text-foreground font-serif">
-              Make Your <span className="text-emca-primary">Impact</span>
+              MAKE YOUR <span className="text-emca-primary">IMPACT</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Your contribution plants trees, empowers communities, and protects Tanzania's environment

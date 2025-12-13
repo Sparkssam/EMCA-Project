@@ -50,7 +50,7 @@ export function CallToAction() {
             Take Action Today
           </div>
           <h2 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            Ready to Make a <span className="text-emca-lime">Difference?</span>
+            READY TO MAKE A <span className="text-emca-lime">DIFFERENCE?</span>
           </h2>
           <p className="text-xl md:text-2xl text-white/90 leading-relaxed text-balance font-serif">
             Every action, no matter how small, contributes to a sustainable future. Choose how you want to be part of

@@ -67,7 +67,7 @@ export function PhilosophyPreview() {
           <div
             className={`text-center mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 gradient-text">Our Philosophy</h2>
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 gradient-text">OUR PHILOSOPHY</h2>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-serif">
               The principles that guide our mission and shape our impact
             </p>

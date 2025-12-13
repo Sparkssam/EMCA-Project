@@ -21,7 +21,7 @@ export function SDGAlignment() {
             <Target className="h-8 w-8 text-sky-600" />
           </div>
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Aligned with <span className="text-sky-600">UN SDGs</span>
+            ALIGNED WITH <span className="text-sky-600">UN SDGs</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
             Our work directly contributes to the United Nations Sustainable Development Goals, creating global impact

@@ -52,7 +52,7 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
             className={`text-center mb-12 sm:mb-14 md:mb-16 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-emca-primary via-emca-medium to-emca-yellow bg-clip-text text-transparent font-serif">
-              Our Key Projects
+              OUR KEY PROJECTS
             </h2>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto px-4 font-serif">
               Three flagship initiatives driving environmental transformation across Tanzania
