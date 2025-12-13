@@ -283,7 +283,7 @@ export function Navigation({ user }: NavigationProps) {
       <div className="fixed top-20 left-0 right-0 z-40 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto px-6 py-4 flex justify-center">
           <Image
-            src="/WEBSITE.svg"
+            src="/logo.jpg"
             alt="EMCA Logo"
             width={400}
             height={100}
