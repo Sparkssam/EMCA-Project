@@ -16,7 +16,7 @@ export function EmpowerHero() {
           </div>
 
           <h1 className="font-serif text-5xl md:text-7xl font-bold text-foreground leading-tight">
-            Be the <span className="text-sky-600">Force</span>
+            BE THE <span className="text-sky-600">FORCE</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">

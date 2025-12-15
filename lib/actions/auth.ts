@@ -2,9 +2,13 @@
 
 import { getSupabaseServerClient } from "@/lib/supabase/server"
 import { cookies } from "next/headers"
+import { rateLimit } from "@/lib/utils/rate-limit"
+import { handleActionError } from "@/lib/utils/error-handling"
 
 export async function loginWithEmail(email: string, password: string) {
   try {
+    rateLimit(`login:${email}`, 5)
+
     const supabase = await getSupabaseServerClient()
 
     const { data, error } = await supabase.auth.signInWithPassword({
@@ -40,11 +44,7 @@ export async function loginWithEmail(email: string, password: string) {
       },
     }
   } catch (error) {
-    console.error("[Auth] Login error:", error)
-    return {
-      success: false,
-      message: "An unexpected error occurred. Please try again.",
-    }
+    return handleActionError(error)
   }
 }
 
@@ -89,11 +89,6 @@ export async function getCurrentUser() {
 
     // Get role from user_metadata (set during account creation)
     const userRole = user.user_metadata?.role || "user"
-
-    // Debug logging
-    console.log("[Auth] User email:", user.email)
-    console.log("[Auth] User metadata:", user.user_metadata)
-    console.log("[Auth] User role:", userRole)
 
     return {
       success: true,

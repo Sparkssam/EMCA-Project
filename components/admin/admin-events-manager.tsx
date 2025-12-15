@@ -109,6 +109,31 @@ export function AdminEventsManager({ userEmail }: { userEmail: string }) {
       return
     }
 
+    // Validate dates for "upcoming" status
+    if (formData.status === "upcoming") {
+      const tomorrow = new Date()
+      tomorrow.setDate(tomorrow.getDate() + 1)
+      tomorrow.setHours(0, 0, 0, 0)
+
+      const startDate = new Date(formData.start_date)
+      startDate.setHours(0, 0, 0, 0)
+
+      if (startDate < tomorrow) {
+        toast.error("For upcoming events, start date must be from tomorrow onwards")
+        return
+      }
+
+      if (formData.end_date) {
+        const endDate = new Date(formData.end_date)
+        endDate.setHours(0, 0, 0, 0)
+
+        if (endDate < tomorrow) {
+          toast.error("For upcoming events, end date must be from tomorrow onwards")
+          return
+        }
+      }
+    }
+
     let imageUrl = formData.image || ""
 
     // Upload image if a new file is selected
@@ -342,7 +367,11 @@ export function AdminEventsManager({ userEmail }: { userEmail: string }) {
                   type="datetime-local"
                   value={formData.start_date}
                   onChange={(e) => setFormData({ ...formData, start_date: e.target.value })}
+                  min={formData.status === "upcoming" ? new Date(new Date().setDate(new Date().getDate() + 1)).toISOString().slice(0, 16) : undefined}
                 />
+                {formData.status === "upcoming" && (
+                  <p className="text-xs text-muted-foreground mt-1">Must be from tomorrow onwards</p>
+                )}
               </div>
 
               <div>
@@ -351,7 +380,11 @@ export function AdminEventsManager({ userEmail }: { userEmail: string }) {
                   type="datetime-local"
                   value={formData.end_date || ""}
                   onChange={(e) => setFormData({ ...formData, end_date: e.target.value })}
+                  min={formData.status === "upcoming" ? new Date(new Date().setDate(new Date().getDate() + 1)).toISOString().slice(0, 16) : undefined}
                 />
+                {formData.status === "upcoming" && (
+                  <p className="text-xs text-muted-foreground mt-1">Must be from tomorrow onwards</p>
+                )}
               </div>
             </div>
 

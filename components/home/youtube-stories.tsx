@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 const youtubeVideos = [
   {
     id: "1",
-    videoId: "dQw4w9WgXcQ",
+    videoId: "NaGLVS5b_ZY",
     title: "EMCA Beach Cleanup 2024",
     description: "Join us as we clean up the beautiful beaches of Dar es Salaam",
     thumbnail: "/beach-cleanup-volunteers-tanzania-coast.jpg",
@@ -21,24 +21,17 @@ const youtubeVideos = [
   },
   {
     id: "3",
-    videoId: "dQw4w9WgXcQ",
+    videoId: "h_D3VFfhvs4",
     title: "Tree Planting Campaign",
     description: "Over 5,000 trees planted with local communities",
     thumbnail: "/tree-planting-tanzania-youth-reforestation.jpg",
   },
   {
     id: "4",
-    videoId: "dQw4w9WgXcQ",
+    videoId: "YQHsXMglC9A",
     title: "Youth Leadership Training",
     description: "Training the next generation of environmental leaders",
     thumbnail: "/young-african-leaders--youth-empowerment-tanzania.jpg",
-  },
-  {
-    id: "5",
-    videoId: "dQw4w9WgXcQ",
-    title: "Community Workshops",
-    description: "Environmental education in local communities",
-    thumbnail: "/african-community-gathering--empowerment-workshop.jpg",
   },
 ]
 
@@ -60,7 +53,7 @@ export function YoutubeStories({ isAdmin = false }: { isAdmin?: boolean }) {
     <section className="py-20 sm:py-28 bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-pompiere text-foreground font-serif">Our Video Stories</h2>
+          <h2 className="text-4xl md:text-5xl font-pompiere text-foreground font-serif">OUR VIDEO STORIES</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Watch our journey through impactful environmental projects across Tanzania
           </p>

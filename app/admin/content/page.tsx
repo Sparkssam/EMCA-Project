@@ -1,5 +1,4 @@
-import { redirect } from "next/navigation"
-import { getSupabaseServerClient } from "@/lib/supabase/server"
+import { requireAdmin } from "@/lib/auth/utils"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { 
@@ -12,7 +11,8 @@ import {
   Image as ImageIcon, 
   Newspaper,
   Calendar,
-  FolderOpen
+  FolderOpen,
+  ArrowLeft
 } from "lucide-react"
 
 export const metadata = {
@@ -94,25 +94,17 @@ const contentSections = [
 ]
 
 export default async function AdminContentPage() {
-  const supabase = await getSupabaseServerClient()
-
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
-
-  if (!user) {
-    redirect("/login")
-  }
-
-  const isAdmin = user.user_metadata?.role === "admin"
-
-  if (!isAdmin) {
-    redirect("/")
-  }
+  await requireAdmin()
 
   return (
-    <div className="min-h-screen bg-background py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-background pt-32 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
+        <Link href="/">
+          <Button variant="ghost" className="mb-6">
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Back to Home
+          </Button>
+        </Link>
         <div className="mb-12">
           <h1 className="text-4xl font-pompiere text-foreground mb-4">Content Management</h1>
           <p className="text-lg text-muted-foreground">

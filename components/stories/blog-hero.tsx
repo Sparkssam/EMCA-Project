@@ -16,7 +16,7 @@ export function BlogHero() {
           </div>
 
           <h1 className="font-pompiere text-5xl md:text-7xl font-bold text-foreground leading-tight font-serif">
-            Voices of <span className="text-forest-600 dark:text-forest-400">Change</span>
+            VOICES OF <span className="text-forest-600 dark:text-forest-400">CHANGE</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto font-serif">

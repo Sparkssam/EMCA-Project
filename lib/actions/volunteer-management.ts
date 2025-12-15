@@ -3,6 +3,7 @@
 import { getSupabaseServerClient } from "@/lib/supabase/server"
 import { createClient } from "@supabase/supabase-js"
 import { revalidatePath } from "next/cache"
+import { handleActionError } from "@/lib/utils/error-handling"
 
 const supabaseAdmin = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -77,8 +78,7 @@ export async function approveVolunteerAndCreateAccount(
       userId: authData.user.id
     }
   } catch (error) {
-    console.error("Error in approveVolunteerAndCreateAccount:", error)
-    return { success: false, error: "Failed to create account" }
+    return handleActionError(error)
   }
 }
 
@@ -116,8 +116,7 @@ export async function updateVolunteerPassword(
       message: `Password updated successfully for ${volunteer.name}`
     }
   } catch (error) {
-    console.error("Error in updateVolunteerPassword:", error)
-    return { success: false, error: "Failed to update password" }
+    return handleActionError(error)
   }
 }
 
@@ -145,14 +144,13 @@ export async function rejectVolunteer(
     }
 
     revalidatePath("/admin/volunteers")
+    revalidatePath("/admin/volunteers")
 
     return { success: true, message: "Volunteer application rejected" }
   } catch (error) {
-    console.error("Error in rejectVolunteer:", error)
-    return { success: false, error: "Failed to reject application" }
+    return handleActionError(error)
   }
 }
-
 export async function deleteVolunteerAccount(volunteerId: string) {
   try {
     const supabase = await getSupabaseServerClient()
@@ -194,8 +192,7 @@ export async function deleteVolunteerAccount(volunteerId: string) {
       message: `Volunteer ${volunteer.name} deleted successfully`
     }
   } catch (error) {
-    console.error("Error in deleteVolunteerAccount:", error)
-    return { success: false, error: "Failed to delete volunteer" }
+    return handleActionError(error)
   }
 }
 
@@ -217,7 +214,6 @@ export async function addAdminNotes(volunteerId: string, notes: string) {
 
     return { success: true, message: "Notes saved successfully" }
   } catch (error) {
-    console.error("Error in addAdminNotes:", error)
-    return { success: false, error: "Failed to save notes" }
+    return handleActionError(error)
   }
 }

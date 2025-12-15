@@ -43,7 +43,7 @@ export function GetInvolvedOptions() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
-            How You Can <span className="text-forest-600">Make a Difference</span>
+            HOW YOU CAN <span className="text-forest-600">MAKE A DIFFERENCE</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
             Whether you have an hour, a day, or want to dedicate your career—there's a place for you in our movement.

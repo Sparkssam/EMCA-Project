@@ -1,12 +1,88 @@
 "use client"
 
+import { useEffect, useState } from "react"
+import { use } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Calendar, Clock, User, ArrowLeft, Share2, Facebook, Twitter, Linkedin } from "lucide-react"
+import { Calendar, Clock, User, ArrowLeft, Share2, Facebook, Twitter, Linkedin, Leaf } from "lucide-react"
+import { getAllNewsUpdates } from "@/lib/actions/content"
 
-export default function BlogPostPage({ params }: { params: { id: string } }) {
-  // In a real app, this would fetch the post data based on the ID
+type NewsArticle = {
+  id: number
+  title: string
+  content: string
+  excerpt: string | null
+  image: string | null
+  author: string | null
+  published_date: string
+  category: string | null
+  active: boolean
+}
+
+export default function BlogPostPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = use(params)
+  const [article, setArticle] = useState<NewsArticle | null>(null)
+  const [relatedArticles, setRelatedArticles] = useState<NewsArticle[]>([])
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    loadArticle()
+  }, [id])
+
+  const loadArticle = async () => {
+    try {
+      const allNews = await getAllNewsUpdates()
+      const currentArticle = allNews.find((news) => news.id === parseInt(id))
+      
+      if (currentArticle) {
+        setArticle(currentArticle)
+        // Get 3 related articles (excluding current one)
+        const related = allNews
+          .filter((news) => news.id !== parseInt(id) && news.category === currentArticle.category)
+          .slice(0, 3)
+        
+        // If not enough from same category, add more from other categories
+        if (related.length < 3) {
+          const additional = allNews
+            .filter((news) => news.id !== parseInt(id) && !related.includes(news))
+            .slice(0, 3 - related.length)
+          related.push(...additional)
+        }
+        
+        setRelatedArticles(related)
+      }
+    } catch (error) {
+      console.error("Failed to load article:", error)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emca-primary"></div>
+      </div>
+    )
+  }
+
+  if (!article) {
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center">
+        <h1 className="text-2xl font-bold mb-4">Article Not Found</h1>
+        <Button asChild>
+          <Link href="/stories">
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Back to Stories
+          </Link>
+        </Button>
+      </div>
+    )
+  }
+
+  const readTime = Math.ceil(article.content.split(' ').length / 200)
+
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -21,31 +97,32 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
             </Button>
 
             <div className="space-y-6">
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-forest-600 text-white text-sm font-medium rounded-full">
-                  Climate Action
-                </span>
-                <span className="px-3 py-1 bg-secondary text-secondary-foreground text-sm font-medium rounded-full">
-                  Youth
-                </span>
-              </div>
+              {article.category && (
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-emca-primary text-white text-sm font-medium rounded-full capitalize">
+                    {article.category}
+                  </span>
+                </div>
+              )}
 
               <h1 className="font-pompiere text-4xl md:text-6xl font-bold text-foreground leading-tight">
-                How 500 Young Tanzanians Are Rewriting the Climate Narrative
+                {article.title}
               </h1>
 
               <div className="flex flex-wrap gap-6 text-muted-foreground">
-                <div className="flex items-center gap-2">
-                  <User className="h-5 w-5" />
-                  <span>Sarah Kimathi</span>
-                </div>
+                {article.author && (
+                  <div className="flex items-center gap-2">
+                    <User className="h-5 w-5" />
+                    <span>{article.author}</span>
+                  </div>
+                )}
                 <div className="flex items-center gap-2">
                   <Calendar className="h-5 w-5" />
-                  <span>March 15, 2025</span>
+                  <span>{new Date(article.published_date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Clock className="h-5 w-5" />
-                  <span>8 min read</span>
+                  <span>{readTime} min read</span>
                 </div>
               </div>
 
@@ -57,7 +134,7 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
                   onClick={() => {
                     if (navigator.share) {
                       navigator.share({
-                        title: "How 500 Young Tanzanians Are Rewriting the Climate Narrative",
+                        title: article.title,
                         url: window.location.href,
                       })
                     }
@@ -113,108 +190,43 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
       </section>
 
       {/* Featured Image */}
-      <section className="py-8 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="relative h-[500px] rounded-2xl overflow-hidden">
-              <Image
-                src="/climate-youth-summit-tanzania.jpg"
-                alt="Youth Climate Summit"
-                fill
-                className="object-cover"
-              />
+      {article.image && (
+        <section className="py-8 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <div className="relative h-[500px] rounded-2xl overflow-hidden">
+                <img
+                  src={article.image}
+                  alt={article.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Article Content */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
-          <article className="max-w-3xl mx-auto prose prose-lg prose-headings:font-pompiere prose-headings:font-bold prose-headings:text-foreground prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-p:text-foreground prose-p:leading-relaxed prose-a:text-forest-600 dark:prose-a:text-forest-400 prose-a:no-underline hover:prose-a:underline prose-strong:text-foreground">
-            <p className="lead text-xl text-foreground font-medium">
-              At the first-ever Youth Climate Summit in Dar es Salaam, young leaders from across Tanzania gathered to
-              share solutions, forge partnerships, and demand action. What emerged was not just hope, but a concrete
-              roadmap for change.
-            </p>
-
-            <h2>A New Generation Takes the Lead</h2>
-
-            <p>
-              The energy in the conference hall was electric. Five hundred young Tanzanians—students, farmers,
-              entrepreneurs, activists—had traveled from every corner of the country. They came with stories of climate
-              impacts in their communities: droughts destroying crops, floods washing away homes, rising temperatures
-              making outdoor work unbearable.
-            </p>
-
-            <p>
-              But they also came with solutions. And that's what made this summit different from countless climate
-              conferences before it.
-            </p>
-
-            <h2>From Talk to Action</h2>
-
-            <p>
-              "We're tired of being told we're the leaders of tomorrow," said Amina Hassan, a 22-year-old environmental
-              science student from Arusha. "We're leading today. And we're not waiting for permission."
-            </p>
-
-            <p>
-              Amina's sentiment echoed throughout the three-day summit. Workshop after workshop showcased youth-led
-              initiatives already making impact: urban farming collectives feeding communities while reducing food
-              miles, solar energy cooperatives bringing power to rural villages, waste management startups turning trash
-              into treasure.
-            </p>
-
-            <h2>The Power of Peer Learning</h2>
-
-            <p>
-              What made the summit particularly powerful was its peer-to-peer learning model. Rather than experts
-              lecturing from stages, young people shared their experiences, challenges, and solutions with each other.
-            </p>
-
-            <p>
-              Joseph, a farmer from Morogoro who increased his yields by 60% using sustainable practices, spent hours
-              teaching other young farmers his techniques. Grace, who started a recycling business in Mwanza, mentored
-              aspiring green entrepreneurs. David, a teacher implementing environmental education in his school, shared
-              curriculum resources with educators from across the country.
-            </p>
-
-            <h2>A Roadmap for the Future</h2>
-
-            <p>
-              By the summit's end, participants had created a comprehensive action plan. It includes commitments to
-              plant 100,000 trees in the next year, establish youth climate hubs in 20 regions, and advocate for
-              stronger environmental policies at local and national levels.
-            </p>
-
-            <p>
-              But perhaps most importantly, they built a network. Five hundred young people who now know they're not
-              alone in this fight. Five hundred voices that will amplify each other. Five hundred leaders who are
-              already changing the narrative.
-            </p>
-
-            <h2>What's Next?</h2>
-
-            <p>
-              The summit was just the beginning. Regional follow-up meetings are already being planned. Online
-              collaboration platforms are being built. Partnerships with organizations like EMCA are being formalized to
-              provide ongoing support, resources, and mentorship.
-            </p>
-
-            <p>
-              "This isn't a moment," Amina said in her closing remarks. "This is a movement. And we're just getting
-              started."
-            </p>
-
-            <div className="not-prose my-12 p-8 bg-forest-50 dark:bg-forest-900/30 rounded-2xl border-l-4 border-forest-600">
-              <p className="text-lg font-medium text-foreground mb-4">Want to join the movement?</p>
-              <p className="text-muted-foreground mb-6">
-                EMCA is organizing regional youth climate workshops across Tanzania. Learn how you can participate,
-                lead, or support these initiatives.
+          <article className="max-w-3xl mx-auto prose prose-lg prose-headings:font-pompiere prose-headings:font-bold prose-headings:text-foreground prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-p:text-foreground prose-p:leading-relaxed prose-a:text-emca-primary dark:prose-a:text-emca-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-foreground">
+            {article.excerpt && (
+              <p className="lead text-xl text-foreground font-medium">
+                {article.excerpt}
               </p>
-              <Button asChild className="bg-forest-600 hover:bg-forest-700 text-white">
-                <Link href="/empower">Get Involved</Link>
+            )}
+
+            <div className="whitespace-pre-wrap">
+              {article.content}
+            </div>
+
+            <div className="not-prose my-12 p-8 bg-emca-primary/5 rounded-2xl border-l-4 border-emca-primary">
+              <p className="text-lg font-medium text-foreground mb-4">Want to get involved?</p>
+              <p className="text-muted-foreground mb-6">
+                EMCA is organizing environmental initiatives across Tanzania. Learn how you can participate, lead, or support these projects.
+              </p>
+              <Button asChild className="bg-emca-primary hover:bg-emca-secondary text-white">
+                <Link href="/volunteer">Get Involved</Link>
               </Button>
             </div>
           </article>
@@ -222,37 +234,44 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
       </section>
 
       {/* Related Posts */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="font-pompiere text-3xl font-bold text-foreground mb-8">Related Stories</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[1, 2, 3].map((i) => (
-                <Link
-                  key={i}
-                  href={`/stories/${i}`}
-                  className="group bg-card rounded-xl overflow-hidden border border-border hover:shadow-lg transition-all"
-                >
-                  <div className="relative h-48">
-                    <Image
-                      src={`/generic-placeholder-graphic.png?height=200&width=400`}
-                      alt="Related post"
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="font-semibold text-card-foreground group-hover:text-forest-600 dark:group-hover:text-forest-400 transition-colors line-clamp-2">
-                      Related Story Title {i}
-                    </h3>
-                    <p className="text-sm text-muted-foreground mt-2">5 min read</p>
-                  </div>
-                </Link>
-              ))}
+      {relatedArticles.length > 0 && (
+        <section className="py-16 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="font-pompiere text-3xl font-bold text-foreground mb-8">RELATED STORIES</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {relatedArticles.map((related) => (
+                  <Link
+                    key={related.id}
+                    href={`/stories/${related.id}`}
+                    className="group bg-card rounded-xl overflow-hidden border border-border hover:shadow-lg transition-all"
+                  >
+                    {related.image ? (
+                      <div className="relative h-48">
+                        <img
+                          src={related.image}
+                          alt={related.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    ) : (
+                      <div className="relative h-48 bg-gradient-to-br from-emca-primary/10 to-emca-medium/10 flex items-center justify-center">
+                        <Leaf className="h-16 w-16 text-emca-primary/30" />
+                      </div>
+                    )}
+                    <div className="p-4">
+                      <h3 className="font-semibold text-card-foreground group-hover:text-emca-primary transition-colors line-clamp-2">
+                        {related.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground mt-2">{Math.ceil(related.content.split(' ').length / 200)} min read</p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
     </div>
   )
 }

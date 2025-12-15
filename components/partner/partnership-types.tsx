@@ -45,7 +45,7 @@ export function PartnershipTypes() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Partnership <span className="text-forest-600">Opportunities</span>
+            PARTNERSHIP <span className="text-forest-600">OPPORTUNITIES</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
             We work with diverse partners to create synergies and multiply our collective impact.

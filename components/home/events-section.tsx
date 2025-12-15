@@ -100,7 +100,7 @@ export function EventsSection({ isAdmin = false }: { isAdmin?: boolean }) {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-4 mb-4">
-            <h2 className="text-4xl md:text-5xl font-pompiere text-foreground">Events & Activities</h2>
+            <h2 className="text-4xl md:text-5xl font-pompiere text-foreground">EVENTS & ACTIVITIES</h2>
             {isAdmin && (
               <Link href="/admin/events">
                 <Button variant="outline" size="sm" className="gap-2">
@@ -210,8 +210,8 @@ export function EventsSection({ isAdmin = false }: { isAdmin?: boolean }) {
                   )}
 
                   {/* Registration Button */}
-                  {event.registration_link && event.status === "upcoming" && (
-                    <Link href={`${event.registration_link}?event=${encodeURIComponent(event.title)}&eventId=${event.id}`}>
+                  {event.status === "upcoming" && (
+                    <Link href={event.registration_link || `/volunteer?event=${encodeURIComponent(event.title)}&eventId=${event.id}`}>
                       <Button className="w-full bg-emca-primary hover:bg-emca-secondary text-white">
                         Register Now
                         <ExternalLink className="ml-2 h-4 w-4" />

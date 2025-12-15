@@ -38,7 +38,7 @@ export function ResourcesSection() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Learning <span className="text-forest-600">Resources</span>
+            LEARNING <span className="text-forest-600">RESOURCES</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
             Free tools, training, and knowledge to help you become an effective environmental leader.

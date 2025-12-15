@@ -29,7 +29,7 @@ export function SuccessStories() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Stories of <span className="text-forest-600">Transformation</span>
+            STORIES OF <span className="text-forest-600">TRANSFORMATION</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
             Behind every statistic is a human story. These are the transformations that inspire us to keep going.

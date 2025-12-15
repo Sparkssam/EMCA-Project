@@ -11,6 +11,9 @@ import { getCurrentUser } from "@/lib/actions/auth"
 
 import { Poppins, Poppins as V0_Font_Poppins } from 'next/font/google'
 
+// Force dynamic rendering for all pages since we use authentication
+export const dynamic = "force-dynamic"
+
 // Initialize fonts
 const _poppins = V0_Font_Poppins({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"] })
 

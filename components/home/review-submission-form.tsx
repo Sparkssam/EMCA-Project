@@ -58,7 +58,7 @@ export function ReviewSubmissionForm() {
 
   return (
     <div className="bg-emca-primary/5 border-2 border-emca-primary/20 rounded-2xl p-6 sticky top-24">
-      <h3 className="text-2xl font-pompiere text-foreground mb-4">Share Your Experience</h3>
+      <h3 className="text-2xl font-pompiere text-foreground mb-4">SHARE YOUR EXPERIENCE</h3>
       <p className="text-sm text-muted-foreground mb-6">
         Your feedback helps us improve and inspires others to join our mission.
       </p>

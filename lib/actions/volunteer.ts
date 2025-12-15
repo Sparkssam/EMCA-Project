@@ -1,6 +1,7 @@
 "use server"
 
 import { getSupabaseServerClient } from "@/lib/supabase/server"
+import { handleActionError } from "@/lib/utils/error-handling"
 
 interface VolunteerData {
   name: string
@@ -50,10 +51,6 @@ export async function submitVolunteerApplication(data: VolunteerData) {
       data: insertedData
     }
   } catch (error) {
-    console.error("[Volunteer] Application error:", error)
-    return { 
-      success: false, 
-      message: "Failed to submit application. Please try again." 
-    }
+    return handleActionError(error)
   }
 }

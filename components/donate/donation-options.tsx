@@ -37,7 +37,7 @@ export function DonationOptions() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Choose Your <span className="text-forest-600">Contribution</span>
+              CHOOSE YOUR <span className="text-forest-600">CONTRIBUTION</span>
             </h2>
           </div>
 

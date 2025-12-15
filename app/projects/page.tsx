@@ -113,7 +113,7 @@ export default async function ProjectsPage() {
 
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h1 className="font-pompiere text-5xl sm:text-6xl md:text-7xl font-normal text-white leading-tight">
-              Our <span className="text-emca-yellow">Projects</span>
+              OUR <span className="text-emca-yellow">PROJECTS</span>
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-emca-lime/90 leading-relaxed">
               Flagship initiatives driving environmental transformation across Tanzania
@@ -128,7 +128,7 @@ export default async function ProjectsPage() {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <div className="flex items-center justify-center gap-4 mb-6">
               <h2 className="font-pompiere text-4xl md:text-5xl font-normal text-foreground">
-                Impact in <span className="text-emca-primary">Motion</span>
+                IMPACT IN <span className="text-emca-primary">MOTION</span>
               </h2>
               {isAdmin && (
                 <Link href="/admin/content/impact-stats">
@@ -191,7 +191,7 @@ export default async function ProjectsPage() {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <div className="flex items-center justify-center gap-4 mb-6">
               <h2 className="font-pompiere text-4xl md:text-5xl font-normal text-foreground">
-                Our <span className="text-emca-primary">Projects</span>
+                OUR <span className="text-emca-primary">PROJECTS</span>
               </h2>
               {isAdmin && (
                 <Link href="/admin/projects">
@@ -207,7 +207,143 @@ export default async function ProjectsPage() {
             </p>
           </div>
 
+          {/* Database Projects */}
+          {dbProjects.length > 0 && (
+            <div className="max-w-6xl mx-auto space-y-16 sm:space-y-24 mb-24">
+              <h3 className="font-pompiere text-3xl text-center text-foreground mb-8">
+                Current <span className="text-emca-primary">Initiatives</span>
+              </h3>
+              {dbProjects.map((project, index) => (
+                <div key={project.id} className="scroll-mt-24" id={project.id}>
+                  {/* Project Header */}
+                  <div className="mb-8">
+                    <div className="flex flex-wrap items-center gap-3 mb-4">
+                      <span
+                        className={`inline-flex items-center gap-2 px-4 py-1.5 bg-gradient-to-r ${project.color} rounded-full text-sm font-medium text-white`}
+                      >
+                        {project.status || "Active"}
+                      </span>
+                      {project.location && (
+                        <div className="flex items-center gap-2 text-muted-foreground text-sm">
+                          <MapPin className="h-4 w-4" />
+                          <span>{project.location}</span>
+                        </div>
+                      )}
+                    </div>
+
+                    <h2 className="font-pompiere text-4xl sm:text-5xl font-normal text-foreground mb-2">
+                      {project.title}
+                    </h2>
+                    <p className="text-xl sm:text-2xl text-emca-primary font-medium">{project.subtitle}</p>
+                  </div>
+
+                  {/* Project Image */}
+                  <div className="relative h-80 sm:h-96 rounded-2xl overflow-hidden mb-8">
+                    <Image 
+                      src={project.image_url || "/placeholder.svg"} 
+                      alt={project.title} 
+                      fill 
+                      className="object-cover" 
+                    />
+                    <div className={`absolute inset-0 bg-gradient-to-r ${project.color} opacity-30`} />
+                  </div>
+
+                  {/* Project Stats */}
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+                    {project.beneficiaries && (
+                      <div className="flex items-center gap-3 p-4 bg-card rounded-xl border-2 border-border">
+                        <Users className="h-5 w-5 text-emca-primary" />
+                        <div>
+                          <p className="text-xs text-muted-foreground">Beneficiaries</p>
+                          <p className="text-sm font-medium text-foreground">{project.beneficiaries}</p>
+                        </div>
+                      </div>
+                    )}
+                    {project.duration && (
+                      <div className="flex items-center gap-3 p-4 bg-card rounded-xl border-2 border-border">
+                        <Calendar className="h-5 w-5 text-emca-primary" />
+                        <div>
+                          <p className="text-xs text-muted-foreground">Duration</p>
+                          <p className="text-sm font-medium text-foreground">{project.duration}</p>
+                        </div>
+                      </div>
+                    )}
+                    <div className="flex items-center gap-3 p-4 bg-card rounded-xl border-2 border-border">
+                      <TrendingUp className="h-5 w-5 text-emca-primary" />
+                      <div>
+                        <p className="text-xs text-muted-foreground">Impact</p>
+                        <p className="text-sm font-medium text-foreground">{project.impact}</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Project Description */}
+                  <div className="prose prose-lg max-w-none mb-8">
+                    <p className="text-base sm:text-lg text-muted-foreground leading-relaxed whitespace-pre-wrap">
+                      {project.description}
+                    </p>
+                    {project.funded_by && (
+                      <p className="text-sm text-muted-foreground mt-4">
+                        <strong>Funded by:</strong> {project.funded_by}
+                      </p>
+                    )}
+                  </div>
+
+                  {/* Objectives */}
+                  {project.objectives && project.objectives.length > 0 && (
+                    <div className="mb-8">
+                      <h3 className="font-pompiere text-2xl sm:text-3xl font-normal text-foreground mb-4 flex items-center gap-2">
+                        <Target className="h-6 w-6 text-emca-primary" />
+                        Project Objectives
+                      </h3>
+                      <ul className="space-y-3">
+                        {project.objectives.map((objective, idx) => (
+                          <li key={idx} className="flex items-start gap-3">
+                            <span className="mt-1.5 h-2 w-2 rounded-full bg-emca-primary flex-shrink-0" />
+                            <span className="text-base text-muted-foreground leading-relaxed">{objective}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {/* Key Activity */}
+                  {project.key_activity && (
+                    <div className={`p-6 bg-emca-primary/5 border-2 border-emca-primary/20 rounded-2xl mb-8`}>
+                      <h3 className="font-pompiere text-xl sm:text-2xl font-normal text-foreground mb-3">Key Activity</h3>
+                      <p className="text-base text-muted-foreground leading-relaxed whitespace-pre-wrap">{project.key_activity}</p>
+                    </div>
+                  )}
+
+                  {/* Expected Outcomes */}
+                  {project.outcomes && project.outcomes.length > 0 && (
+                    <div className="mb-8">
+                      <h3 className="font-pompiere text-2xl sm:text-3xl font-normal text-foreground mb-4">
+                        Expected Outcomes
+                      </h3>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        {project.outcomes.map((outcome, idx) => (
+                          <div
+                            key={idx}
+                            className="p-5 bg-card rounded-xl border-2 border-border hover:border-emca-primary/40 transition-all duration-300"
+                          >
+                            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{outcome}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {index < dbProjects.length - 1 && <div className="mt-16 border-t-2 border-border" />}
+                </div>
+              ))}
+            </div>
+          )}
+
           <div className="max-w-6xl mx-auto space-y-16 sm:space-y-24">
+            <h3 className="font-pompiere text-3xl text-center text-foreground mb-8">
+              Featured <span className="text-emca-primary">Programs</span>
+            </h3>
             {projects.map((project, index) => (
               <div key={project.id} className="scroll-mt-24" id={project.id}>
                 {/* Project Header */}
@@ -330,7 +466,7 @@ export default async function ProjectsPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="font-pompiere text-4xl md:text-5xl font-normal text-foreground mb-6">
-              Stories of <span className="text-emca-primary">Transformation</span>
+              STORIES OF <span className="text-emca-primary">TRANSFORMATION</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Behind every statistic is a human story. These are the transformations that inspire us to keep going.
@@ -413,7 +549,7 @@ export default async function ProjectsPage() {
               <Target className="h-8 w-8 text-blue-600" />
             </div>
             <h2 className="font-pompiere text-4xl md:text-5xl font-normal text-foreground mb-6">
-              Aligned with <span className="text-blue-600">UN SDGs</span>
+              ALIGNED WITH <span className="text-blue-600">UN SDGs</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Our work directly contributes to the United Nations Sustainable Development Goals, creating global impact through local action.
@@ -500,7 +636,7 @@ export default async function ProjectsPage() {
       <section className="py-24 bg-gradient-to-br from-emca-darkest via-emca-dark to-emca-primary">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="font-pompiere text-4xl md:text-5xl font-normal text-white mb-6">Find Us</h2>
+            <h2 className="font-pompiere text-4xl md:text-5xl font-normal text-white mb-6">FIND US</h2>
             <p className="text-lg text-emca-lime/90 leading-relaxed">
               Visit our office or reach out to collaborate on environmental action
             </p>

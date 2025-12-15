@@ -15,7 +15,7 @@ export function GalleryHero() {
           </div>
 
           <h1 className="font-pompiere text-5xl sm:text-6xl md:text-7xl font-normal text-white leading-tight">
-            Impact in <span className="text-emca-yellow">Focus</span>
+            IMPACT IN <span className="text-emca-yellow">FOCUS</span>
           </h1>
 
           <p className="text-xl sm:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto">

@@ -57,7 +57,7 @@ export function NewsletterSignup() {
           </div>
 
           <h2 className="font-pompiere text-4xl md:text-5xl font-bold text-primary font-serif">
-            Never Miss a <span className="text-forest-300">Story</span>
+            NEVER MISS A <span className="text-forest-300">STORY</span>
           </h2>
 
           <p className="text-xl leading-relaxed text-primary">

@@ -10,6 +10,18 @@ const team = [
     image: "/team-member-1.png",
   },
   {
+    name: "Thomson Mushi",
+    role: "Chief Operating Officer",
+    bio: `With extensive experience in operational management and strategic planning, Thomson oversees the day-to-day operations of EMCA, ensuring that our programs run efficiently and effectively. His leadership in coordinating field activities, managing resources, and streamlining processes has been instrumental in scaling our environmental initiatives across Tanzania. Thomson's commitment to operational excellence ensures that every project delivers measurable impact while maintaining the highest standards of accountability and transparency.`,
+    image: "/THOMSON MUSHI.png",
+  },
+  {
+    name: "Zephania",
+    role: "Managing Director",
+    bio: `As Managing Director, Zephania provides strategic leadership and vision for EMCA's growth and development. With a strong background in environmental management and organizational development, he works closely with stakeholders to forge partnerships, secure funding, and expand our reach. His innovative approach to sustainability and community engagement has positioned EMCA as a leading voice in environmental conservation. Zephania is dedicated to building a resilient organization that empowers communities while protecting Tanzania's natural heritage for future generations.`,
+    image: "/ZEPHANIA.png",
+  },
+  {
     name: "Frank Kalago",
     role: "Programs Manager",
     bio: "Oversees project planning, execution, and community engagement. Ensures every initiative delivers real impact and aligns with EMCA’s mission for sustainable development.",
@@ -35,14 +47,14 @@ export function TeamSection() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Meet the <span className="text-forest-600">Team</span>
+            MEET THE <span className="text-forest-600">TEAM</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
             Passionate individuals united by a shared vision of environmental sustainability and community empowerment.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {team.map((member, index) => (
             <div
               key={index}
@@ -53,7 +65,7 @@ export function TeamSection() {
                   src={member.image || "/placeholder.svg"}
                   alt={member.name}
                   fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="object-contain group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
               <div className="p-6 space-y-3">

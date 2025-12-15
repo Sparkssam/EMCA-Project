@@ -4,6 +4,7 @@ import { getSupabaseServerClient } from "@/lib/supabase/server"
 import { Resend } from "resend"
 import fs from "fs"
 import path from "path"
+import { handleActionError } from "@/lib/utils/error-handling"
 
 // Initialize Resend with API key from environment
 const resend = new Resend(process.env.RESEND_API_KEY)
@@ -32,8 +33,7 @@ export async function subscribeToNewsletter(email: string) {
 
     return { success: true, message: "Successfully subscribed! Check your email for a welcome gift." }
   } catch (error) {
-    console.error("[Newsletter] Subscription error:", error)
-    return { success: false, message: "Failed to subscribe. Please try again." }
+    return handleActionError(error)
   }
 }
 

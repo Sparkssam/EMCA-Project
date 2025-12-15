@@ -2,6 +2,7 @@
 
 import { getSupabaseServerClient } from "@/lib/supabase/server"
 import { revalidatePath } from "next/cache"
+import { handleActionError } from "@/lib/utils/error-handling"
 
 export type Project = {
   id: string
@@ -15,6 +16,14 @@ export type Project = {
   link: string | null
   display_order: number
   is_active: boolean
+  status?: string | null
+  location?: string | null
+  duration?: string | null
+  beneficiaries?: string | null
+  funded_by?: string | null
+  objectives?: string[] | null
+  key_activity?: string | null
+  outcomes?: string[] | null
   created_at: string
   updated_at: string
 }
@@ -30,6 +39,57 @@ export type ProjectFormData = {
   link?: string
   display_order?: number
   is_active?: boolean
+  status?: string
+  location?: string
+  duration?: string
+  beneficiaries?: string
+  funded_by?: string
+  objectives?: string[]
+  key_activity?: string
+  outcomes?: string[]
+}
+
+// Helper function to validate project input
+function validateProjectInput(formData: ProjectFormData) {
+  const errors: string[] = []
+  
+  // Validate title
+  if (!formData.title?.trim() || formData.title.length > 100) {
+    errors.push("Title must be between 1-100 characters")
+  }
+  
+  // Sanitize description (basic length check)
+  if (formData.description && formData.description.length > 5000) {
+    errors.push("Description too long (max 5000 characters)")
+  }
+  
+  // Validate objectives
+  if (formData.objectives && !Array.isArray(formData.objectives)) {
+    errors.push("Objectives must be an array")
+  }
+  
+  // Validate outcomes
+  if (formData.outcomes && !Array.isArray(formData.outcomes)) {
+    errors.push("Outcomes must be an array")
+  }
+  
+  return errors
+}
+
+// Helper function to check admin authorization
+async function checkAdminAuth(supabase: any) {
+  const { data: { user }, error: authError } = await supabase.auth.getUser()
+  
+  if (authError || !user) {
+    return { authorized: false, error: "Unauthorized" }
+  }
+  
+  const userRole = user.user_metadata?.role
+  if (userRole !== "admin") {
+    return { authorized: false, error: "Insufficient permissions" }
+  }
+  
+  return { authorized: true }
 }
 
 export async function getProjects() {
@@ -86,6 +146,18 @@ export async function createProject(formData: ProjectFormData) {
   try {
     const supabase = await getSupabaseServerClient()
 
+    // Check authorization
+    const authCheck = await checkAdminAuth(supabase)
+    if (!authCheck.authorized) {
+      return { success: false, error: authCheck.error }
+    }
+
+    // Validate input
+    const validationErrors = validateProjectInput(formData)
+    if (validationErrors.length > 0) {
+      return { success: false, error: validationErrors.join(', ') }
+    }
+
     const { data, error } = await supabase
       .from("projects")
       .insert([
@@ -100,6 +172,14 @@ export async function createProject(formData: ProjectFormData) {
           link: formData.link || null,
           display_order: formData.display_order || 0,
           is_active: formData.is_active ?? true,
+          status: formData.status || null,
+          location: formData.location || null,
+          duration: formData.duration || null,
+          beneficiaries: formData.beneficiaries || null,
+          funded_by: formData.funded_by || null,
+          objectives: formData.objectives || null,
+          key_activity: formData.key_activity || null,
+          outcomes: formData.outcomes || null,
         },
       ])
       .select()
@@ -116,14 +196,25 @@ export async function createProject(formData: ProjectFormData) {
 
     return { success: true, data }
   } catch (error) {
-    console.error("Error in createProject:", error)
-    return { success: false, error: "Failed to create project" }
+    return handleActionError(error)
   }
 }
 
 export async function updateProject(id: string, formData: ProjectFormData) {
   try {
     const supabase = await getSupabaseServerClient()
+
+    // Check authorization
+    const authCheck = await checkAdminAuth(supabase)
+    if (!authCheck.authorized) {
+      return { success: false, error: authCheck.error }
+    }
+
+    // Validate input
+    const validationErrors = validateProjectInput(formData)
+    if (validationErrors.length > 0) {
+      return { success: false, error: validationErrors.join(', ') }
+    }
 
     const { data, error } = await supabase
       .from("projects")
@@ -138,6 +229,14 @@ export async function updateProject(id: string, formData: ProjectFormData) {
         link: formData.link || null,
         display_order: formData.display_order ?? 0,
         is_active: formData.is_active ?? true,
+        status: formData.status || null,
+        location: formData.location || null,
+        duration: formData.duration || null,
+        beneficiaries: formData.beneficiaries || null,
+        funded_by: formData.funded_by || null,
+        objectives: formData.objectives || null,
+        key_activity: formData.key_activity || null,
+        outcomes: formData.outcomes || null,
       })
       .eq("id", id)
       .select()
@@ -151,17 +250,23 @@ export async function updateProject(id: string, formData: ProjectFormData) {
     revalidatePath("/")
     revalidatePath("/projects")
     revalidatePath("/admin/projects")
+    revalidatePath("/admin/projects")
 
     return { success: true, data }
   } catch (error) {
-    console.error("Error in updateProject:", error)
-    return { success: false, error: "Failed to update project" }
+    return handleActionError(error)
   }
 }
 
 export async function deleteProject(id: string) {
   try {
     const supabase = await getSupabaseServerClient()
+
+    // Check authorization
+    const authCheck = await checkAdminAuth(supabase)
+    if (!authCheck.authorized) {
+      return { success: false, error: authCheck.error }
+    }
 
     const { error } = await supabase
       .from("projects")
@@ -179,14 +284,19 @@ export async function deleteProject(id: string) {
 
     return { success: true }
   } catch (error) {
-    console.error("Error in deleteProject:", error)
-    return { success: false, error: "Failed to delete project" }
+    return handleActionError(error)
   }
 }
 
 export async function toggleProjectStatus(id: string, isActive: boolean) {
   try {
     const supabase = await getSupabaseServerClient()
+
+    // Check authorization
+    const authCheck = await checkAdminAuth(supabase)
+    if (!authCheck.authorized) {
+      return { success: false, error: authCheck.error }
+    }
 
     const { data, error } = await supabase
       .from("projects")
@@ -206,17 +316,41 @@ export async function toggleProjectStatus(id: string, isActive: boolean) {
 
     return { success: true, data }
   } catch (error) {
-    console.error("Error in toggleProjectStatus:", error)
-    return { success: false, error: "Failed to toggle project status" }
+    return handleActionError(error)
   }
 }
-
 export async function uploadProjectImage(file: File) {
   try {
     const supabase = await getSupabaseServerClient()
 
+    // Check authorization
+    const authCheck = await checkAdminAuth(supabase)
+    if (!authCheck.authorized) {
+      return { success: false, error: authCheck.error }
+    }
+
+    // Validate file type
+    const allowedTypes = ['image/jpeg', 'image/png', 'image/webp', 'image/gif']
+    if (!allowedTypes.includes(file.type)) {
+      return { success: false, error: "Invalid file type. Only JPEG, PNG, WebP, and GIF are allowed." }
+    }
+    
+    // Validate file size (e.g., 5MB max)
+    const maxSize = 5 * 1024 * 1024 // 5MB
+    if (file.size > maxSize) {
+      return { success: false, error: "File too large. Maximum size is 5MB." }
+    }
+    
+    // Sanitize filename
+    const originalName = file.name.replace(/[^a-zA-Z0-9.-]/g, '_')
+    const fileExt = originalName.split('.').pop()?.toLowerCase()
+    const allowedExtensions = ['jpg', 'jpeg', 'png', 'webp', 'gif']
+    
+    if (!fileExt || !allowedExtensions.includes(fileExt)) {
+      return { success: false, error: "Invalid file extension" }
+    }
+
     // Create a unique filename
-    const fileExt = file.name.split(".").pop()
     const fileName = `${Math.random().toString(36).substring(2)}-${Date.now()}.${fileExt}`
     const filePath = `projects/${fileName}`
 
@@ -240,7 +374,6 @@ export async function uploadProjectImage(file: File) {
 
     return { success: true, url: publicUrl }
   } catch (error) {
-    console.error("Error in uploadProjectImage:", error)
-    return { success: false, error: "Failed to upload image" }
+    return handleActionError(error)
   }
 }

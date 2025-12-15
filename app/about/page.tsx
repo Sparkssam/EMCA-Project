@@ -14,7 +14,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-6 sm:space-y-8">
             <h1 className="font-pompiere text-5xl sm:text-6xl md:text-7xl font-normal text-white leading-tight font-serif">
-              About <span className="text-emca-yellow">EMCA</span>
+              ABOUT <span className="text-emca-yellow">EMCA</span>
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-emca-lime/90 leading-relaxed font-serif">
               Environmental Management and Community Awareness
@@ -28,7 +28,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <h2 className="font-pompiere text-4xl sm:text-5xl font-normal text-center text-foreground mb-8 sm:mb-12 font-serif">
-              Who We <span className="text-emca-primary">Are</span>
+              WHO WE <span className="text-emca-primary">ARE</span>
             </h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-6 font-serif">
@@ -73,7 +73,7 @@ export default function AboutPage() {
                   />
                 </svg>
               </div>
-              <h2 className="font-pompiere text-3xl sm:text-4xl font-normal text-foreground mb-4 font-serif">Our Vision</h2>
+              <h2 className="font-pompiere text-3xl sm:text-4xl font-normal text-foreground mb-4 font-serif">OUR VISION</h2>
               <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                 Our vision is to create a thriving future where empowered communities will actively manage and safeguard
                 the environment.
@@ -92,7 +92,7 @@ export default function AboutPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h2 className="font-pompiere text-3xl sm:text-4xl font-normal text-foreground mb-4 font-serif">Our Mission</h2>
+              <h2 className="font-pompiere text-3xl sm:text-4xl font-normal text-foreground mb-4 font-serif">OUR MISSION</h2>
               <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                 Our mission is to empower communities as leaders in environmental stewardship by fostering innovation
                 and action-oriented solutions that promote sustainable practices for people and the planet.
@@ -107,7 +107,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16">
             <h2 className="font-pompiere text-foreground mb-6 font-serif font-extrabold text-6xl">
-              Our <span className="text-emca-primary">Objectives</span>
+              OUR <span className="text-emca-primary">OBJECTIVES</span>
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed font-serif">
               Strategic goals driving our mission forward
@@ -140,7 +140,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="font-pompiere text-4xl sm:text-5xl font-normal text-foreground mb-6 font-serif">
-              Our <span className="text-emca-primary">Values</span>
+              OUR <span className="text-emca-primary">VALUES</span>
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground font-serif">The principles that guide everything we do</p>
           </div>

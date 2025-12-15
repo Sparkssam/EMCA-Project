@@ -63,7 +63,7 @@ export function CoreValues() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
           <h2 className="font-pompiere text-3xl sm:text-4xl md:text-5xl font-normal text-foreground mb-4 sm:mb-6 font-serif">
-            Our Core <span className="text-emca-primary">Values</span>
+            OUR CORE <span className="text-emca-primary">VALUES</span>
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed font-serif">
             These principles guide every decision, project, and partnership. They are the foundation of who we are and

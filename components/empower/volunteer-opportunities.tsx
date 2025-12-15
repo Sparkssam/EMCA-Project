@@ -42,7 +42,7 @@ export function VolunteerOpportunities() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Current <span className="text-forest-600">Opportunities</span>
+            CURRENT <span className="text-forest-600">OPPORTUNITIES</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
             Find the perfect way to contribute your time and skills to environmental action.

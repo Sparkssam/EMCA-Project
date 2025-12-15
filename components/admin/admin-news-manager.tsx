@@ -34,7 +34,7 @@ import {
   updateNewsUpdate, 
   deleteNewsUpdate 
 } from "@/lib/actions/content"
-import { uploadEventImage } from "@/lib/actions/events"
+import { uploadProjectImage } from "@/lib/actions/projects"
 
 type NewsUpdate = {
   id: number
@@ -53,7 +53,6 @@ export default function AdminNewsManager() {
   const [loading, setLoading] = useState(true)
   const [editingNews, setEditingNews] = useState<NewsUpdate | null>(null)
   const [isDialogOpen, setIsDialogOpen] = useState(false)
-  const [imageFile, setImageFile] = useState<File | null>(null)
   const [imagePreview, setImagePreview] = useState<string | null>(null)
   const [uploadingImage, setUploadingImage] = useState(false)
   const { toast } = useToast()
@@ -87,20 +86,62 @@ export default function AdminNewsManager() {
     }
   }
 
-  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
-    if (file) {
-      setImageFile(file)
-      const reader = new FileReader()
-      reader.onloadend = () => {
-        setImagePreview(reader.result as string)
+    if (!file) return
+
+    // Validate file type
+    if (!file.type.startsWith("image/")) {
+      toast({
+        title: "Error",
+        description: "Please upload an image file",
+        variant: "destructive",
+      })
+      return
+    }
+
+    // Validate file size (max 5MB)
+    if (file.size > 5 * 1024 * 1024) {
+      toast({
+        title: "Error",
+        description: "Image size should be less than 5MB",
+        variant: "destructive",
+      })
+      return
+    }
+
+    setUploadingImage(true)
+
+    try {
+      // Upload immediately
+      const result = await uploadProjectImage(file)
+      
+      if (result.success && result.url) {
+        setFormData({ ...formData, image: result.url })
+        setImagePreview(result.url)
+        toast({
+          title: "Success",
+          description: "Image uploaded successfully",
+        })
+      } else {
+        toast({
+          title: "Error",
+          description: result.error || "Failed to upload image",
+          variant: "destructive",
+        })
       }
-      reader.readAsDataURL(file)
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to upload image",
+        variant: "destructive",
+      })
+    } finally {
+      setUploadingImage(false)
     }
   }
 
   const removeImage = () => {
-    setImageFile(null)
     setImagePreview(null)
     setFormData({ ...formData, image: "" })
   }
@@ -116,28 +157,11 @@ export default function AdminNewsManager() {
     }
 
     try {
-      let imageUrl = formData.image
-
-      // Upload image if selected
-      if (imageFile) {
-        setUploadingImage(true)
-        const uploadResult = await uploadEventImage(imageFile)
-        if (uploadResult.success && uploadResult.url) {
-          imageUrl = uploadResult.url
-        } else {
-          toast({
-            title: "Warning",
-            description: "Image upload failed, but news will be saved without image",
-            variant: "destructive",
-          })
-        }
-        setUploadingImage(false)
-      }
-
       const newsData = {
         ...formData,
-        image: imageUrl,
       }
+
+      console.log("[News] Saving news with data:", newsData)
 
       if (editingNews) {
         await updateNewsUpdate(editingNews.id, newsData, "admin@emca.org")
@@ -206,15 +230,14 @@ export default function AdminNewsManager() {
       excerpt: "",
       image: "",
       author: "",
-      category: "General",
+      category: "Activities",
       active: true,
     })
     setEditingNews(null)
-    setImageFile(null)
     setImagePreview(null)
   }
 
-  const categories = ["General", "Events", "Impact", "Community", "Environment", "Education"]
+  const categories = ["Activities", "Eco Tips"]
 
   if (loading) {
     return <div className="text-center py-8">Loading...</div>

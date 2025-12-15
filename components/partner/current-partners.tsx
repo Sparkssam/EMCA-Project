@@ -15,7 +15,7 @@ export function CurrentPartners() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Our <span className="text-forest-600">Partners</span>
+            OUR <span className="text-forest-600">PARTNERS</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
             Proud to collaborate with organizations that share our vision for a sustainable future.

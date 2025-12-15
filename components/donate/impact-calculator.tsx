@@ -22,7 +22,7 @@ export function ImpactCalculator() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
-              See Your <span className="text-forest-600">Impact</span>
+              SEE YOUR <span className="text-forest-600">IMPACT</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Move the slider to see how your contribution translates into real-world change.

@@ -2,6 +2,7 @@
 
 import { getSupabaseServerClient } from "@/lib/supabase/server"
 import { revalidatePath } from "next/cache"
+import { handleActionError } from "@/lib/utils/error-handling"
 
 export interface Event {
   id: number
@@ -22,8 +23,44 @@ export interface Event {
   updated_by: string | null
 }
 
+// Helper function to automatically update event statuses based on current time
+async function refreshEventStatuses() {
+  const supabase = await getSupabaseServerClient()
+  const now = new Date().toISOString()
+
+  try {
+    // Update to 'ongoing': Started but not yet ended
+    await supabase
+      .from("events")
+      .update({ status: "ongoing" })
+      .lte("start_date", now)
+      .gte("end_date", now)
+      .neq("status", "ongoing")
+
+    // Update to 'past': End date has passed
+    await supabase
+      .from("events")
+      .update({ status: "past" })
+      .lt("end_date", now)
+      .neq("status", "past")
+      
+    // Update to 'upcoming': Start date is in the future
+    await supabase
+      .from("events")
+      .update({ status: "upcoming" })
+      .gt("start_date", now)
+      .neq("status", "upcoming")
+  } catch (error) {
+    console.error("Error refreshing event statuses:", error)
+    // Continue execution even if status update fails
+  }
+}
+
 export async function getAllEvents() {
   try {
+    // Refresh statuses before fetching
+    await refreshEventStatuses()
+
     const supabase = await getSupabaseServerClient()
     
     const { data, error } = await supabase
@@ -35,13 +72,16 @@ export async function getAllEvents() {
     
     return { success: true, data: data as Event[] }
   } catch (error) {
-    console.error("[Events] Error fetching events:", error)
-    return { success: false, error: "Failed to fetch events", data: [] }
+    const result = handleActionError(error)
+    return { ...result, data: [] }
   }
 }
 
 export async function getEventsByStatus(status: "upcoming" | "ongoing" | "past") {
   try {
+    // Refresh statuses before fetching
+    await refreshEventStatuses()
+
     const supabase = await getSupabaseServerClient()
     
     const { data, error } = await supabase
@@ -54,13 +94,16 @@ export async function getEventsByStatus(status: "upcoming" | "ongoing" | "past")
     
     return { success: true, data: data as Event[] }
   } catch (error) {
-    console.error("[Events] Error fetching events by status:", error)
-    return { success: false, error: "Failed to fetch events", data: [] }
+    const result = handleActionError(error)
+    return { ...result, data: [] }
   }
 }
 
 export async function getEventById(id: number) {
   try {
+    // Refresh statuses before fetching
+    await refreshEventStatuses()
+
     const supabase = await getSupabaseServerClient()
     
     const { data, error } = await supabase
@@ -73,8 +116,8 @@ export async function getEventById(id: number) {
     
     return { success: true, data: data as Event }
   } catch (error) {
-    console.error("[Events] Error fetching event:", error)
-    return { success: false, error: "Failed to fetch event", data: null }
+    const result = handleActionError(error)
+    return { ...result, data: null }
   }
 }
 
@@ -99,8 +142,8 @@ export async function createEvent(eventData: Omit<Event, "id" | "created_at" | "
     
     return { success: true, message: "Event created successfully", data: data as Event }
   } catch (error) {
-    console.error("[Events] Error creating event:", error)
-    return { success: false, error: "Failed to create event", data: null }
+    const result = handleActionError(error)
+    return { ...result, data: null }
   }
 }
 
@@ -126,8 +169,8 @@ export async function updateEvent(id: number, eventData: Partial<Event>, userEma
     
     return { success: true, message: "Event updated successfully", data: data as Event }
   } catch (error) {
-    console.error("[Events] Error updating event:", error)
-    return { success: false, error: "Failed to update event", data: null }
+    const result = handleActionError(error)
+    return { ...result, data: null }
   }
 }
 
@@ -147,8 +190,7 @@ export async function deleteEvent(id: number) {
     
     return { success: true, message: "Event deleted successfully" }
   } catch (error) {
-    console.error("[Events] Error deleting event:", error)
-    return { success: false, error: "Failed to delete event" }
+    return handleActionError(error)
   }
 }
 
@@ -156,6 +198,8 @@ export async function uploadEventImage(formData: FormData) {
   try {
     const supabase = await getSupabaseServerClient()
     const file = formData.get("file") as File
+    
+    console.log("[Upload] Starting upload, file:", file?.name, file?.type, file?.size)
     
     if (!file) {
       return { success: false, error: "No file provided", url: null }
@@ -176,9 +220,13 @@ export async function uploadEventImage(formData: FormData) {
     const fileName = `event-${Date.now()}-${Math.random().toString(36).substring(7)}.${fileExt}`
     const filePath = `events/${fileName}`
     
+    console.log("[Upload] Generated file path:", filePath)
+    
     // Convert File to ArrayBuffer for server-side upload
     const arrayBuffer = await file.arrayBuffer()
     const buffer = Buffer.from(arrayBuffer)
+    
+    console.log("[Upload] Converted to buffer, size:", buffer.length)
     
     // Upload to Supabase Storage
     const { data, error } = await supabase.storage
@@ -189,16 +237,23 @@ export async function uploadEventImage(formData: FormData) {
         upsert: false,
       })
     
-    if (error) throw error
+    if (error) {
+      console.error("[Upload] Supabase storage error:", error)
+      throw error
+    }
+    
+    console.log("[Upload] Upload successful, data:", data)
     
     // Get public URL
     const { data: { publicUrl } } = supabase.storage
       .from("images")
       .getPublicUrl(filePath)
     
+    console.log("[Upload] Generated public URL:", publicUrl)
+    
     return { success: true, url: publicUrl }
   } catch (error) {
-    console.error("[Events] Error uploading image:", error)
-    return { success: false, error: error instanceof Error ? error.message : "Failed to upload image", url: null }
+    const result = handleActionError(error)
+    return { ...result, url: null }
   }
 }

@@ -1,6 +1,7 @@
 "use server"
 
 import { getSupabaseServerClient } from "@/lib/supabase/server"
+import { handleActionError } from "@/lib/utils/error-handling"
 
 interface PartnershipData {
   organization_name: string
@@ -22,7 +23,6 @@ export async function submitPartnershipInquiry(data: PartnershipData) {
 
     return { success: true, message: "Partnership inquiry submitted successfully!" }
   } catch (error) {
-    console.error("[v0] Partnership inquiry error:", error)
-    return { success: false, message: "Failed to submit inquiry. Please try again." }
+    return handleActionError(error)
   }
 }

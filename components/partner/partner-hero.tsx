@@ -16,7 +16,7 @@ export function PartnerHero() {
           </div>
 
           <h1 className="font-serif text-5xl md:text-7xl font-bold text-foreground leading-tight">
-            Connect & <span className="text-sky-600">Collaborate</span>
+            CONNECT & <span className="text-sky-600">COLLABORATE</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto font-serif">

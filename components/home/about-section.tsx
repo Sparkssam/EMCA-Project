@@ -38,7 +38,7 @@ export function AboutSection() {
               <span className="text-emca-primary font-semibold text-base sm:text-lg">About EMCA</span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 sm:mb-6 font-serif">
-              Who We Are
+              WHO WE ARE
             </h2>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed px-4 font-serif">
               EMCA (Environmental Management and Community Awareness) is a youth-led NGO based in Tanzania, dedicated to

@@ -129,7 +129,7 @@ export function ProjectDetails() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16 sm:mb-20 space-y-4">
           <h2 className="font-pompiere text-4xl sm:text-5xl md:text-6xl font-normal text-foreground font-serif">
-            Our <span className="text-emca-primary">Projects</span> in Detail
+            OUR <span className="text-emca-primary">PROJECTS</span> IN DETAIL
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
             Comprehensive information about EMCA's flagship environmental initiatives

@@ -16,7 +16,7 @@ export async function ReviewsSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-pompiere text-foreground">Community Reviews</h2>
+          <h2 className="text-4xl md:text-5xl font-pompiere text-foreground">COMMUNITY REVIEWS</h2>
           <div className="flex items-center justify-center gap-3">
             <div className="flex items-center gap-1">
               {[...Array(5)].map((_, i) => (
@@ -31,7 +31,7 @@ export async function ReviewsSection() {
         <div className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-8">
           {/* Reviews Display - Takes 2 columns */}
           <div className="lg:col-span-2 space-y-6">
-            <h3 className="text-2xl font-pompiere text-foreground mb-6">What People Say</h3>
+            <h3 className="text-2xl font-pompiere text-foreground mb-6">WHAT PEOPLE SAY</h3>
             {reviews.length === 0 ? (
               <div className="text-center py-12 bg-card border-2 border-border rounded-2xl">
                 <p className="text-muted-foreground">No reviews yet. Be the first to share your experience!</p>

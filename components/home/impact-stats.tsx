@@ -97,7 +97,7 @@ export function ImpactStats({ isAdmin = false }: { isAdmin?: boolean }) {
         <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-14 md:mb-16">
           <div className="flex items-center justify-center gap-4 mb-4 sm:mb-6">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground font-serif">
-              Impact by the <span className="gradient-text">Numbers</span>
+              IMPACT BY THE <span className="gradient-text">NUMBERS</span>
             </h2>
             <AdminSectionButton section="Impact Stats" href="/admin/content/impact-stats" isAdmin={isAdmin} />
           </div>
