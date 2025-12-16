@@ -6,37 +6,37 @@ const team = [
   {
     name: "Zafarani Ramadhani",
     role: " Executive Director",
-    bio: "A visionary leader dedicated to empowering communities and driving sustainable environmental action. Leads EMCA with purpose, integrity, and a passion for creating long-term impact.",
+    bio: " A visionary leader dedicated to empowering communities and driving sustainable environmental action. Leads EMCA with purpose, integrity, and a passion for creating long-term impact.",
     image: "/team-member-1.png",
   },
   {
     name: "Frank Kalago",
     role: "Programs Manager",
-    bio: "Oversees project planning, execution, and community engagement. Ensures every initiative delivers real impact and aligns with EMCA’s mission for sustainable development.",
+    bio: " Oversees project planning, execution, and community engagement. Ensures every initiative delivers real impact and aligns with EMCA’s mission for sustainable development.",
     image: "/team-member-2.png",
   },
   {
     name: "ADV. JOHN .R. CHUA ",
     role: "Secretary ",
-    bio: "The organizational backbone of EMCA managing communication, documentation, and coordination with clarity, professionalism, and reliability.",
+    bio: " The organizational backbone of EMCA—managing communication, documentation, and coordination with clarity, professionalism, and reliability.",
     image: "/team-member-3.png",
   },
   {
     name: "Zephania",
     role: "Branding and awareness Manager",
-    bio: `As Managing Director, Zephania provides strategic leadership and vision for EMCA's growth and development. With a strong background in environmental management and organizational development, he works closely with stakeholders to forge partnerships, secure funding, and expand our reach. His innovative approach to sustainability and community engagement has positioned EMCA as a leading voice in environmental conservation. Zephania is dedicated to building a resilient organization that empowers communities while protecting Tanzania's natural heritage for future generations.`,
+    bio: " Crafts EMCA’s public image with creativity and strategy. Drives powerful environmental storytelling that inspires communities to take action.",
     image: "/ZEPHANIA.png",
   },
   {
     name: "Elvida James",
     role: "Accountant",
-    bio: "Ensures transparent, accurate, and efficient financial management. Committed to maintaining accountability and supporting EMCA’s mission through responsible budgeting.",
+    bio: " Ensures transparent, accurate, and efficient financial management. Committed to maintaining accountability and supporting EMCA’s mission through responsible budgeting.",
     image: "/team-member-4.png",
   },
   {
     name: "Thomson Mushi",
     role: "ICT Manager",
-    bio: `With extensive experience in operational management and strategic planning, Thomson oversees the day-to-day operations of EMCA, ensuring that our programs run efficiently and effectively. His leadership in coordinating field activities, managing resources, and streamlining processes has been instrumental in scaling our environmental initiatives across Tanzania. Thomson's commitment to operational excellence ensures that every project delivers measurable impact while maintaining the highest standards of accountability and transparency.`,
+    bio: " Responsible for developing and maintaining EMCA’s digital systems. Ensures technology works smoothly to support innovation, data management, and project efficiency.",
     image: "/THOMSON MUSHI.png",
   }
 ]
