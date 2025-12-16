@@ -47,60 +47,123 @@ async function sendWelcomeEmailWithPDF(email: string) {
 
     // Send email with PDF attachment using Resend
     await resend.emails.send({
-      from: "EMCA Tanzania <onboarding@resend.dev>", // Change to your domain after verification
+      from: "EMCA Tanzania <onboarding@resend.dev>",
       to: email,
-      subject: "Welcome to EMCA Tanzania! 🌿",
+      subject: "Welcome to EMCA Tanzania! 🌿 Your Environmental Journey Begins",
       html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <div style="background: linear-gradient(135deg, #1A724F 0%, #06231D 100%); padding: 40px 20px; text-align: center;">
-            <h1 style="color: #F0E68C; margin: 0; font-size: 32px;">Welcome to EMCA Tanzania! 🌿</h1>
+        <div style="font-family: 'Segoe UI', Arial, sans-serif; max-width: 650px; margin: 0 auto; background: #ffffff;">
+          <!-- Header -->
+          <div style="background: linear-gradient(135deg, #1A724F 0%, #06231D 100%); padding: 40px 30px; text-align: center;">
+            <h1 style="color: #F0E68C; margin: 0; font-size: 28px; font-weight: normal;">Welcome to EMCA 🌿</h1>
+            <p style="color: #ffffff; margin: 10px 0 0 0; font-size: 14px; opacity: 0.9;">Environmental Management & Community Awareness</p>
           </div>
           
-          <div style="padding: 40px 20px; background: #ffffff;">
-            <p style="font-size: 18px; color: #333;">Thank you for subscribing!</p>
+          <!-- Main Content -->
+          <div style="padding: 40px 30px;">
+            <p style="font-size: 18px; color: #1A724F; margin: 0 0 20px 0;"><strong>Dear Friend of the Environment,</strong></p>
             
-            <p style="font-size: 16px; color: #666; line-height: 1.6;">
-              We're thrilled to have you join our community of environmental champions. 
-              Together, we're working towards a greener, more sustainable Tanzania.
+            <p style="font-size: 16px; color: #333; line-height: 1.7; margin: 0 0 25px 0;">
+              Thank you for subscribing to EMCA. We're honored to welcome you into a community that believes in a cleaner, safer, and more sustainable world for everyone.
             </p>
             
-            <div style="background: #f0f9f5; border-left: 4px solid #1A724F; padding: 20px; margin: 30px 0;">
-              <p style="margin: 0; color: #1A724F; font-weight: bold;">📄 Your Welcome Gift</p>
-              <p style="margin: 10px 0 0 0; color: #666;">
-                We've attached a special guide to help you get started with environmental conservation!
+            <p style="font-size: 16px; color: #333; line-height: 1.7; margin: 0 0 30px 0;">
+              This guidebook is designed to give you a clear understanding of who we are, what we stand for, and how you can be part of meaningful environmental change.
+            </p>
+
+            <!-- Who We Are -->
+            <div style="background: #f0f9f5; border-radius: 12px; padding: 25px; margin: 0 0 25px 0;">
+              <h2 style="color: #1A724F; margin: 0 0 15px 0; font-size: 20px;">🌱 Who We Are</h2>
+              <p style="font-size: 15px; color: #444; line-height: 1.7; margin: 0;">
+                EMCA is a youth-led Non-Governmental Organisation committed to environmental protection, community empowerment, and sustainable development. We work to ensure that every individual—especially women, youth, and vulnerable groups—has access to the knowledge and tools to protect the environment.
               </p>
             </div>
-            
-            <h3 style="color: #1A724F; margin-top: 30px;">What's Next?</h3>
-            <ul style="color: #666; line-height: 1.8;">
-              <li>Receive monthly updates on our projects</li>
-              <li>Get tips on sustainable living</li>
-              <li>Learn about volunteer opportunities</li>
-              <li>Stay informed about environmental events</li>
+
+            <!-- Our Mission -->
+            <div style="background: #fff9e6; border-radius: 12px; padding: 25px; margin: 0 0 25px 0;">
+              <h2 style="color: #1A724F; margin: 0 0 15px 0; font-size: 20px;">🎯 Our Mission</h2>
+              <p style="font-size: 15px; color: #444; line-height: 1.7; margin: 0;">
+                To empower communities as champions of environmental stewardship by promoting sustainable practices, innovation, and action-driven solutions that protect both people and the planet.
+              </p>
+            </div>
+
+            <!-- What You'll Gain -->
+            <h2 style="color: #1A724F; margin: 30px 0 20px 0; font-size: 20px;">📬 What You'll Gain as a Subscriber</h2>
+            <p style="font-size: 15px; color: #444; line-height: 1.6; margin: 0 0 15px 0;">By joining EMCA, you will receive:</p>
+            <ul style="color: #444; line-height: 2; font-size: 15px; margin: 0 0 30px 0; padding-left: 20px;">
+              <li>Updates on our ongoing and upcoming environmental projects</li>
+              <li>Educational content on sustainability, climate action, and waste management</li>
+              <li>Invitations to participate in clean-ups, tree-planting, workshops, and community initiatives</li>
+              <li>Stories from the field showcasing real impact and inspiring change</li>
             </ul>
-            
-            <div style="text-align: center; margin-top: 40px;">
-              <a href="https://emca-tanzania.org" 
+
+            <!-- Core Values -->
+            <div style="background: linear-gradient(135deg, #1A724F 0%, #2d8a65 100%); border-radius: 12px; padding: 25px; margin: 0 0 30px 0; text-align: center;">
+              <h2 style="color: #F0E68C; margin: 0 0 15px 0; font-size: 20px;">💚 Our Core Values</h2>
+              <p style="color: #ffffff; font-size: 15px; line-height: 1.8; margin: 0;">
+                <strong>Sustainability</strong> • <strong>Empowerment</strong> • <strong>Equity</strong> • <strong>Innovation</strong> • <strong>Collaboration</strong> • <strong>Intergenerational Responsibility</strong>
+              </p>
+              <p style="color: #ffffff; font-size: 14px; line-height: 1.6; margin: 15px 0 0 0; opacity: 0.9;">
+                These values shape everything we do—from educating young girls about menstrual hygiene to empowering youth climate champions and conducting large-scale cleanup drives.
+              </p>
+            </div>
+
+            <!-- Guidebook Section -->
+            <div style="background: #e8f5e9; border-left: 5px solid #1A724F; padding: 20px 25px; margin: 0 0 30px 0; border-radius: 0 12px 12px 0;">
+              <h3 style="color: #1A724F; margin: 0 0 10px 0; font-size: 18px;">📘 What's Inside Your Guidebook</h3>
+              <ul style="color: #444; line-height: 1.8; font-size: 15px; margin: 0; padding-left: 20px;">
+                <li>A brief introduction to EMCA's mission and vision</li>
+                <li>An overview of our key projects such as Binti Mazingira, Tuelimishe Mazingira, and Cleanup Drives</li>
+                <li>Simple ways you can take part and contribute from wherever you are</li>
+              </ul>
+            </div>
+
+            <!-- Welcome Again -->
+            <div style="text-align: center; padding: 20px 0 30px 0; border-top: 2px solid #e0e0e0;">
+              <h2 style="color: #1A724F; margin: 0 0 15px 0; font-size: 22px;">🌍 Welcome Again!</h2>
+              <p style="font-size: 15px; color: #444; line-height: 1.7; margin: 0 0 20px 0;">
+                Thank you for choosing to stand with us. Your subscription is more than just an email sign-up—it is a step toward creating a future where communities live in harmony with the environment.
+              </p>
+              <p style="font-size: 15px; color: #444; line-height: 1.7; margin: 0 0 25px 0;">
+                If you have any questions or would like to get involved, feel free to reach out anytime.
+              </p>
+              <p style="font-size: 18px; color: #1A724F; font-weight: bold; margin: 0;">
+                Together, let's build a greener tomorrow. 🌱
+              </p>
+            </div>
+
+            <!-- CTA Button -->
+            <div style="text-align: center; margin: 20px 0;">
+              <a href="https://emca.or.tz" 
                  style="background: linear-gradient(135deg, #F0E68C 0%, #B8D96E 100%); 
                         color: #06231D; 
-                        padding: 15px 30px; 
+                        padding: 16px 40px; 
                         text-decoration: none; 
-                        border-radius: 25px; 
+                        border-radius: 30px; 
                         font-weight: bold;
-                        display: inline-block;">
+                        font-size: 16px;
+                        display: inline-block;
+                        box-shadow: 0 4px 15px rgba(26, 114, 79, 0.3);">
                 Visit Our Website
               </a>
             </div>
           </div>
           
-          <div style="background: #f5f5f5; padding: 20px; text-align: center; color: #999; font-size: 14px;">
-            <p style="margin: 0;">
-              Environmental Management & Community Awareness (EMCA)<br>
-              Dar es Salaam, Tanzania
+          <!-- Footer -->
+          <div style="background: #06231D; padding: 30px; text-align: center;">
+            <p style="color: #F0E68C; font-size: 16px; font-weight: bold; margin: 0 0 5px 0;">EMCA Team</p>
+            <p style="color: #ffffff; font-size: 14px; margin: 0 0 15px 0; opacity: 0.8;">
+              Environmental Management & Community Awareness
             </p>
-            <p style="margin: 10px 0 0 0;">
-              <a href="mailto:info@emca-tanzania.org" style="color: #1A724F; text-decoration: none;">
-                info@emca-tanzania.org
+            <p style="color: #ffffff; font-size: 13px; margin: 0 0 10px 0; opacity: 0.7;">
+              P.O. Box 23, USA River, Arusha, Tanzania
+            </p>
+            <p style="margin: 0;">
+              <a href="mailto:info@emca.or.tz" style="color: #B8D96E; text-decoration: none; font-size: 14px;">
+                info@emca.or.tz
+              </a>
+              <span style="color: #ffffff; opacity: 0.5; margin: 0 10px;">|</span>
+              <a href="https://emca.or.tz" style="color: #B8D96E; text-decoration: none; font-size: 14px;">
+                emca.or.tz
               </a>
             </p>
           </div>
