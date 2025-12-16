@@ -35,7 +35,7 @@ The volunteer approval system is now complete with the following features:
 
 ---
 
-## 🚀 Setup Steps (Required)
+## 🚀 Setup Steps 
 
 ### Step 1: Add Service Role Key to .env.local
 
