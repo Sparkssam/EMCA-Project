@@ -1,6 +1,14 @@
-import { Camera } from "lucide-react"
+"use client"
 
-export function GalleryHero() {
+import { Camera, Settings } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
+
+interface GalleryHeroProps {
+  isAdmin?: boolean
+}
+
+export function GalleryHero({ isAdmin = false }: GalleryHeroProps) {
   return (
     <section className="relative pt-32 pb-16 sm:pt-40 sm:pb-20 bg-gradient-to-b from-emca-darkest to-emca-dark overflow-hidden">
       {/* Background pattern */}
@@ -21,6 +29,17 @@ export function GalleryHero() {
           <p className="text-xl sm:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto">
             Every photo tells a story of change, hope, and environmental action across Tanzania
           </p>
+
+          {isAdmin && (
+            <div className="pt-4">
+              <Link href="/admin/gallery">
+                <Button className="bg-emca-yellow hover:bg-emca-yellow/90 text-emca-darkest font-semibold">
+                  <Settings className="mr-2 h-4 w-4" />
+                  Manage Gallery
+                </Button>
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </section>

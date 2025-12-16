@@ -1,6 +1,7 @@
 import { GalleryHero } from "@/components/gallery/gallery-hero"
 import { GalleryGrid } from "@/components/gallery/gallery-grid"
 import { getActiveGalleryItems } from "@/lib/actions/gallery"
+import { getSupabaseServerClient } from "@/lib/supabase/server"
 
 export const metadata = {
   title: "Gallery - EMCA",
@@ -9,6 +10,10 @@ export const metadata = {
 }
 
 export default async function GalleryPage() {
+  const supabase = await getSupabaseServerClient()
+  const { data: { user } } = await supabase.auth.getUser()
+  const isAdmin = user?.user_metadata?.role === "admin"
+
   const { data: galleryItems } = await getActiveGalleryItems()
   
   // Extract unique categories from items
@@ -18,7 +23,7 @@ export default async function GalleryPage() {
 
   return (
     <div className="flex flex-col">
-      <GalleryHero />
+      <GalleryHero isAdmin={isAdmin} />
       <GalleryGrid items={galleryItems || []} categories={categories} />
     </div>
   )
