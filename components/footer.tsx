@@ -47,19 +47,6 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 font-serif">
           {/* Brand Section */}
           <div className="space-y-5">
-            <Link href="/" className="flex items-center gap-3 group">
-              <Image 
-                src="/logo.jpg" 
-                alt="EMCA Logo" 
-                width={50} 
-                height={50} 
-                className="rounded-full transition-transform group-hover:scale-110"
-              />
-              <div className="flex flex-col -space-y-1">
-                <span className="text-2xl font-bold text-white">EMCA</span>
-                <span className="text-xs tracking-wider uppercase text-emca-lime/90">Tanzania</span>
-              </div>
-            </Link>
             <p className="text-base text-white/80 leading-relaxed">
               Youth-led environmental action for a sustainable future. Together, we protect our planet and empower
               communities across Tanzania.
