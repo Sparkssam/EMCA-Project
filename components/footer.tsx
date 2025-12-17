@@ -4,7 +4,8 @@ import type React from "react"
 
 import { useState } from "react"
 import Link from "next/link"
-import { Leaf, Mail, MapPin, Phone, Facebook, Twitter, Instagram, Linkedin, Send } from "lucide-react"
+import Image from "next/image"
+import { Mail, MapPin, Phone, Facebook, Twitter, Instagram, Linkedin, Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { subscribeToNewsletter } from "@/lib/actions/newsletter"
@@ -47,7 +48,13 @@ export function Footer() {
           {/* Brand Section */}
           <div className="space-y-5">
             <Link href="/" className="flex items-center gap-3 group">
-              <Leaf className="h-10 w-10 text-emca-yellow transition-transform group-hover:rotate-12" />
+              <Image 
+                src="/logo.jpg" 
+                alt="EMCA Logo" 
+                width={50} 
+                height={50} 
+                className="rounded-full transition-transform group-hover:scale-110"
+              />
               <div className="flex flex-col -space-y-1">
                 <span className="text-2xl font-bold text-white">EMCA</span>
                 <span className="text-xs tracking-wider uppercase text-emca-lime/90">Tanzania</span>
