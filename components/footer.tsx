@@ -137,7 +137,7 @@ export function Footer() {
           <div>
             <h4 className="font-pompiere text-xl font-normal mb-5 text-emca-yellow">Stay Connected</h4>
             <p className="text-base text-white/80 mb-5 leading-relaxed">
-              Download our newsletter to learn about environmental updates, impact stories, and ways to get involved.
+              Subscribe to our newsletter to learn about environmental updates, impact stories, and ways to get involved.
             </p>
             <a
               href="/newsletter.pdf"
@@ -145,7 +145,7 @@ export function Footer() {
               className="inline-flex items-center justify-center w-full bg-gradient-to-r from-emca-yellow to-emca-lime hover:from-emca-lime hover:to-emca-yellow text-emca-darkest font-bold h-12 text-base rounded-xl shadow-lg hover:shadow-xl transition-all px-6"
             >
               <Send className="mr-2 h-5 w-5" />
-              Download Newsletter
+              Subscribe
             </a>
           </div>
         </div>
