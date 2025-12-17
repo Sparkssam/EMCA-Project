@@ -27,8 +27,8 @@ export function ContactSection() {
                     </div>
                     <div>
                       <p className="font-medium text-foreground mb-1">Email</p>
-                      <a href="mailto:info@emca.or.tz" className="text-muted-foreground hover:text-forest-600">
-                        info@emca.or.tz
+                      <a href="mailto:emca.organization@gmail.com" className="text-muted-foreground hover:text-forest-600">
+                        emca.organization@gmail.com
                       </a>
                       <br />
                       <a href="mailto:partnerships@emca.or.tz" className="text-muted-foreground hover:text-forest-600">

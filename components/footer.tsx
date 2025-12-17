@@ -157,8 +157,8 @@ export function Footer() {
                 <Mail className="h-5 w-5 text-emca-yellow flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
                 <div>
                   <p className="font-medium text-white mb-1">Email</p>
-                  <a href="mailto:info@emca.or.tz" className="hover:text-emca-lime transition-colors text-white">
-                    info@emca.or.tz
+                  <a href="mailto:emca.organization@gmail.com" className="hover:text-emca-lime transition-colors text-white">
+                    emca.organization@gmail.com
                   </a>
                 </div>
               </li>

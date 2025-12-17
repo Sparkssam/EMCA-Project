@@ -137,8 +137,8 @@ async function sendWelcomeEmail(email: string) {
               P.O. Box 23, USA River, Arusha, Tanzania
             </p>
             <p style="margin: 0;">
-              <a href="mailto:info@emca.or.tz" style="color: #B8D96E; text-decoration: none; font-size: 14px;">
-                info@emca.or.tz
+              <a href="mailto:emca.organization@gmail.com" style="color: #B8D96E; text-decoration: none; font-size: 14px;">
+                emca.organization@gmail.com
               </a>
               <span style="color: #ffffff; opacity: 0.5; margin: 0 10px;">|</span>
               <a href="https://emca.or.tz" style="color: #B8D96E; text-decoration: none; font-size: 14px;">

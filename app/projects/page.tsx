@@ -648,7 +648,7 @@ export default async function ProjectsPage() {
                 <MapPinIcon className="h-6 w-6 text-emca-darkest" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
-              <p className="text-emca-lime/80">Dar es Salaam, Tanzania</p>
+              <p className="text-emca-lime/80">USA River, Arusha, Tanzania</p>
             </div>
 
             <div className="text-center p-8 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20">
@@ -656,8 +656,8 @@ export default async function ProjectsPage() {
                 <Mail className="h-6 w-6 text-emca-darkest" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-              <a href="mailto:info@emca.or.tz" className="text-emca-lime/80 hover:text-emca-yellow transition-colors">
-                info@emca.or.tz
+              <a href="mailto:emca.organization@gmail.com" className="text-emca-lime/80 hover:text-emca-yellow transition-colors text-sm break-all">
+                emca.organization@gmail.com
               </a>
             </div>
 
@@ -675,7 +675,7 @@ export default async function ProjectsPage() {
 
           <div className="text-center mt-12">
             <a 
-              href="https://maps.google.com/?q=Dar+es+Salaam+Tanzania" 
+              href="https://maps.google.com/?q=USA+River+Arusha+Tanzania" 
               target="_blank" 
               rel="noopener noreferrer"
             >

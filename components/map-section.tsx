@@ -47,10 +47,10 @@ export function MapSection() {
                   <div>
                     <h4 className="font-semibold text-lg mb-1 text-white">Email</h4>
                     <a
-                      href="mailto:info@emca.or.tz"
+                      href="mailto:emca.organization@gmail.com"
                       className="hover:text-emca-yellow transition-colors text-secondary"
                     >
-                      info@emca.or.tz
+                      emca.organization@gmail.com
                     </a>
                   </div>
                 </div>
