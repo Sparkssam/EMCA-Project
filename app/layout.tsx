@@ -98,7 +98,7 @@ export default async function RootLayout({
   const { success, user } = await getCurrentUser()
   
   return (
-    <html lang="en" className={poppins.variable} suppressHydrationWarning>
+    <html lang="en" className={`${poppins.variable} dark`} suppressHydrationWarning>
       <head>
         <link rel="canonical" href="https://emca-tanzania.org" />
       </head>

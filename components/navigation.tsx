@@ -6,7 +6,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Menu, X, Leaf, Heart, User, LogOut } from 'lucide-react'
 import { cn } from "@/lib/utils"
-import { ThemeToggle } from "./theme-toggle"
+// Theme toggle removed - dark mode only
 import { logout } from "@/lib/actions/auth"
 import { toast } from "sonner"
 import { useRouter } from "next/navigation"
@@ -97,8 +97,6 @@ export function Navigation({ user }: NavigationProps) {
           </div>
 
           <div className="hidden lg:flex items-center gap-3">
-            <ThemeToggle />
-            
             {user ? (
               // Logged in - show user info and logout
               <>
@@ -219,11 +217,6 @@ export function Navigation({ user }: NavigationProps) {
                   {item.label}
                 </Link>
               ))}
-              
-              <div className="px-4 py-2 flex items-center gap-3">
-                <span className="text-sm text-muted-foreground">Theme:</span>
-                <ThemeToggle />
-              </div>
               
               {user ? (
                 <>
