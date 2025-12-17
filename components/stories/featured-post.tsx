@@ -17,7 +17,7 @@ export function FeaturedPost() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative h-[500px] rounded-2xl overflow-hidden group">
               <Image
-                src="/climate-youth-summit-tanzania.jpg"
+                src="/How 500 Young Tanzanians Are Rewriting the Climate Narrative.jpg"
                 alt="Youth Climate Summit"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500"

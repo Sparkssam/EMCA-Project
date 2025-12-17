@@ -96,7 +96,7 @@ const posts = [
     date: "February 25, 2025",
     readTime: "7 min",
     category: "community", // Changed to lowercase
-    image: "/community-partnership-meeting-tanzania.jpg",
+    image: "/The power of partnership.jpg",
     featured: false,
   },
   {
@@ -189,8 +189,7 @@ export function BlogGrid({ activeCategory }: BlogGridProps) {
         <div className="mt-16 text-center">
           <Button
             size="lg"
-            variant="outline"
-            className="border-2 border-forest-600 text-forest-700 dark:text-forest-300 bg-transparent hover:bg-forest-50 dark:hover:bg-forest-900/30"
+            className="bg-emca-yellow hover:bg-emca-lime text-emca-darkest font-semibold px-8 py-3"
           >
             Load More Stories
           </Button>
