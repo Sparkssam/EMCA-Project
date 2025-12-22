@@ -12,7 +12,7 @@ const values = [
   },
   {
     icon: Users,
-    title: "Youth Empowerment",
+    title: "Empowerment",
     subtitle: "The future belongs to the bold",
     description:
       "Young people are not just leaders of tomorrow—they are changemakers today. We invest in their potential, amplify their voices, and trust their vision.",
