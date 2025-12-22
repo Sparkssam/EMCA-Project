@@ -92,7 +92,7 @@ export function NewsletterSignup() {
           )}
 
           <p className="text-sm text-primary">
-            Join 5,000+ subscribers. Unsubscribe anytime. We respect your privacy.
+            Join 100+ subscribers. Unsubscribe anytime. We respect your privacy.
           </p>
         </div>
       </div>
