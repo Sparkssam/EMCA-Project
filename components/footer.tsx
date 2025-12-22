@@ -1,45 +1,11 @@
 "use client"
 
-import type React from "react"
-
-import { useState } from "react"
 import Link from "next/link"
-import { Leaf, Mail, MapPin, Phone, Facebook, Twitter, Instagram, Linkedin, Send } from "lucide-react"
+import Image from "next/image"
+import { Mail, MapPin, Phone, Facebook, Twitter, Instagram, Linkedin, Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { subscribeToNewsletter } from "@/lib/actions/newsletter"
-import { toast } from "sonner"
 
 export function Footer() {
-  const [email, setEmail] = useState("")
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [message, setMessage] = useState("")
-
-  const handleNewsletterSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    setMessage("")
-
-    try {
-      const result = await subscribeToNewsletter(email)
-      
-      if (result.success) {
-        setMessage(result.message)
-        setEmail("")
-        toast.success(result.message)
-      } else {
-        setMessage(result.message)
-        toast.error(result.message)
-      }
-    } catch (error) {
-      setMessage("Something went wrong. Please try again.")
-      toast.error("Failed to subscribe. Please try again.")
-    }
-
-    setIsSubmitting(false)
-    setTimeout(() => setMessage(""), 5000)
-  }
-
   return (
     <footer className="bg-emca-darkest text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -47,11 +13,13 @@ export function Footer() {
           {/* Brand Section */}
           <div className="space-y-5">
             <Link href="/" className="flex items-center gap-3 group">
-              <Leaf className="h-10 w-10 text-emca-yellow transition-transform group-hover:rotate-12" />
-              <div className="flex flex-col -space-y-1">
-                <span className="text-2xl font-bold text-white">EMCA</span>
-                <span className="text-xs tracking-wider uppercase text-emca-lime/90">Tanzania</span>
-              </div>
+              <Image 
+                src="/logo.jpg" 
+                alt="EMCA Logo" 
+                width={140} 
+                height={140} 
+                className="transition-transform group-hover:scale-110"
+              />
             </Link>
             <p className="text-base text-white/80 leading-relaxed">
               Youth-led environmental action for a sustainable future. Together, we protect our planet and empower
@@ -150,8 +118,8 @@ export function Footer() {
                 <Mail className="h-5 w-5 text-emca-yellow flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
                 <div>
                   <p className="font-medium text-white mb-1">Email</p>
-                  <a href="mailto:info@emca.or.tz" className="hover:text-emca-lime transition-colors text-white">
-                    info@emca.or.tz
+                  <a href="mailto:emca.organization@gmail.com" className="hover:text-emca-lime transition-colors text-white">
+                    emca.organization@gmail.com
                   </a>
                 </div>
               </li>
@@ -169,33 +137,16 @@ export function Footer() {
           <div>
             <h4 className="font-pompiere text-xl font-normal mb-5 text-emca-yellow">Stay Connected</h4>
             <p className="text-base text-white/80 mb-5 leading-relaxed">
-              Subscribe to our newsletter for environmental updates, impact stories, and ways to get involved.
+              Subscribe to our newsletter to learn about environmental updates, impact stories, and ways to get involved.
             </p>
-            <form onSubmit={handleNewsletterSubmit} className="space-y-3">
-              <Input
-                type="email"
-                placeholder="Your email address"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="bg-emca-dark border-2 border-emca-medium/30 text-white placeholder:text-white/50 h-12 text-base rounded-xl focus:border-emca-yellow transition-all"
-              />
-              <Button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-emca-yellow to-emca-lime hover:from-emca-lime hover:to-emca-yellow text-emca-darkest font-bold h-12 text-base rounded-xl shadow-lg hover:shadow-xl transition-all border-0"
-              >
-                {isSubmitting ? (
-                  "Subscribing..."
-                ) : (
-                  <>
-                    <Send className="mr-2 h-5 w-5" />
-                    Subscribe
-                  </>
-                )}
-              </Button>
-              {message && <p className="text-sm text-emca-lime">{message}</p>}
-            </form>
+            <a
+              href="/newsletter.pdf"
+              download
+              className="inline-flex items-center justify-center w-full bg-gradient-to-r from-emca-yellow to-emca-lime hover:from-emca-lime hover:to-emca-yellow text-emca-darkest font-bold h-12 text-base rounded-xl shadow-lg hover:shadow-xl transition-all px-6"
+            >
+              <Send className="mr-2 h-5 w-5" />
+              Subscribe
+            </a>
           </div>
         </div>
 

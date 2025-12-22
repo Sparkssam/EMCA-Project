@@ -157,7 +157,7 @@ export default function PrivacyPage() {
               </p>
               <div className="space-y-2 text-muted-foreground">
                 <p>
-                  <strong>Email:</strong> info@emca.or.tz
+                  <strong>Email:</strong> emca.organization@gmail.com
                 </p>
                 <p>
                   <strong>Phone:</strong> +255 628 957 390

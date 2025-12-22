@@ -187,7 +187,7 @@ export default function TermsPage() {
               </div>
               <div className="space-y-2 text-muted-foreground pl-9">
                 <p>
-                  <strong>Email:</strong> info@emca.or.tz
+                  <strong>Email:</strong> emca.organization@gmail.com
                 </p>
                 <p>
                   <strong>Phone:</strong> +255 628 957 390

@@ -542,91 +542,91 @@ export default async function ProjectsPage() {
       </section>
 
       {/* SDG Alignment Section */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-gradient-to-br from-emca-darkest via-emca-dark to-emca-primary">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-500/10 rounded-full mb-6">
-              <Target className="h-8 w-8 text-blue-600" />
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-emca-yellow rounded-full mb-6">
+              <Target className="h-8 w-8 text-emca-darkest" />
             </div>
-            <h2 className="font-pompiere text-4xl md:text-5xl font-normal text-foreground mb-6">
-              ALIGNED WITH <span className="text-blue-600">UN SDGs</span>
+            <h2 className="font-pompiere text-4xl md:text-5xl font-normal text-white mb-6">
+              ALIGNED WITH <span className="text-emca-yellow">UN SDGs</span>
             </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-emca-lime/90 leading-relaxed">
               Our work directly contributes to the United Nations Sustainable Development Goals, creating global impact through local action.
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
-            <div className="group p-6 bg-card rounded-2xl border-2 border-border hover:shadow-xl hover:border-blue-600/40 transition-all duration-300 hover:-translate-y-2 text-center">
-              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform">
+            <div className="group p-6 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 hover:shadow-xl hover:border-emca-yellow/40 transition-all duration-300 hover:-translate-y-2 text-center">
+              <div className="w-16 h-16 bg-emca-yellow text-emca-darkest rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform">
                 1
               </div>
-              <h3 className="font-semibold text-foreground mb-2 text-sm">No Poverty</h3>
-              <p className="text-xs text-muted-foreground">Creating sustainable livelihoods</p>
+              <h3 className="font-semibold text-white mb-2 text-sm">No Poverty</h3>
+              <p className="text-xs text-emca-lime/80">Creating sustainable livelihoods</p>
             </div>
 
-            <div className="group p-6 bg-card rounded-2xl border-2 border-border hover:shadow-xl hover:border-blue-600/40 transition-all duration-300 hover:-translate-y-2 text-center">
-              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform">
+            <div className="group p-6 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 hover:shadow-xl hover:border-emca-yellow/40 transition-all duration-300 hover:-translate-y-2 text-center">
+              <div className="w-16 h-16 bg-emca-yellow text-emca-darkest rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform">
                 2
               </div>
-              <h3 className="font-semibold text-foreground mb-2 text-sm">Zero Hunger</h3>
-              <p className="text-xs text-muted-foreground">Sustainable agriculture training</p>
+              <h3 className="font-semibold text-white mb-2 text-sm">Zero Hunger</h3>
+              <p className="text-xs text-emca-lime/80">Sustainable agriculture training</p>
             </div>
 
-            <div className="group p-6 bg-card rounded-2xl border-2 border-border hover:shadow-xl hover:border-blue-600/40 transition-all duration-300 hover:-translate-y-2 text-center">
-              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform">
+            <div className="group p-6 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 hover:shadow-xl hover:border-emca-yellow/40 transition-all duration-300 hover:-translate-y-2 text-center">
+              <div className="w-16 h-16 bg-emca-yellow text-emca-darkest rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform">
                 4
               </div>
-              <h3 className="font-semibold text-foreground mb-2 text-sm">Quality Education</h3>
-              <p className="text-xs text-muted-foreground">Environmental education programs</p>
+              <h3 className="font-semibold text-white mb-2 text-sm">Quality Education</h3>
+              <p className="text-xs text-emca-lime/80">Environmental education programs</p>
             </div>
 
-            <div className="group p-6 bg-card rounded-2xl border-2 border-border hover:shadow-xl hover:border-blue-600/40 transition-all duration-300 hover:-translate-y-2 text-center">
-              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform">
+            <div className="group p-6 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 hover:shadow-xl hover:border-emca-yellow/40 transition-all duration-300 hover:-translate-y-2 text-center">
+              <div className="w-16 h-16 bg-emca-yellow text-emca-darkest rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform">
                 6
               </div>
-              <h3 className="font-semibold text-foreground mb-2 text-sm">Clean Water</h3>
-              <p className="text-xs text-muted-foreground">Water access initiatives</p>
+              <h3 className="font-semibold text-white mb-2 text-sm">Clean Water</h3>
+              <p className="text-xs text-emca-lime/80">Water access initiatives</p>
             </div>
 
-            <div className="group p-6 bg-card rounded-2xl border-2 border-border hover:shadow-xl hover:border-blue-600/40 transition-all duration-300 hover:-translate-y-2 text-center">
-              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform">
+            <div className="group p-6 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 hover:shadow-xl hover:border-emca-yellow/40 transition-all duration-300 hover:-translate-y-2 text-center">
+              <div className="w-16 h-16 bg-emca-yellow text-emca-darkest rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform">
                 8
               </div>
-              <h3 className="font-semibold text-foreground mb-2 text-sm">Decent Work</h3>
-              <p className="text-xs text-muted-foreground">Green job creation</p>
+              <h3 className="font-semibold text-white mb-2 text-sm">Decent Work</h3>
+              <p className="text-xs text-emca-lime/80">Green job creation</p>
             </div>
 
-            <div className="group p-6 bg-card rounded-2xl border-2 border-border hover:shadow-xl hover:border-blue-600/40 transition-all duration-300 hover:-translate-y-2 text-center">
-              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform">
+            <div className="group p-6 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 hover:shadow-xl hover:border-emca-yellow/40 transition-all duration-300 hover:-translate-y-2 text-center">
+              <div className="w-16 h-16 bg-emca-yellow text-emca-darkest rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform">
                 11
               </div>
-              <h3 className="font-semibold text-foreground mb-2 text-sm">Sustainable Cities</h3>
-              <p className="text-xs text-muted-foreground">Urban greening projects</p>
+              <h3 className="font-semibold text-white mb-2 text-sm">Sustainable Cities</h3>
+              <p className="text-xs text-emca-lime/80">Urban greening projects</p>
             </div>
 
-            <div className="group p-6 bg-card rounded-2xl border-2 border-border hover:shadow-xl hover:border-blue-600/40 transition-all duration-300 hover:-translate-y-2 text-center">
-              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform">
+            <div className="group p-6 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 hover:shadow-xl hover:border-emca-yellow/40 transition-all duration-300 hover:-translate-y-2 text-center">
+              <div className="w-16 h-16 bg-emca-yellow text-emca-darkest rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform">
                 13
               </div>
-              <h3 className="font-semibold text-foreground mb-2 text-sm">Climate Action</h3>
-              <p className="text-xs text-muted-foreground">Carbon reduction programs</p>
+              <h3 className="font-semibold text-white mb-2 text-sm">Climate Action</h3>
+              <p className="text-xs text-emca-lime/80">Carbon reduction programs</p>
             </div>
 
-            <div className="group p-6 bg-card rounded-2xl border-2 border-border hover:shadow-xl hover:border-blue-600/40 transition-all duration-300 hover:-translate-y-2 text-center">
-              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform">
+            <div className="group p-6 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 hover:shadow-xl hover:border-emca-yellow/40 transition-all duration-300 hover:-translate-y-2 text-center">
+              <div className="w-16 h-16 bg-emca-yellow text-emca-darkest rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform">
                 15
               </div>
-              <h3 className="font-semibold text-foreground mb-2 text-sm">Life on Land</h3>
-              <p className="text-xs text-muted-foreground">Reforestation and conservation</p>
+              <h3 className="font-semibold text-white mb-2 text-sm">Life on Land</h3>
+              <p className="text-xs text-emca-lime/80">Reforestation and conservation</p>
             </div>
 
-            <div className="group p-6 bg-card rounded-2xl border-2 border-border hover:shadow-xl hover:border-blue-600/40 transition-all duration-300 hover:-translate-y-2 text-center">
-              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform">
+            <div className="group p-6 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 hover:shadow-xl hover:border-emca-yellow/40 transition-all duration-300 hover:-translate-y-2 text-center">
+              <div className="w-16 h-16 bg-emca-yellow text-emca-darkest rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform">
                 17
               </div>
-              <h3 className="font-semibold text-foreground mb-2 text-sm">Partnerships</h3>
-              <p className="text-xs text-muted-foreground">Collaborative impact</p>
+              <h3 className="font-semibold text-white mb-2 text-sm">Partnerships</h3>
+              <p className="text-xs text-emca-lime/80">Collaborative impact</p>
             </div>
           </div>
         </div>
@@ -648,7 +648,7 @@ export default async function ProjectsPage() {
                 <MapPinIcon className="h-6 w-6 text-emca-darkest" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
-              <p className="text-emca-lime/80">Dar es Salaam, Tanzania</p>
+              <p className="text-emca-lime/80">USA River, Arusha, Tanzania</p>
             </div>
 
             <div className="text-center p-8 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20">
@@ -656,8 +656,8 @@ export default async function ProjectsPage() {
                 <Mail className="h-6 w-6 text-emca-darkest" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-              <a href="mailto:info@emca.or.tz" className="text-emca-lime/80 hover:text-emca-yellow transition-colors">
-                info@emca.or.tz
+              <a href="mailto:emca.organization@gmail.com" className="text-emca-lime/80 hover:text-emca-yellow transition-colors text-sm break-all">
+                emca.organization@gmail.com
               </a>
             </div>
 
@@ -675,7 +675,7 @@ export default async function ProjectsPage() {
 
           <div className="text-center mt-12">
             <a 
-              href="https://maps.google.com/?q=Dar+es+Salaam+Tanzania" 
+              href="https://maps.google.com/?q=USA+River+Arusha+Tanzania" 
               target="_blank" 
               rel="noopener noreferrer"
             >
