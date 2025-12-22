@@ -14,7 +14,7 @@ export function Footer() {
           <div className="space-y-5">
             <Link href="/" className="flex items-center gap-3 group">
               <Image 
-                src="/logo.jpg" 
+                src="/logo.svg" 
                 alt="EMCA Logo" 
                 width={140} 
                 height={140} 
