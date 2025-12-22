@@ -70,7 +70,7 @@ export function Navigation({ user }: NavigationProps) {
           <div className="flex items-center justify-between h-20 font-serif tracking-widest">
           <Link href="/" className="flex items-center group">
             <Image
-              src="/logo.jpg"
+              src="/logo.svg"
               alt="EMCA Tanzania Logo"
               width={120}
               height={50}
