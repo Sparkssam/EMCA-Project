@@ -31,14 +31,14 @@ export function PhilosophyPreview() {
       icon: Eye,
       title: "Vision",
       content:
-        "A Tanzania where communities thrive in harmony with nature, and every individual is empowered to protect and preserve our environment for future generations.",
+        "Our vision is to create a thriving future where empowered communities will actively manage and safeguard the environment.",
       color: "emca-primary",
     },
     {
       icon: Target,
       title: "Mission",
       content:
-        "To mobilize and empower youth-led environmental initiatives that promote sustainable practices, community awareness, and lasting ecological impact across Tanzania.",
+        "Our mission is to empower communities as leaders in environmental stewardship by fostering innovation and action-oriented solutions that promote sustainable practices for people and the planet.",
       color: "emca-medium",
     },
     {
@@ -52,7 +52,7 @@ export function PhilosophyPreview() {
       icon: Award,
       title: "Values",
       content:
-        "Sustainability • Youth Empowerment • Community Collaboration • Innovation • Accountability • Respect for Nature",
+        "Sustainability • Empowerment • Collaboration • Innovation • Equity and Inclusion • Intergenerational Responsibility",
       color: "emca-lime",
     },
   ]

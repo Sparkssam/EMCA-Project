@@ -75,8 +75,8 @@ export default function AboutPage() {
               </div>
               <h2 className="font-pompiere text-3xl sm:text-4xl font-normal text-foreground mb-4 font-serif">OUR VISION</h2>
               <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                Our vision is to create a thriving future where empowered communities will actively manage and safeguard
-                the environment.
+                Our vision is to create a thriving future where empowered communities will
+actively manage and safeguard the environment.
               </p>
             </div>
 
@@ -94,8 +94,9 @@ export default function AboutPage() {
               </div>
               <h2 className="font-pompiere text-3xl sm:text-4xl font-normal text-foreground mb-4 font-serif">OUR MISSION</h2>
               <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                Our mission is to empower communities as leaders in environmental stewardship by fostering innovation
-                and action-oriented solutions that promote sustainable practices for people and the planet.
+                Our mission is to empower communities as leaders in environmental
+stewardship by fostering innovation and action-oriented solutions that
+promote sustainable practices for people and the planet.
               </p>
             </div>
           </div>
