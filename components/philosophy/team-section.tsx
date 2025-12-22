@@ -35,8 +35,8 @@ const team = [
   },
   {
     name: "Thomson Mushi",
-    role: "ICT Manager",
-    bio: " Responsible for developing and maintaining EMCA’s digital systems. Ensures technology works smoothly to support innovation, data management, and project efficiency.",
+    role: "Co-Founder",
+    bio: "A co-founder of the NGO, dedicated to protecting the environment while supporting people and communities. Driven by a strong belief in sustainability, the focus is on creating positive impact for both nature and society.",
     image: "/THOMSON MUSHI.png",
   }
 ]
