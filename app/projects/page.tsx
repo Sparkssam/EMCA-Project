@@ -648,7 +648,7 @@ export default async function ProjectsPage() {
                 <MapPinIcon className="h-6 w-6 text-emca-darkest" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
-              <p className="text-emca-lime/80">USA River, Arusha, Tanzania</p>
+              <p className="text-emca-lime/80">USA River, Arusha(Head-Quarters),<br>Dr-es-Salaam(Branch) </br>Tanzania</p>
             </div>
 
             <div className="text-center p-8 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20">
